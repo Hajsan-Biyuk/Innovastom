@@ -306,7 +306,7 @@ form {
 	align-items: center;
 	justify-content: flex-start;
 	flex: 1;
-	gap: 28px;
+	justify-content: space-between;
 }
 .menu > li > a {
 	padding: 10px 20px;
