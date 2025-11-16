@@ -1,0 +1,11 @@
+<svg width="360" height="445" viewBox="0 0 360 445" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="360" height="445" rx="12" fill="white"/>
+<rect x="40" y="60" width="280" height="20" rx="4" fill="#F1F0EA"/>
+<rect x="40" y="100" width="220" height="16" rx="4" fill="#F1F0EA"/>
+<rect x="40" y="130" width="260" height="16" rx="4" fill="#F1F0EA"/>
+<rect x="40" y="160" width="240" height="16" rx="4" fill="#F1F0EA"/>
+<rect x="40" y="210" width="280" height="120" rx="8" fill="#F1F0EA"/>
+<text x="180" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#1D1D1B">Документ №6</text>
+<rect x="1" y="1" width="358" height="443" rx="11" stroke="#F1F0EA" stroke-width="2" fill="none"/>
+</svg>
+
