@@ -38,14 +38,11 @@
         font-size: 13px;
     }
     .menu > li > a {
-        padding: 8px 16px;
+        padding: 8px 10px;
         font-size: 14px;
     }
     .billboard__wrapper {
         width: 100%;
-    }
-    .billboard__main {
-        gap: 400px;
     }
     .billboard__content {
         width: 700px;
@@ -58,8 +55,7 @@
         width: 600px;
     }
     .billboard__advantages {
-        width: 450px;
-        gap: 60px;
+        gap: 40px;
     }
     .services {
         padding: 80px 0 0;
@@ -104,6 +100,14 @@
         padding-top: 40px;
     }
 }
+@media only screen and (max-width : 1400px) {
+    .header__info {
+        margin-left: auto;
+    }
+    .menu > li > a {
+        padding: 8px 5px;
+    }
+}
 
 @media only screen and (max-width : 1200px) {
 .header__info {
@@ -126,7 +130,6 @@
         font-size: 13px;
     }
     .billboard__main {
-        gap: 200px;
         flex-wrap: wrap;
     }
     .billboard__content {
@@ -134,6 +137,24 @@
     }
     .billboard__image {
         margin-top: 30px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .billboard-image-card {
+        width: 80px;
+        height: 110px;
+    }
+    .billboard-image-card__tooltip {    
+        visibility: visible;
+        right: auto;
+        left: 0;      
+        margin-top: 16px;
+        max-width: 100%;
+        pointer-events: auto;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    .billboard-image-card__tooltip::before {
+        display: none;
     }
     .billboard__advantages {
         width: 100%;
@@ -641,9 +662,6 @@
     .billboard__wrapper {
         gap: 50px;
     }
-    .billboard__main {
-        gap: 30px;
-    }
     .billboard__title {
         font-size: 28px;
     }
@@ -703,7 +721,6 @@
         font-size: 14px;
     }
     .services__grid {
-        gap: 12px;
         margin-top: 24px;
         padding-top: 24px;
     }
@@ -746,7 +763,6 @@
         margin-bottom: 16px;
     }
     .promotion-card .row.no-gutters > [class*="col-"]:first-child {
-        padding-right: 0;
         padding-bottom: 20px;
     }
     .promotion-card__image {
@@ -774,14 +790,7 @@
     .promotion-card__note {
         font-size: 13px;
     }
-    .promotion-card__footer {
-        gap: 40px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .promotion-card__prices {
-        width: 100%;
-    }
+
     .promotion-card__price-old {
         font-size: 18px;
     }
@@ -789,7 +798,6 @@
         font-size: 26px;
     }
     .btn-promotion {
-        width: 100%;
         justify-content: space-between;
         padding: 12px 12px 12px 20px;
     }
@@ -849,14 +857,7 @@
         gap: 20px;
     }
     .equipment__nav {
-        order: 2;
-        align-self: center;
-    }
-    .equipment__nav--prev {
-        order: 1;
-    }
-    .equipment__nav--next {
-        order: 3;
+        display: none !important;
     }
     .equipment__main {
         gap: 30px;
@@ -1036,7 +1037,7 @@
         max-width: 546px;
     }
     .interior-reviews__nav {
-        align-self: flex-start;
+        display: none !important;
     }
 
 .advantages {
@@ -1498,6 +1499,9 @@
     /* Generic small (Tablets) */
     .container {
         padding: 0 15px;
+    }
+    .services__stats-wrapper {
+        padding: 10px 15px;
     }
     .billboard__title {
         font-size: 24px;
@@ -2057,6 +2061,109 @@
      .sandwich {      
         top: 35%;      
     }
+    .billboard {
+        padding: 75px 0 20px;
+        background-position: 65% 50%;
+    }
+    .billboard__content {
+        order: 2;
+    }
+    .billboard__image {
+        margin-top: 35px;
+        margin-bottom: 90px;
+    }
+    .billboard-image-card {
+        width: 70px;
+        height: 70px;
+    }
+    .billboard__advantages {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .billboard__advantages .slick-slide {
+        padding-right: 14px;
+    }
+    .billboard__advantages .advantage-item {
+        width: 100%;
+        max-width: 100%;
+    }
+    .billboard__wrapper {
+        overflow: hidden;
+    }
+    .billboard-image-card__tooltip {
+        top: auto;
+    }
+    .services__description {
+        display: none;
+    }
+    .services {
+        padding: 20px 0 0;
+        gap: 20px;
+    }
+    .services__grid {
+        margin-top: 0px;
+        padding-top: 10px;
+    }
+    .service-card {
+        min-height: 120px;
+        padding: 20px;
+    }
+    .service-card__content {
+        min-height: 120px;
+    }
+    .service-card__image,
+    .equipment__image,
+    .doctors__image,
+    .interior-reviews__image,
+    .interior-reviews__divider,
+    .advantages__top-card-badge,
+    .advantages__top-card-image,
+    .portfolio__image {
+        display: none;
+    }
+    .service-card__title,
+    .service-card__count,
+    .service-card__price {
+        color: #313638;
+    }
+    .equipment__item {
+        justify-content: left;
+    }
+    .interior-reviews__tabs-nav {
+        margin-top: 25px;
+    }
+    .interior-reviews__tab {
+        border-bottom: 1px solid #1D1D1B;
+    }
+    .interior-reviews__tab.active,
+    .interior-reviews__tab:hover {
+       border-bottom: 2px solid #C5A780; 
+    }
+    .advantages__top-card-text {
+        text-align: left;
+    }
+    .advantages__card-title {
+        width: calc(100% - 68px);
+    }
+    .advantages__card {
+        min-height: 200px;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+    .portfolio__text,
+    .portfolio__tab span {
+        text-align: left;
+    }
+    .portfolio__tab span {
+        border-bottom: 1px solid;
+    }
+    .reviews-platforms__content .row > div {
+        padding: 0px 10px;
+    }
+    .reviews-platforms__card {
+        height: 270px;
+    }
+
 }
 
 @media only screen and (min-width : 992px) {

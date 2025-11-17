@@ -34,6 +34,44 @@ $(document).ready(function() {
 		}
 	});
 
+	// Слайдер преимуществ на мобильных (<=480px)
+	(function initBillboardAdvantagesSlider() {
+		var $advantages = $('.billboard__advantages');
+		if (!$advantages.length || typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var sliderInitialized = false;
+
+		function toggleSlider() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				if (!sliderInitialized) {
+					$advantages.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						dots: false,
+						infinite: false,
+						speed: 400,
+						adaptiveHeight: true,
+						touchMove: true,
+						swipe: true
+					});
+					sliderInitialized = true;
+				}
+			} else if (sliderInitialized) {
+				$advantages.slick('unslick');
+				sliderInitialized = false;
+			}
+		}
+
+		toggleSlider();
+		$(window).on('resize.billboardAdvantages orientationchange.billboardAdvantages', function() {
+			toggleSlider();
+		});
+	})();
+
 	// Анимация чисел в статистике при скролле
 	function animateNumber(element, targetValue, duration) {
 		var startValue = 0;
@@ -103,26 +141,18 @@ $(document).ready(function() {
 		var $tabContents = $('.equipment__tab-content');
 		var currentActiveSlider = null;
 		
-		// Функция инициализации слайдера для конкретного таба
-		function initSliderForTab($tabContent) {
-			var $slider = $tabContent.find('.equipment__benefits-slider');
-			
-			// Если слайдер уже инициализирован, пересчитываем позицию
-			if ($slider.hasClass('slick-initialized')) {
-				setTimeout(function() {
-					$slider.slick('setPosition');
-				}, 50);
-				return $slider;
-			}
-			
-			// Инициализация Slick Slider (по примеру slider-sales)
-			$slider.slick({
+		// Функция получения настроек слайдера в зависимости от ширины экрана
+		function getSliderSettings() {
+			var windowWidth = $(window).width();
+			return {
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				infinite: false,
+				infinite: true,
+				autoplay: true,
+				autoplaySpeed: 10000,
 				speed: 300,
 				arrows: false,
-				dots: false,
+				dots: windowWidth < 992,
 				swipe: true,
 				touchMove: true,
 				onInit: function() {
@@ -139,7 +169,25 @@ $(document).ready(function() {
 						$this.slick('setPosition');
 					}, 10);
 				}
-			});
+			};
+		}
+		
+		// Функция инициализации слайдера для конкретного таба
+		function initSliderForTab($tabContent) {
+			var $slider = $tabContent.find('.equipment__benefits-slider');
+			
+			// Если слайдер уже инициализирован, обновляем настройки
+			if ($slider.hasClass('slick-initialized')) {
+				var windowWidth = $(window).width();
+				$slider.slick('slickSetOption', 'dots', windowWidth < 992, true);
+				setTimeout(function() {
+					$slider.slick('setPosition');
+				}, 50);
+				return $slider;
+			}
+			
+			// Инициализация Slick Slider
+			$slider.slick(getSliderSettings());
 			
 			return $slider;
 		}
@@ -227,6 +275,8 @@ $(document).ready(function() {
 		// Пересчет ширины слайдера при изменении размера окна
 		$(window).on('resize', function() {
 			if (currentActiveSlider && currentActiveSlider.length && currentActiveSlider.hasClass('slick-initialized')) {
+				var windowWidth = $(window).width();
+				currentActiveSlider.slick('slickSetOption', 'dots', windowWidth < 992, true);
 				currentActiveSlider.slick('setPosition');
 			}
 		});
@@ -236,10 +286,24 @@ $(document).ready(function() {
 	if ($('.interior-reviews').length) {
 		var interiorCurrentActiveSlider = null;
 
+		// Функция получения настроек слайдера в зависимости от ширины экрана
+		function getInteriorSliderSettings() {
+			var windowWidth = $(window).width();
+			return {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				dots: windowWidth < 992,
+				infinite: true,
+				speed: 300
+			};
+		}
+
 		// Функция инициализации слайдера для активного таба
 		function initInteriorSliderForTab(tabContent) {
 			var sliderFor = tabContent.find('.interior-reviews__slider-for');
 			var sliderNav = tabContent.find('.interior-reviews__slider-nav');
+			var dotsContainer = tabContent.find('.interior-reviews__dots');
 			var sliderForId = 'interior-slider-for-' + tabContent.index();
 			var sliderNavId = 'interior-slider-nav-' + tabContent.index();
 			
@@ -249,29 +313,31 @@ $(document).ready(function() {
 			
 			// Инициализация основного слайдера
 			if (sliderFor.length && !sliderFor.hasClass('slick-initialized')) {
-				sliderFor.slick({
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					arrows: false,
-					dots: false,
-					infinite: true,
-					speed: 300,
-					asNavFor: '#' + sliderNavId,
-					onInit: function() {
-						setTimeout(function() {
-							sliderFor.slick('setPosition');
-							sliderNav.slick('setPosition');
-						}, 100);
-					},
-					onAfterChange: function() {
-						setTimeout(function() {
-							sliderFor.slick('setPosition');
-							sliderNav.slick('setPosition');
-						}, 100);
-					}
-				});
+				var sliderSettings = getInteriorSliderSettings();
+				sliderSettings.asNavFor = '#' + sliderNavId;
+				if (dotsContainer.length && sliderSettings.dots) {
+					sliderSettings.appendDots = dotsContainer;
+				}
+				sliderSettings.onInit = function() {
+					setTimeout(function() {
+						sliderFor.slick('setPosition');
+						sliderNav.slick('setPosition');
+					}, 100);
+				};
+				sliderSettings.onAfterChange = function() {
+					setTimeout(function() {
+						sliderFor.slick('setPosition');
+						sliderNav.slick('setPosition');
+					}, 100);
+				};
+				sliderFor.slick(sliderSettings);
 				interiorCurrentActiveSlider = sliderFor;
 			} else if (sliderFor.length && sliderFor.hasClass('slick-initialized')) {
+				var windowWidth = $(window).width();
+				sliderFor.slick('slickSetOption', 'dots', windowWidth < 992, true);
+				if (dotsContainer.length && windowWidth < 992) {
+					sliderFor.slick('slickSetOption', 'appendDots', dotsContainer, true);
+				}
 				interiorCurrentActiveSlider = sliderFor;
 			}
 			
@@ -364,6 +430,13 @@ $(document).ready(function() {
 		// Пересчет ширины слайдера при изменении размера окна
 		$(window).on('resize', function() {
 			if (interiorCurrentActiveSlider && interiorCurrentActiveSlider.length && interiorCurrentActiveSlider.hasClass('slick-initialized')) {
+				var windowWidth = $(window).width();
+				var tabContent = interiorCurrentActiveSlider.closest('.interior-reviews__tab-content');
+				var dotsContainer = tabContent.find('.interior-reviews__dots');
+				interiorCurrentActiveSlider.slick('slickSetOption', 'dots', windowWidth < 992, true);
+				if (dotsContainer.length && windowWidth < 992) {
+					interiorCurrentActiveSlider.slick('slickSetOption', 'appendDots', dotsContainer, true);
+				}
 				interiorCurrentActiveSlider.slick('setPosition');
 			}
 		});
@@ -432,7 +505,7 @@ $(document).ready(function() {
 			slidesToScroll: 2,
 			arrows: false,
 			dots: true,
-			infinite: true,
+			infinite: false,
 			speed: 500,
 			appendDots: $dotsContainer,
 			customPaging: function(slider, i) {
