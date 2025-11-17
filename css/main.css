@@ -1341,7 +1341,7 @@ form {
 	border-radius: 7px;
 }
 .equipment__nav:hover {
-	background-color: #C5A780;
+	background-color: #EFDFCD;
 }
 .equipment__nav img {
 	width: 24px;
@@ -1351,9 +1351,6 @@ form {
 	filter: brightness(0) saturate(100%);
 }
 
-.equipment__nav:hover img {
-	filter: brightness(0) invert(1);
-}
 .equipment__main {
 	flex: 1;
 	display: flex;
@@ -2246,7 +2243,7 @@ form .btn-main:hover {
 	flex-shrink: 0;
 }
 .interior-reviews__nav:hover {
-	background-color: #C5A780;
+	background-color: #EFDFCD;
 }
 .interior-reviews__nav img {
 	width: 24px;
@@ -2255,9 +2252,7 @@ form .btn-main:hover {
 	transition: filter 0.3s;
 	filter: brightness(0) saturate(100%);
 }
-.interior-reviews__nav:hover img {
-	filter: brightness(0) invert(1);
-}
+
 .interior-reviews__tabs {
 	display: flex;
 	flex-direction: row;
@@ -3056,7 +3051,7 @@ form .btn-main:hover {
 	padding: 0;
 }
 .documents__nav-btn:hover {
-	background-color: #F1F0EA;
+	background-color: #EFDFCD;
 }
 .documents__nav-btn img {
 	width: 24px;
