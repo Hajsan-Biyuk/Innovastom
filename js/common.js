@@ -34,6 +34,44 @@ $(document).ready(function() {
 		}
 	});
 
+	// Слайдер преимуществ на мобильных (<=480px)
+	(function initBillboardAdvantagesSlider() {
+		var $advantages = $('.billboard__advantages');
+		if (!$advantages.length || typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var sliderInitialized = false;
+
+		function toggleSlider() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				if (!sliderInitialized) {
+					$advantages.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						dots: false,
+						infinite: false,
+						speed: 400,
+						adaptiveHeight: true,
+						touchMove: true,
+						swipe: true
+					});
+					sliderInitialized = true;
+				}
+			} else if (sliderInitialized) {
+				$advantages.slick('unslick');
+				sliderInitialized = false;
+			}
+		}
+
+		toggleSlider();
+		$(window).on('resize.billboardAdvantages orientationchange.billboardAdvantages', function() {
+			toggleSlider();
+		});
+	})();
+
 	// Анимация чисел в статистике при скролле
 	function animateNumber(element, targetValue, duration) {
 		var startValue = 0;
@@ -109,7 +147,9 @@ $(document).ready(function() {
 			return {
 				slidesToShow: 1,
 				slidesToScroll: 1,
-				infinite: false,
+				infinite: true,
+				autoplay: true,
+				autoplaySpeed: 10000,
 				speed: 300,
 				arrows: false,
 				dots: windowWidth < 992,
