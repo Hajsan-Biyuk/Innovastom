@@ -569,6 +569,7 @@
         position: absolute;
         left: -15px;
         right: -15px;
+        top: 75%;
     }
     .header__bottom .menu,
     .header__wrapper .header__contacts,
@@ -637,7 +638,7 @@
         border-radius: 11px;
     }
     .header.active {
-        background: #fff;
+        background: #000;
     }
     .main-menu__mobile .header__info {
         display: block;
@@ -650,10 +651,26 @@
     .header__buttons {
         gap: 15px;
         margin-bottom: 15px;
+        justify-content: center;
     }
     .header__contacts {
         gap: 10px;
         margin-bottom: 14px;
+        justify-content: center;
+    }
+    .btn-main_border,
+    .btn-main_fill {
+        border-color: #231f20;
+        color: #231f20;
+        background: transparent;
+    }
+    .header__contacts .phone-main {
+        color: #231f20; 
+    }
+    .header__contacts .socials-list a {
+        border-color: #231f20;
+        color: #231f20;
+        background: #231f20;
     }
     .billboard {
         padding: 150px 0 0;
