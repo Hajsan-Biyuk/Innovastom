@@ -2112,6 +2112,7 @@
     .service-card__content {
         min-height: 120px;
     }
+    .services__description,
     .service-card__image,
     .equipment__image,
     .doctors__image,
