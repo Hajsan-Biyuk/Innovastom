@@ -2059,14 +2059,14 @@
         top: 35%;      
     }
     .billboard {
-        padding: 100px 0 20px;
+        padding: 75px 0 20px;
         background-position: 65% 50%;
     }
     .billboard__content {
         order: 2;
     }
     .billboard__image {
-        margin-top: 5px;
+        margin-top: 35px;
         margin-bottom: 90px;
     }
     .billboard-image-card {
