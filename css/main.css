@@ -518,7 +518,6 @@ form {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-	gap: 606px;
 	width: 100%;
 }
 .billboard__content {
@@ -2867,6 +2866,16 @@ form {
 	justify-content: center;
 	align-items: center;
 	gap: 200px;
+	position: relative;
+}
+.documents__dots .slick-dots {
+	position: absolute;
+    bottom: -5px;
+    display: block;
+    width: unset;
+    padding: 0;  
+    left: 50%;
+    transform: translateX(-50%);
 }
 .documents__nav-btn {
 	width: 42px;
@@ -2895,9 +2904,6 @@ form {
 	flex-direction: row;
 	align-items: center;
 	gap: 30px;
-}
-.documents__dots .slick-dots {
-	position: unset;
 }
 .documents__dots .slick-dot {
 	width: 10px;

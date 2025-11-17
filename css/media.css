@@ -44,9 +44,6 @@
     .billboard__wrapper {
         width: 100%;
     }
-    .billboard__main {
-        gap: 400px;
-    }
     .billboard__content {
         width: 700px;
     }
@@ -103,6 +100,14 @@
         padding-top: 40px;
     }
 }
+@media only screen and (max-width : 1400px) {
+    .header__info {
+        margin-left: auto;
+    }
+    .menu > li > a {
+        padding: 8px 5px;
+    }
+}
 
 @media only screen and (max-width : 1200px) {
 .header__info {
@@ -125,7 +130,6 @@
         font-size: 13px;
     }
     .billboard__main {
-        gap: 200px;
         flex-wrap: wrap;
     }
     .billboard__content {
@@ -639,9 +643,6 @@
     }
     .billboard__wrapper {
         gap: 50px;
-    }
-    .billboard__main {
-        gap: 30px;
     }
     .billboard__title {
         font-size: 28px;
