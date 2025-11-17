@@ -2093,6 +2093,7 @@
     .billboard-image-card__tooltip {
         top: auto;
     }
+<<<<<<< HEAD
     .services__description {
         display: none;
     }
@@ -2163,7 +2164,6 @@
     .reviews-platforms__card {
         height: 270px;
     }
-
 }
 
 @media only screen and (min-width : 992px) {

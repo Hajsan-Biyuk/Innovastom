@@ -952,8 +952,9 @@ form {
 	background: #EFDFCD;
 }
 .service-card__arrow:hover img {
-	transform: rotate(45deg)
+	transform: rotate(45deg);
 }
+
 
 
 /* Promotions Section */
