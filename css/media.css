@@ -703,7 +703,6 @@
         font-size: 14px;
     }
     .services__grid {
-        gap: 12px;
         margin-top: 24px;
         padding-top: 24px;
     }
@@ -746,7 +745,6 @@
         margin-bottom: 16px;
     }
     .promotion-card .row.no-gutters > [class*="col-"]:first-child {
-        padding-right: 0;
         padding-bottom: 20px;
     }
     .promotion-card__image {
@@ -774,14 +772,7 @@
     .promotion-card__note {
         font-size: 13px;
     }
-    .promotion-card__footer {
-        gap: 40px;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .promotion-card__prices {
-        width: 100%;
-    }
+
     .promotion-card__price-old {
         font-size: 18px;
     }
@@ -789,7 +780,6 @@
         font-size: 26px;
     }
     .btn-promotion {
-        width: 100%;
         justify-content: space-between;
         padding: 12px 12px 12px 20px;
     }
@@ -849,14 +839,7 @@
         gap: 20px;
     }
     .equipment__nav {
-        order: 2;
-        align-self: center;
-    }
-    .equipment__nav--prev {
-        order: 1;
-    }
-    .equipment__nav--next {
-        order: 3;
+        display: none !important;
     }
     .equipment__main {
         gap: 30px;
@@ -1036,7 +1019,7 @@
         max-width: 546px;
     }
     .interior-reviews__nav {
-        align-self: flex-start;
+        display: none !important;
     }
 
 .advantages {

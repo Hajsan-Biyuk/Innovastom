@@ -1336,6 +1336,40 @@ form {
 .equipment__benefits-slider .slick-slide > div {
 	width: 100%;
 }
+.equipment__benefits-slider .slick-dots {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+	margin: 24px 0 0;
+	position: relative;
+}
+.equipment__benefits-slider .slick-dots li {
+	width: 10px;
+	height: 10px;
+	margin: 0;
+	padding: 0;
+}
+.equipment__benefits-slider .slick-dots li button {
+	width: 10px;
+	height: 10px;
+	padding: 0;
+	border: none;
+	border-radius: 2px;
+	background-color: #1D1D1B;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+}
+.equipment__benefits-slider .slick-dots li.slick-active button,
+.equipment__benefits-slider .slick-dots li button:hover {
+	background-color: #C5A780;
+}
 .equipment__benefits {
 	padding: 24px;
 	background-color: #FFFFFF;
@@ -2163,6 +2197,43 @@ form {
 }
 .interior-reviews__slider-for:not(.slick-initialized) > *:not(:first-child) {
 	display: none;
+}
+.interior-reviews__dots {
+	margin-top: 24px;
+}
+.interior-reviews__dots .slick-dots {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.interior-reviews__dots .slick-dots li {
+	width: 10px;
+	height: 10px;
+	margin: 0;
+	padding: 0;
+}
+.interior-reviews__dots .slick-dots li button {
+	width: 10px;
+	height: 10px;
+	padding: 0;
+	border: none;
+	border-radius: 2px;
+	background-color: #1D1D1B;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+}
+.interior-reviews__dots .slick-dots li.slick-active button,
+.interior-reviews__dots .slick-dots li button:hover {
+	background-color: #C5A780;
 }
 .interior-reviews__slide {
 	width: 100%;
