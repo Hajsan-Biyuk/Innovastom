@@ -527,15 +527,7 @@ $(document).ready(function() {
 			customPaging: function(slider, i) {
 				return '<div class="slick-dot"></div>';
 			},
-			responsive: [
-				{
-					breakpoint: 992,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}
-			],
+			
 			onInit: function() {
 				setTimeout(function() {
 					$slider.slick('setPosition');
@@ -554,7 +546,7 @@ $(document).ready(function() {
 			$slider.slick('slickNext');
 		});
 
-		$(window).on('resize', function() {
+		$(window).on('resize.documents', function() {
 			$slider.slick('setPosition');
 		});
 	}

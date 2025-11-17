@@ -2382,6 +2382,9 @@
     .reviews-platforms__card {
         height: 270px;
     }
+    .documents__slide {
+        height: 375px;
+    }
 }
 
 @media only screen and (min-width : 992px) {
