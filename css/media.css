@@ -1416,6 +1416,57 @@
     .promotion-card__badge-text {
         font-size: 16px;
     }
+    /* Promotions Slider для ≤480px */
+    .promotions__grid {
+        position: relative;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding: 0 15px;
+    }
+    .promotions__grid.slick-initialized {
+        display: block;
+    }
+    .promotions__grid.slick-initialized > [class*="col-"] {
+        margin-bottom: 0;
+    }
+    .promotions__grid .slick-list {
+        overflow: visible;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+    .promotions__grid .slick-track {
+        display: flex;
+        align-items: flex-start;
+    }
+    .promotions__grid .slick-slide {
+        padding: 0 10px;
+        opacity: 0.6;
+        transition: opacity 0.3s;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+    }
+    .promotions__grid .slick-slide > div {
+        width: 100%;
+        height: 100%;
+    }
+    .promotions__grid .slick-slide.slick-center {
+        opacity: 1;
+    }
+    .promotions__dots {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        margin-top: 16px;
+        gap: 6px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .promotions__dots .slick-dot {
+        width: 8px;
+        height: 8px;
+    }
     .btn-subscribe {
         padding: 14px 16px;
         gap: 16px;
@@ -1596,6 +1647,57 @@
         max-width: 370px;
         margin-bottom: 0;
     }
+    /* Doctors Slider для ≤480px */
+    .doctors__grid {
+        position: relative;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding: 0 15px;
+    }
+    .doctors__grid.slick-initialized {
+        display: block;
+    }
+    .doctors__grid.slick-initialized > [class*="col-"] {
+        margin-bottom: 0;
+    }
+    .doctors__grid .slick-list {
+        overflow: visible;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+    .doctors__grid .slick-track {
+        display: flex;
+        align-items: flex-start;
+    }
+    .doctors__grid .slick-slide {
+        padding: 0 10px;
+        opacity: 0.6;
+        transition: opacity 0.3s;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+    }
+    .doctors__grid .slick-slide > div {
+        width: 100%;
+        height: 100%;
+    }
+    .doctors__grid .slick-slide.slick-center {
+        opacity: 1;
+    }
+    .doctors__dots {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        margin-top: 16px;
+        gap: 6px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .doctors__dots .slick-dot {
+        width: 8px;
+        height: 8px;
+    }
 
 .interior-reviews {
         padding: 50px 0 0;
@@ -1683,6 +1785,53 @@
     .advantages__grid [class*="col-"] {
         margin-bottom: 12px;
     }
+    /* Advantages Slider для ≤480px - 2 слайда вертикально */
+    .advantages__grid {
+        position: relative;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding: 0 15px;
+    }
+    .advantages__grid.slick-initialized {
+        display: block;
+    }
+    .advantages__grid.slick-initialized > [class*="col-"] {
+        margin-bottom: 0;
+    }
+    .advantages__grid .slick-list {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .advantages__grid .slick-track {
+        display: block;
+    }
+    .advantages__grid .slick-slide {
+        padding: 0;
+        height: auto;
+        margin-bottom: 12px;
+    }
+    .advantages__grid .slick-slide > div {
+        width: 100%;
+        height: 100%;
+    }
+    .advantages__grid .slick-slide:last-child {
+        margin-bottom: 0;
+    }
+    .advantages__dots {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        margin-top: 16px;
+        gap: 6px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .advantages__dots .slick-dot {
+        width: 8px;
+        height: 8px;
+    }
     .advantages__card {
         min-height: 240px;
         padding: 24px 20px;
@@ -1740,12 +1889,61 @@
     .portfolio__slider-container {
         gap: 20px;
     }
+    /* Portfolio Slider для ≤480px */
     .portfolio__slider .row {
+        position: relative;
+        width: 100vw;
         margin: 0;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        padding: 0 15px;
     }
     .portfolio__slider .row > div {
         padding: 0;
         margin-bottom: 16px;
+    }
+    .portfolio__slider .row.slick-initialized {
+        display: block;
+    }
+    .portfolio__slider .row.slick-initialized > div {
+        margin-bottom: 0;
+    }
+    .portfolio__slider .row .slick-list {
+        overflow: visible;
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+    .portfolio__slider .row .slick-track {
+        display: flex;
+        align-items: flex-start;
+    }
+    .portfolio__slider .row .slick-slide {
+        padding: 0 10px;
+        opacity: 0.6;
+        transition: opacity 0.3s;
+        height: auto;
+        display: flex;
+        align-items: flex-start;
+    }
+    .portfolio__slider .row .slick-slide > div {
+        width: 100%;
+        height: 100%;
+    }
+    .portfolio__slider .row .slick-slide.slick-center {
+        opacity: 1;
+    }
+    .portfolio__slider-dots {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        margin-right: calc(-50vw + 50%);
+        margin-top: 16px;
+        gap: 6px;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .portfolio__slider-dots .slick-dot {
+        width: 8px;
+        height: 8px;
     }
     .portfolio__card {
         padding: 20px;
@@ -1754,6 +1952,9 @@
     .portfolio__card-nav {
         flex-direction: column;
         align-items: stretch;
+    }
+    .portfolio__card-nav-btn {
+        display: none;
     }
     .portfolio__card-tabs {
         flex-direction: column;
@@ -2110,7 +2311,6 @@
     .billboard-image-card__tooltip {
         top: auto;
     }
-<<<<<<< HEAD
     .services__description {
         display: none;
     }
