@@ -1010,8 +1010,8 @@ form {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	gap: 16px;
-	padding: 10px 10px 10px 24px;
+	gap: 5px;
+	padding: 10px 10px 10px 10px;
 	background-color: #C4AA9B;
 	border-radius: 6px;
 	text-decoration: none;
@@ -1472,10 +1472,8 @@ form {
 .consultation__block {
 	position: relative;
 	width: 100%;
-	max-width: 1560px;
-	height: 564px;
 	margin: 0 auto;
-	padding: 48px 58px;
+	padding: 25px 45px;
 	border-radius: 0;
 	overflow: hidden;
 }
@@ -1486,6 +1484,8 @@ form {
 	width: 100%;
 	height: 100%;
 	z-index: 0;
+	border-radius: 24px;
+    overflow: hidden;
 }
 .consultation__background img {
 	width: 100%;
@@ -2268,9 +2268,8 @@ form {
 	gap: 60px;
 	background-color: #FFFFFF;
 	border-radius: 24px;
-	padding: 48px 60px;
-	margin-bottom: 57px;
-	box-shadow: 0px 4px 15px 0px rgba(239, 223, 205, 0.5);
+	padding: 5px 60px;	
+	/* box-shadow: 0px 4px 15px 0px rgba(239, 223, 205, 0.5); */
 }
 .advantages__top-card-badge {
 	flex-shrink: 0;
@@ -2321,7 +2320,7 @@ form {
 	padding: 36px 32px;
 	height: 100%;
 	min-height: 320px;
-	box-shadow: 0px 4px 15px 0px rgba(239, 223, 205, 0.5);
+	/* box-shadow: 0px 4px 15px 0px rgba(239, 223, 205, 0.5); */
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
@@ -2645,11 +2644,10 @@ form {
 .installment__wrapper {
 	position: relative;
 	width: 100%;
-	max-width: 1560px;
 	margin: 0 auto;
 	overflow: hidden;
 	border-radius: 0;
-	padding: 44px 46px;
+	padding: 24px 46px;
 	box-sizing: border-box;
 }
 .installment__bg {
@@ -2659,7 +2657,7 @@ form {
 	width: 100%;
 	height: 100%;
 	z-index: 0;
-	border-radius: 0;
+	border-radius: 24px;
 	overflow: hidden;
 }
 .installment__bg img {
