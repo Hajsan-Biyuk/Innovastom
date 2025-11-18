@@ -2704,11 +2704,20 @@
     .service-tabs__nav {
         display: none !important;
     }
-    .service-tabs__dots {
-        display: block;
+    .service-tabs__content {
+        flex-direction: column;
+        align-items: center;
     }
     .service-tabs__slider-wrapper {
         gap: 0;
+        width: 100%;
+        order: 1;
+    }
+    .service-tabs__dots {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        order: 2;
     }
     .service-tabs__slider .slick-list {
         margin: 0;
