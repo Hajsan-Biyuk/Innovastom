@@ -1114,13 +1114,13 @@ $(document).ready(function() {
 	}
 
 	var mh = 0;
-   $(".equipment__list .tab-item span").each(function () {
+   $(".equipment__item-text").each(function () {
        var h_block = parseInt($(this).height());
        if(h_block > mh) {
           mh = h_block;
        };
    });
-   $(".equipment__list .tab-item span").height(mh);
+   $(".equipment__item-text").height(mh);
 
    var mh2 = 0;
    $(".interior-reviews__tabs .tab-item span").each(function () {
