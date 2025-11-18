@@ -94,6 +94,83 @@ p {
 	padding: 0;
 	margin: 0;
 }
+
+/* Global Slick Dots */
+.slick-dots {
+	display: flex !important;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	position: static;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	transform: none;
+}
+.slick-dots li {
+	width: 10px;
+	height: 10px;
+	margin: 0;
+	padding: 0;
+}
+.slick-dots li button {
+	width: 10px;
+	height: 10px;
+	padding: 0;
+	border: none;
+	border-radius: 2px;
+	background-color: #1D1D1B;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-size: 0;
+	line-height: 0;
+	display: block;
+}
+.slick-dots li.slick-active button,
+.slick-dots li button:hover {
+	background-color: #C5A780;
+}
+.slick-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 2px;
+	background-color: #1D1D1B;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	margin: 0;
+	padding: 0;
+	text-indent: -9999px;
+	border: none;
+	display: block;
+}
+.slick-dot.active,
+.slick-active .slick-dot {
+	background-color: #C5A780;
+}
+.slider-nav {
+	width: 42px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	background: transparent;
+	border: 1px solid #C5A780;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	padding: 0;
+}
+.slider-nav:hover {
+	background-color: #EFDFCD;
+}
+.slider-nav img {
+	width: 24px;
+	height: 24px;
+	display: block;
+}
 form {
 	margin: 0;
 }
@@ -753,23 +830,8 @@ form {
 	position: relative;
 }
 .service-tabs__nav {
-	width: 42px;
-	height: 42px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	background-color: transparent;
-	border: 1px solid #C5A780;
-	border-radius: 7px;
-	cursor: pointer;
-	transition: all 0.3s;
-	padding: 0;
 	position: relative;
 	z-index: 10;
-}
-.service-tabs__nav:hover {
-	background-color: #EFDFCD;
 }
 .service-tabs__nav img {
 	width: 24px;
@@ -886,73 +948,11 @@ form {
 	margin-top: 20px;
 	width: 100%;
 }
-.slider-dots .slick-dots {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	position: relative;
-}
-.slider-dots .slick-dots li {
-	width: 10px;
-	height: 10px;
-	margin: 0;
-	padding: 0;
-}
-.slider-dots .slick-dots li button {
-	width: 10px;
-	height: 10px;
-	padding: 0;
-	border: none;
-	border-radius: 2px;
-	background-color: #1D1D1B;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	font-size: 0;
-	line-height: 0;
-	display: block;
-}
-.slider-dots .slick-dots li.slick-active button,
-.slider-dots .slick-dots li button:hover {
-	background-color: #C5A780;
-}
 
 /* Common Slider Dots Styles for .slick-dot structure (alternative) */
 .slider-dots-alt {
 	margin-top: 20px;
 	width: 100%;
-}
-.slider-dots-alt .slick-dots {
-	display: flex !important;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
-	position: static;
-	width: auto;
-	padding: 0;
-	margin: 0;
-	transform: none;
-}
-.slider-dots-alt .slick-dot {
-	width: 10px;
-	height: 10px;
-	border-radius: 2px;
-	background-color: #1D1D1B;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	margin: 0;
-	padding: 0;
-	text-indent: -9999px;
-	border: none;
-}
-.slider-dots-alt .slick-dot.active,
-.slider-dots-alt .slick-active .slick-dot {
-	background-color: #C5A780;
 }
 
 /* Service Tabs Dots */
@@ -1521,34 +1521,6 @@ form {
 		display: flex;
 	}
 }
-.promotions__dots .slick-dots {
-	display: flex !important;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
-	position: static;
-	width: auto;
-	padding: 0;
-	margin: 0;
-	transform: none;
-}
-.promotions__dots .slick-dot {
-	width: 10px;
-	height: 10px;
-	border-radius: 2px;
-	background-color: #1D1D1B;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	margin: 0;
-	padding: 0;
-	text-indent: -9999px;
-	border: none;
-}
-.promotions__dots .slick-dot.active,
-.promotions__dots .slick-active .slick-dot {
-	background-color: #C5A780;
-}
 
 .promotion-card {
 	padding: 24px;
@@ -1869,23 +1841,6 @@ form {
 	width: 100%;
 	justify-content: center;
 }
-.equipment__nav {
-	width: 42px;
-	height: 42px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	background-color: transparent;
-	border: 1px solid #C5A780;
-	cursor: pointer;
-	transition: all 0.3s;
-	padding: 0;
-	border-radius: 7px;
-}
-.equipment__nav:hover {
-	background-color: #EFDFCD;
-}
 .equipment__nav img {
 	width: 24px;
 	height: 24px;
@@ -1950,6 +1905,7 @@ form {
 	height: 1px;
 	background-color: #313638;
 	margin: 0 auto;
+	margin-top: -1px;
 }
 .equipment__tabs-content {
 	width: 100%;
@@ -2486,34 +2442,6 @@ form .btn-main:hover {
 		display: flex;
 	}
 }
-.doctors__dots .slick-dots {
-	display: flex !important;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
-	position: static;
-	width: auto;
-	padding: 0;
-	margin: 0;
-	transform: none;
-}
-.doctors__dots .slick-dot {
-	width: 10px;
-	height: 10px;
-	border-radius: 2px;
-	background-color: #1D1D1B;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	margin: 0;
-	padding: 0;
-	text-indent: -9999px;
-	border: none;
-}
-.doctors__dots .slick-dot.active,
-.doctors__dots .slick-active .slick-dot {
-	background-color: #C5A780;
-}
 
 .doctor-card {
 	position: relative;
@@ -2794,21 +2722,7 @@ form .btn-main:hover {
 	width: 100%;
 }
 .interior-reviews__nav {
-	width: 42px;
-	height: 42px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: transparent;
-	border: 1px solid #C5A780;
 	border-radius: 4px;
-	cursor: pointer;
-	padding: 0;
-	transition: background-color 0.3s, filter 0.3s;
-	flex-shrink: 0;
-}
-.interior-reviews__nav:hover {
-	background-color: #EFDFCD;
 }
 .interior-reviews__nav img {
 	width: 24px;
@@ -2873,6 +2787,7 @@ form .btn-main:hover {
 }
 .interior-reviews__dots {
 	margin-top: 24px;
+	width: 100%;
 }
 .interior-reviews__slide {
 	width: 100%;
@@ -3038,34 +2953,6 @@ form .btn-main:hover {
 	.advantages__dots {
 		display: flex;
 	}
-}
-.advantages__dots .slick-dots {
-	display: flex !important;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
-	position: static;
-	width: auto;
-	padding: 0;
-	margin: 0;
-	transform: none;
-}
-.advantages__dots .slick-dot {
-	width: 10px;
-	height: 10px;
-	border-radius: 2px;
-	background-color: #1D1D1B;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	margin: 0;
-	padding: 0;
-	text-indent: -9999px;
-	border: none;
-}
-.advantages__dots .slick-dot.active,
-.advantages__dots .slick-active .slick-dot {
-	background-color: #C5A780;
 }
 
 .advantages__card {
@@ -3252,34 +3139,6 @@ form .btn-main:hover {
 		display: flex;
 	}
 }
-.portfolio__slider-dots .slick-dots {
-	display: flex !important;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	gap: 8px;
-	position: static;
-	width: auto;
-	padding: 0;
-	margin: 0;
-	transform: none;
-}
-.portfolio__slider-dots .slick-dot {
-	width: 10px;
-	height: 10px;
-	border-radius: 2px;
-	background-color: #1D1D1B;
-	cursor: pointer;
-	transition: background-color 0.3s;
-	margin: 0;
-	padding: 0;
-	text-indent: -9999px;
-	border: none;
-}
-.portfolio__slider-dots .slick-dot.active,
-.portfolio__slider-dots .slick-active .slick-dot {
-	background-color: #C5A780;
-}
 
 .portfolio__card {
 	/* background-color: #FFFFFF; */
@@ -3295,27 +3154,6 @@ form .btn-main:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-}
-.portfolio__card-nav-btn {
-	width: 42px;
-	height: 42px;
-	border: 1px solid #C5A780;
-	border-radius: 7px;
-	background: transparent;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	transition: background-color 0.3s;
-}
-.portfolio__card-nav-btn:hover {
-	background-color: #EFDFCD;
-}
-.portfolio__card-nav-btn img {
-	width: 24px;
-	height: 24px;
-	display: block;
 }
 .portfolio__card-tabs {
 	display: flex;
@@ -3653,39 +3491,9 @@ form .btn-main:hover {
 	gap: 200px;
 	position: relative;
 }
-.documents__dots .slick-dots {
-	position: absolute;
-	bottom: -5px;
-	left: 50%;
-	transform: translateX(-50%);
-}
-.documents__nav-btn {
-	width: 42px;
-	height: 42px;
-	border: 1px solid #C5A780;
-	border-radius: 7px;
-	background: transparent;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	transition: background-color 0.3s;
-	padding: 0;
-}
-.documents__nav-btn:hover {
-	background-color: #EFDFCD;
-}
-.documents__nav-btn img {
-	width: 24px;
-	height: 24px;
-	display: block;
-}
 .documents__dots {
 	display: block;
-}
-.documents__dots .slick-dots {
-	gap: 30px;
+	width: 100%;
 }
 
 /* FAQ Section */

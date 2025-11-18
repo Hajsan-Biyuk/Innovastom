@@ -518,7 +518,7 @@ $(document).ready(function() {
 		
 		$slider.slick({
 			slidesToShow: 2,
-			slidesToScroll: 2,
+			slidesToScroll: 1,
 			arrows: false,
 			dots: true,
 			infinite: false,
@@ -527,6 +527,15 @@ $(document).ready(function() {
 			customPaging: function(slider, i) {
 				return '<div class="slick-dot"></div>';
 			},
+			responsive: [
+				{
+					breakpoint: 481,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			],
 			
 			onInit: function() {
 				setTimeout(function() {
@@ -1103,6 +1112,15 @@ $(document).ready(function() {
 			}
 		});
 	}
+
+	var mh = 0;
+   $(".equipment__item-text").each(function () {
+       var h_block = parseInt($(this).height());
+       if(h_block > mh) {
+          mh = h_block;
+       };
+   });
+   $(".equipment__item-text").height(mh);
 
 });
 

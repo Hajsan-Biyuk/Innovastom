@@ -892,9 +892,7 @@
         gap: 20px;
         align-items: stretch;
     }
-    .equipment__item {
-        border-bottom: 1px solid #313638;
-    }
+  
     .equipment__item-text {
         text-align: left;
     }
@@ -924,7 +922,9 @@
     .equipment__gallery-image {
         height: 250px;
     }
-
+    .equipment__divider {
+        display: none;
+    }
 .consultation {
         padding: 60px 0 0;
     }
