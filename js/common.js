@@ -567,7 +567,7 @@ $(document).ready(function() {
 					// Создаем контейнер для dots, если его нет
 					var $dotsContainer = $promotionsGrid.siblings('.promotions__dots');
 					if (!$dotsContainer.length) {
-						$dotsContainer = $('<div class="promotions__dots slider-dots-alt"></div>');
+						$dotsContainer = $('<div class="promotions__dots"></div>');
 						$promotionsGrid.after($dotsContainer);
 					}
 
@@ -634,7 +634,7 @@ $(document).ready(function() {
 					// Создаем контейнер для dots, если его нет
 					var $dotsContainer = $doctorsGrid.siblings('.doctors__dots');
 					if (!$dotsContainer.length) {
-						$dotsContainer = $('<div class="doctors__dots slider-dots-alt"></div>');
+						$dotsContainer = $('<div class="doctors__dots"></div>');
 						$doctorsGrid.after($dotsContainer);
 					}
 
@@ -717,7 +717,7 @@ $(document).ready(function() {
 				// Создаем контейнер для dots внутри tab-content
 				var $dotsContainer = $tabContent.find('.portfolio__slider-dots');
 				if (!$dotsContainer.length) {
-					$dotsContainer = $('<div class="portfolio__slider-dots slider-dots-alt"></div>');
+					$dotsContainer = $('<div class="portfolio__slider-dots"></div>');
 					$portfolioSliderRow.after($dotsContainer);
 				}
 
@@ -807,7 +807,7 @@ $(document).ready(function() {
 					// Создаем контейнер для dots, если его нет
 					var $dotsContainer = $advantagesGrid.siblings('.advantages__dots');
 					if (!$dotsContainer.length) {
-						$dotsContainer = $('<div class="advantages__dots slider-dots-alt"></div>');
+						$dotsContainer = $('<div class="advantages__dots"></div>');
 						$advantagesGrid.after($dotsContainer);
 					}
 
