@@ -518,7 +518,7 @@ $(document).ready(function() {
 		
 		$slider.slick({
 			slidesToShow: 2,
-			slidesToScroll: 2,
+			slidesToScroll: 1,
 			arrows: false,
 			dots: true,
 			infinite: false,
@@ -527,6 +527,15 @@ $(document).ready(function() {
 			customPaging: function(slider, i) {
 				return '<div class="slick-dot"></div>';
 			},
+			responsive: [
+				{
+					breakpoint: 481,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			],
 			
 			onInit: function() {
 				setTimeout(function() {
@@ -922,5 +931,231 @@ $(document).ready(function() {
 		}
 	}
 
+	// Service Tabs Slider
+	if ($('.service-tabs').length) {
+		var serviceTabsCurrentActiveSlider = null;
+		var serviceTabsSlidersInitialized = {};
+
+		// Функция получения настроек слайдера в зависимости от ширины экрана
+		function getServiceTabsSliderSettings() {
+			var windowWidth = $(window).width();
+			var slidesToShow = 4; // По умолчанию 4 карточки на десктопе
+			if (windowWidth <= 480) {
+				slidesToShow = 1;
+			} else if (windowWidth <= 768) {
+				slidesToShow = 2;
+			} else if (windowWidth <= 992) {
+				slidesToShow = 3;
+			}
+			return {
+				slidesToShow: slidesToShow,
+				slidesToScroll: 1,
+				arrows: false,
+				dots: windowWidth <= 480,
+				infinite: false,
+				speed: 300,
+				adaptiveHeight: false,
+				swipe: true,
+				touchMove: true,
+				onInit: function() {
+					var $this = $(this);
+					setTimeout(function() {
+						$this.slick('setPosition');
+					}, 100);
+				},
+				onAfterChange: function() {
+					var $this = $(this);
+					setTimeout(function() {
+						$this.slick('setPosition');
+					}, 10);
+				}
+			};
+		}
+
+		// Функция уничтожения слайдера
+		function destroyServiceTabsSlider($slider) {
+			if ($slider.length && $slider.hasClass('slick-initialized')) {
+				$slider.slick('unslick');
+			}
+		}
+
+		// Функция инициализации слайдера для конкретного таба
+		function initServiceTabsSliderForTab($tabContent) {
+			var tabIndex = $tabContent.data('content');
+			var $slider = $tabContent.find('.service-tabs__slider');
+			var $dotsContainer = $('.service-tabs__dots');
+
+			if (!$slider.length) {
+				return null;
+			}
+
+			// Если слайдер уже инициализирован, сначала уничтожаем его
+			if ($slider.hasClass('slick-initialized')) {
+				destroyServiceTabsSlider($slider);
+			}
+
+			// Инициализация Slick Slider
+			var sliderSettings = getServiceTabsSliderSettings();
+			if (sliderSettings.dots && $dotsContainer.length) {
+				sliderSettings.appendDots = $dotsContainer;
+				sliderSettings.customPaging = function(slider, i) {
+					return '<button type="button"></button>';
+				};
+			}
+			$slider.slick(sliderSettings);
+			serviceTabsSlidersInitialized[tabIndex] = true;
+
+			return $slider;
+		}
+
+		// Функция переключения табов
+		function switchServiceTab(tabIndex) {
+			// Уничтожаем текущий активный слайдер
+			if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length) {
+				destroyServiceTabsSlider(serviceTabsCurrentActiveSlider);
+				serviceTabsCurrentActiveSlider = null;
+			}
+
+			// Убираем активный класс со всех табов и контентов
+			$('.service-tabs__tab').removeClass('active');
+			$('.service-tabs__tab-content').removeClass('active');
+
+			// Добавляем активный класс к выбранному табу и контенту
+			$('.service-tabs__tab[data-tab="' + tabIndex + '"]').addClass('active');
+			var $activeTabContent = $('.service-tabs__tab-content[data-content="' + tabIndex + '"]').addClass('active');
+
+			// Небольшая задержка для применения стилей
+			setTimeout(function() {
+				// Инициализируем слайдер для активного таба
+				serviceTabsCurrentActiveSlider = initServiceTabsSliderForTab($activeTabContent);
+
+				// Пересчитываем позицию слайдера после переключения таба
+				if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length) {
+					if (serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+						setTimeout(function() {
+							serviceTabsCurrentActiveSlider.slick('setPosition');
+						}, 100);
+					} else {
+						// Ждем инициализации и пересчитываем
+						serviceTabsCurrentActiveSlider.on('init', function() {
+							var $this = $(this);
+							setTimeout(function() {
+								$this.slick('setPosition');
+							}, 100);
+						});
+					}
+				}
+			}, 100);
+		}
+
+		// Инициализация слайдера для первого таба
+		var $firstTabContent = $('.service-tabs__tab-content.active');
+		if ($firstTabContent.length) {
+			setTimeout(function() {
+				serviceTabsCurrentActiveSlider = initServiceTabsSliderForTab($firstTabContent);
+				// Пересчитываем позицию слайдера после инициализации
+				if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length) {
+					if (serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+						setTimeout(function() {
+							serviceTabsCurrentActiveSlider.slick('setPosition');
+						}, 100);
+					} else {
+						// Ждем инициализации и пересчитываем
+						serviceTabsCurrentActiveSlider.on('init', function() {
+							setTimeout(function() {
+								serviceTabsCurrentActiveSlider.slick('setPosition');
+							}, 100);
+						});
+					}
+				}
+			}, 150);
+		}
+
+		// Переключение табов
+		$('.service-tabs__tab').on('click', function() {
+			var tabIndex = parseInt($(this).data('tab'));
+			switchServiceTab(tabIndex);
+		});
+
+		// Обработка кнопок навигации
+		$('.service-tabs__nav--prev').on('click', function() {
+			if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length && serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+				serviceTabsCurrentActiveSlider.slick('slickPrev');
+			}
+		});
+
+		$('.service-tabs__nav--next').on('click', function() {
+			if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length && serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+				serviceTabsCurrentActiveSlider.slick('slickNext');
+			}
+		});
+
+		// Пересчет ширины слайдера при изменении размера окна
+		$(window).on('resize.serviceTabs', function() {
+			if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length && serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+				var windowWidth = $(window).width();
+				var slidesToShow = 4; // По умолчанию 4 карточки на десктопе
+				if (windowWidth <= 480) {
+					slidesToShow = 1;
+				} else if (windowWidth <= 768) {
+					slidesToShow = 2;
+				} else if (windowWidth <= 992) {
+					slidesToShow = 3;
+				}
+				var $dotsContainer = $('.service-tabs__dots');
+				serviceTabsCurrentActiveSlider.slick('slickSetOption', 'slidesToShow', slidesToShow, true);
+				serviceTabsCurrentActiveSlider.slick('slickSetOption', 'dots', windowWidth <= 480, true);
+				if (windowWidth <= 480 && $dotsContainer.length) {
+					serviceTabsCurrentActiveSlider.slick('slickSetOption', 'appendDots', $dotsContainer, true);
+				}
+				serviceTabsCurrentActiveSlider.slick('setPosition');
+			}
+		});
+	}
+
+	var mh = 0;
+   $(".equipment__list .tab-item span").each(function () {
+       var h_block = parseInt($(this).height());
+       if(h_block > mh) {
+          mh = h_block;
+       };
+   });
+   $(".equipment__list .tab-item span").height(mh);
+
+   var mh2 = 0;
+   $(".interior-reviews__tabs .tab-item span").each(function () {
+       var h_block2 = parseInt($(this).height());
+       if(h_block2 > mh2) {
+          mh2 = h_block2;
+       };
+   });
+   $(".interior-reviews__tabs .tab-item span").height(mh2);
+
+   var mh3 = 0;
+   $(".portfolio__tabs .tab-item span").each(function () {
+       var h_block3 = parseInt($(this).height());
+       if(h_block3 > mh3) {
+          mh3 = h_block3;
+       };
+   });
+   $(".portfolio__tabs .tab-item span").height(mh3);
+
+   var mh4 = 0;
+   $(".portfolio__card-tabs .tab-item span").each(function () {
+       var h_block4 = parseInt($(this).height());
+       if(h_block4 > mh4) {
+          mh4 = h_block4;
+       };
+   });
+   $(".portfolio__card-tabs .tab-item span").height(mh4);
+
+   var mh5 = 0;
+   $(".service-tabs__tabs .tab-item span").each(function () {
+       var h_block5 = parseInt($(this).height());
+       if(h_block5 > mh5) {
+          mh5 = h_block5;
+       };
+   });
+   $(".service-tabs__tabs .tab-item span").height(mh5);
 });
 
