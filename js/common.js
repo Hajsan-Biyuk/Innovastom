@@ -354,6 +354,15 @@ $(document).ready(function() {
 					focusOnSelect: true,
 					centerMode: false,
 					variableWidth: false,
+					responsive: [
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 1
+							}
+						}
+					],
 					onInit: function() {
 						setTimeout(function() {
 							sliderNav.slick('setPosition');
@@ -452,7 +461,14 @@ $(document).ready(function() {
 			$(this).addClass('active');
 			
 			$('.portfolio__tab-content').removeClass('active');
-			$(`.portfolio__tab-content[data-content="${tab}"]`).addClass('active');
+			var $activeTabContent = $(`.portfolio__tab-content[data-content="${tab}"]`).addClass('active');
+			
+			// Переинициализируем слайдер для активного таба
+			setTimeout(function() {
+				if (typeof window.initPortfolioSliderForTab === 'function') {
+					window.initPortfolioSliderForTab($activeTabContent);
+				}
+			}, 50);
 		});
 
 		// Табы внутри карточек
@@ -505,21 +521,13 @@ $(document).ready(function() {
 			slidesToScroll: 2,
 			arrows: false,
 			dots: true,
-			infinite: true,
+			infinite: false,
 			speed: 500,
 			appendDots: $dotsContainer,
 			customPaging: function(slider, i) {
 				return '<div class="slick-dot"></div>';
 			},
-			responsive: [
-				{
-					breakpoint: 992,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}
-			],
+			
 			onInit: function() {
 				setTimeout(function() {
 					$slider.slick('setPosition');
@@ -538,10 +546,318 @@ $(document).ready(function() {
 			$slider.slick('slickNext');
 		});
 
-		$(window).on('resize', function() {
+		$(window).on('resize.documents', function() {
 			$slider.slick('setPosition');
 		});
 	}
+
+	// Promotions Grid Slider (≤480px)
+	(function initPromotionsSlider() {
+		var $promotionsGrid = $('.promotions__grid');
+		if (!$promotionsGrid.length || typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var sliderInitialized = false;
+
+		function togglePromotionsSlider() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				if (!sliderInitialized) {
+					// Создаем контейнер для dots, если его нет
+					var $dotsContainer = $promotionsGrid.siblings('.promotions__dots');
+					if (!$dotsContainer.length) {
+						$dotsContainer = $('<div class="promotions__dots slider-dots-alt"></div>');
+						$promotionsGrid.after($dotsContainer);
+					}
+
+					$promotionsGrid.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						dots: true,
+						appendDots: $dotsContainer,
+						customPaging: function(slider, i) {
+							return '<div class="slick-dot"></div>';
+						},
+						centerMode: true,
+						centerPadding: '20px',
+						infinite: false,
+						speed: 400,
+						adaptiveHeight: false,
+						touchMove: true,
+						swipe: true,
+						onInit: function() {
+							setTimeout(function() {
+								$promotionsGrid.slick('setPosition');
+							}, 100);
+						},
+						onAfterChange: function() {
+							$promotionsGrid.slick('setPosition');
+						}
+					});
+					sliderInitialized = true;
+				}
+			} else if (sliderInitialized) {
+				$promotionsGrid.slick('unslick');
+				sliderInitialized = false;
+				// Удаляем контейнер dots при отключении слайдера
+				$promotionsGrid.siblings('.promotions__dots').remove();
+			}
+		}
+
+		togglePromotionsSlider();
+		$(window).on('resize.promotions orientationchange.promotions', function() {
+			togglePromotionsSlider();
+			// Пересчитываем позицию слайдера после изменения размера
+			if (sliderInitialized && $promotionsGrid.hasClass('slick-initialized')) {
+				setTimeout(function() {
+					$promotionsGrid.slick('setPosition');
+				}, 100);
+			}
+		});
+	})();
+
+	// Doctors Grid Slider (≤480px)
+	(function initDoctorsSlider() {
+		var $doctorsGrid = $('.doctors__grid');
+		if (!$doctorsGrid.length || typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var sliderInitialized = false;
+
+		function toggleDoctorsSlider() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				if (!sliderInitialized) {
+					// Создаем контейнер для dots, если его нет
+					var $dotsContainer = $doctorsGrid.siblings('.doctors__dots');
+					if (!$dotsContainer.length) {
+						$dotsContainer = $('<div class="doctors__dots slider-dots-alt"></div>');
+						$doctorsGrid.after($dotsContainer);
+					}
+
+					$doctorsGrid.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						dots: true,
+						appendDots: $dotsContainer,
+						customPaging: function(slider, i) {
+							return '<div class="slick-dot"></div>';
+						},
+						centerMode: true,
+						centerPadding: '20px',
+						infinite: false,
+						speed: 400,
+						adaptiveHeight: false,
+						touchMove: true,
+						swipe: true,
+						onInit: function() {
+							setTimeout(function() {
+								$doctorsGrid.slick('setPosition');
+							}, 100);
+						},
+						onAfterChange: function() {
+							$doctorsGrid.slick('setPosition');
+						}
+					});
+					sliderInitialized = true;
+				}
+			} else if (sliderInitialized) {
+				$doctorsGrid.slick('unslick');
+				sliderInitialized = false;
+				// Удаляем контейнер dots при отключении слайдера
+				$doctorsGrid.siblings('.doctors__dots').remove();
+			}
+		}
+
+		toggleDoctorsSlider();
+		$(window).on('resize.doctors orientationchange.doctors', function() {
+			toggleDoctorsSlider();
+			// Пересчитываем позицию слайдера после изменения размера
+			if (sliderInitialized && $doctorsGrid.hasClass('slick-initialized')) {
+				setTimeout(function() {
+					$doctorsGrid.slick('setPosition');
+				}, 100);
+			}
+		});
+	})();
+
+	// Portfolio Slider (≤480px)
+	(function initPortfolioSlider() {
+		if (typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var slidersInitialized = {};
+
+		// Функция инициализации слайдера для конкретного таба
+		function initPortfolioSliderForTab($tabContent) {
+			if (!$tabContent || !$tabContent.length) {
+				return;
+			}
+
+			var tabId = $tabContent.data('content');
+			var $portfolioSliderRow = $tabContent.find('.portfolio__slider .row');
+			
+			if (!$portfolioSliderRow.length) {
+				return;
+			}
+
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				// Если слайдер уже инициализирован для этого таба, сначала уничтожаем его
+				if (slidersInitialized[tabId] && $portfolioSliderRow.hasClass('slick-initialized')) {
+					$portfolioSliderRow.slick('unslick');
+					$tabContent.find('.portfolio__slider-dots').remove();
+				}
+
+				// Создаем контейнер для dots внутри tab-content
+				var $dotsContainer = $tabContent.find('.portfolio__slider-dots');
+				if (!$dotsContainer.length) {
+					$dotsContainer = $('<div class="portfolio__slider-dots slider-dots-alt"></div>');
+					$portfolioSliderRow.after($dotsContainer);
+				}
+
+				$portfolioSliderRow.slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+					appendDots: $dotsContainer,
+					customPaging: function(slider, i) {
+						return '<div class="slick-dot"></div>';
+					},
+					centerMode: true,
+					centerPadding: '20px',
+					infinite: false,
+					speed: 400,
+					adaptiveHeight: false,
+					touchMove: true,
+					swipe: true,
+					onInit: function() {
+						setTimeout(function() {
+							$portfolioSliderRow.slick('setPosition');
+						}, 100);
+					},
+					onAfterChange: function() {
+						$portfolioSliderRow.slick('setPosition');
+					}
+				});
+				slidersInitialized[tabId] = true;
+			} else {
+				// Если ширина больше 480px, уничтожаем слайдер если он был инициализирован
+				if (slidersInitialized[tabId] && $portfolioSliderRow.hasClass('slick-initialized')) {
+					$portfolioSliderRow.slick('unslick');
+					$tabContent.find('.portfolio__slider-dots').remove();
+					delete slidersInitialized[tabId];
+				}
+			}
+		}
+
+		// Экспортируем функцию для использования в обработчике табов
+		window.initPortfolioSliderForTab = initPortfolioSliderForTab;
+
+		// Инициализация для всех активных табов при загрузке
+		function initAllActiveTabs() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				$('.portfolio__tab-content.active').each(function() {
+					initPortfolioSliderForTab($(this));
+				});
+			}
+		}
+
+		initAllActiveTabs();
+
+		// Обработчик изменения размера окна
+		$(window).on('resize.portfolio orientationchange.portfolio', function() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				// Инициализируем слайдеры для активных табов
+				$('.portfolio__tab-content.active').each(function() {
+					initPortfolioSliderForTab($(this));
+				});
+			} else {
+				// Уничтожаем все слайдеры если ширина больше 480px
+				$('.portfolio__slider .row.slick-initialized').each(function() {
+					$(this).slick('unslick');
+				});
+				$('.portfolio__slider-dots').remove();
+				slidersInitialized = {};
+			}
+		});
+	})();
+
+	// Advantages Grid Slider (≤480px) - 2 слайда вертикально
+	(function initAdvantagesSlider() {
+		var $advantagesGrid = $('.advantages__grid');
+		if (!$advantagesGrid.length || typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var sliderInitialized = false;
+
+		function toggleAdvantagesSlider() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				if (!sliderInitialized) {
+					// Создаем контейнер для dots, если его нет
+					var $dotsContainer = $advantagesGrid.siblings('.advantages__dots');
+					if (!$dotsContainer.length) {
+						$dotsContainer = $('<div class="advantages__dots slider-dots-alt"></div>');
+						$advantagesGrid.after($dotsContainer);
+					}
+
+					$advantagesGrid.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						rows: 2,
+						slidesPerRow: 1,
+						arrows: false,
+						dots: true,
+						appendDots: $dotsContainer,
+						customPaging: function(slider, i) {
+							return '<div class="slick-dot"></div>';
+						},
+						infinite: false,
+						speed: 400,
+						adaptiveHeight: false,
+						touchMove: true,
+						swipe: true,
+						vertical: false,
+						onInit: function() {
+							setTimeout(function() {
+								$advantagesGrid.slick('setPosition');
+							}, 100);
+						},
+						onAfterChange: function() {
+							$advantagesGrid.slick('setPosition');
+						}
+					});
+					sliderInitialized = true;
+				}
+			} else if (sliderInitialized) {
+				$advantagesGrid.slick('unslick');
+				sliderInitialized = false;
+				// Удаляем контейнер dots при отключении слайдера
+				$advantagesGrid.siblings('.advantages__dots').remove();
+			}
+		}
+
+		toggleAdvantagesSlider();
+		$(window).on('resize.advantages orientationchange.advantages', function() {
+			toggleAdvantagesSlider();
+			// Пересчитываем позицию слайдера после изменения размера
+			if (sliderInitialized && $advantagesGrid.hasClass('slick-initialized')) {
+				setTimeout(function() {
+					$advantagesGrid.slick('setPosition');
+				}, 100);
+			}
+		});
+	})();
 
 	// FAQ Accordion
 	$('.faq__question').on('click', function() {
@@ -604,6 +920,188 @@ $(document).ready(function() {
 		} catch (e) {
 			// fail silently
 		}
+	}
+
+	// Service Tabs Slider
+	if ($('.service-tabs').length) {
+		var serviceTabsCurrentActiveSlider = null;
+		var serviceTabsSlidersInitialized = {};
+
+		// Функция получения настроек слайдера в зависимости от ширины экрана
+		function getServiceTabsSliderSettings() {
+			var windowWidth = $(window).width();
+			var slidesToShow = 4; // По умолчанию 4 карточки на десктопе
+			if (windowWidth <= 480) {
+				slidesToShow = 1;
+			} else if (windowWidth <= 768) {
+				slidesToShow = 2;
+			} else if (windowWidth <= 992) {
+				slidesToShow = 3;
+			}
+			return {
+				slidesToShow: slidesToShow,
+				slidesToScroll: 1,
+				arrows: false,
+				dots: windowWidth <= 480,
+				infinite: false,
+				speed: 300,
+				adaptiveHeight: false,
+				swipe: true,
+				touchMove: true,
+				onInit: function() {
+					var $this = $(this);
+					setTimeout(function() {
+						$this.slick('setPosition');
+					}, 100);
+				},
+				onAfterChange: function() {
+					var $this = $(this);
+					setTimeout(function() {
+						$this.slick('setPosition');
+					}, 10);
+				}
+			};
+		}
+
+		// Функция уничтожения слайдера
+		function destroyServiceTabsSlider($slider) {
+			if ($slider.length && $slider.hasClass('slick-initialized')) {
+				$slider.slick('unslick');
+			}
+		}
+
+		// Функция инициализации слайдера для конкретного таба
+		function initServiceTabsSliderForTab($tabContent) {
+			var tabIndex = $tabContent.data('content');
+			var $slider = $tabContent.find('.service-tabs__slider');
+			var $dotsContainer = $('.service-tabs__dots');
+
+			if (!$slider.length) {
+				return null;
+			}
+
+			// Если слайдер уже инициализирован, сначала уничтожаем его
+			if ($slider.hasClass('slick-initialized')) {
+				destroyServiceTabsSlider($slider);
+			}
+
+			// Инициализация Slick Slider
+			var sliderSettings = getServiceTabsSliderSettings();
+			if (sliderSettings.dots && $dotsContainer.length) {
+				sliderSettings.appendDots = $dotsContainer;
+				sliderSettings.customPaging = function(slider, i) {
+					return '<button type="button"></button>';
+				};
+			}
+			$slider.slick(sliderSettings);
+			serviceTabsSlidersInitialized[tabIndex] = true;
+
+			return $slider;
+		}
+
+		// Функция переключения табов
+		function switchServiceTab(tabIndex) {
+			// Уничтожаем текущий активный слайдер
+			if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length) {
+				destroyServiceTabsSlider(serviceTabsCurrentActiveSlider);
+				serviceTabsCurrentActiveSlider = null;
+			}
+
+			// Убираем активный класс со всех табов и контентов
+			$('.service-tabs__tab').removeClass('active');
+			$('.service-tabs__tab-content').removeClass('active');
+
+			// Добавляем активный класс к выбранному табу и контенту
+			$('.service-tabs__tab[data-tab="' + tabIndex + '"]').addClass('active');
+			var $activeTabContent = $('.service-tabs__tab-content[data-content="' + tabIndex + '"]').addClass('active');
+
+			// Небольшая задержка для применения стилей
+			setTimeout(function() {
+				// Инициализируем слайдер для активного таба
+				serviceTabsCurrentActiveSlider = initServiceTabsSliderForTab($activeTabContent);
+
+				// Пересчитываем позицию слайдера после переключения таба
+				if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length) {
+					if (serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+						setTimeout(function() {
+							serviceTabsCurrentActiveSlider.slick('setPosition');
+						}, 100);
+					} else {
+						// Ждем инициализации и пересчитываем
+						serviceTabsCurrentActiveSlider.on('init', function() {
+							var $this = $(this);
+							setTimeout(function() {
+								$this.slick('setPosition');
+							}, 100);
+						});
+					}
+				}
+			}, 100);
+		}
+
+		// Инициализация слайдера для первого таба
+		var $firstTabContent = $('.service-tabs__tab-content.active');
+		if ($firstTabContent.length) {
+			setTimeout(function() {
+				serviceTabsCurrentActiveSlider = initServiceTabsSliderForTab($firstTabContent);
+				// Пересчитываем позицию слайдера после инициализации
+				if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length) {
+					if (serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+						setTimeout(function() {
+							serviceTabsCurrentActiveSlider.slick('setPosition');
+						}, 100);
+					} else {
+						// Ждем инициализации и пересчитываем
+						serviceTabsCurrentActiveSlider.on('init', function() {
+							setTimeout(function() {
+								serviceTabsCurrentActiveSlider.slick('setPosition');
+							}, 100);
+						});
+					}
+				}
+			}, 150);
+		}
+
+		// Переключение табов
+		$('.service-tabs__tab').on('click', function() {
+			var tabIndex = parseInt($(this).data('tab'));
+			switchServiceTab(tabIndex);
+		});
+
+		// Обработка кнопок навигации
+		$('.service-tabs__nav--prev').on('click', function() {
+			if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length && serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+				serviceTabsCurrentActiveSlider.slick('slickPrev');
+			}
+		});
+
+		$('.service-tabs__nav--next').on('click', function() {
+			if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length && serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+				serviceTabsCurrentActiveSlider.slick('slickNext');
+			}
+		});
+
+		// Пересчет ширины слайдера при изменении размера окна
+		$(window).on('resize.serviceTabs', function() {
+			if (serviceTabsCurrentActiveSlider && serviceTabsCurrentActiveSlider.length && serviceTabsCurrentActiveSlider.hasClass('slick-initialized')) {
+				var windowWidth = $(window).width();
+				var slidesToShow = 4; // По умолчанию 4 карточки на десктопе
+				if (windowWidth <= 480) {
+					slidesToShow = 1;
+				} else if (windowWidth <= 768) {
+					slidesToShow = 2;
+				} else if (windowWidth <= 992) {
+					slidesToShow = 3;
+				}
+				var $dotsContainer = $('.service-tabs__dots');
+				serviceTabsCurrentActiveSlider.slick('slickSetOption', 'slidesToShow', slidesToShow, true);
+				serviceTabsCurrentActiveSlider.slick('slickSetOption', 'dots', windowWidth <= 480, true);
+				if (windowWidth <= 480 && $dotsContainer.length) {
+					serviceTabsCurrentActiveSlider.slick('slickSetOption', 'appendDots', $dotsContainer, true);
+				}
+				serviceTabsCurrentActiveSlider.slick('setPosition');
+			}
+		});
 	}
 
 });
