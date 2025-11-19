@@ -1112,50 +1112,51 @@ $(document).ready(function() {
 			}
 		});
 	}
+	/* if ($(window).width() > 980) {
+		var mh = 0;
+		$(".equipment__item-text").each(function () {
+			var h_block = parseInt($(this).height());
+			if(h_block > mh) {
+				mh = h_block;
+			};
+		});
+		$(".equipment__item-text").height(mh);
 
-	var mh = 0;
-   $(".equipment__item-text").each(function () {
-       var h_block = parseInt($(this).height());
-       if(h_block > mh) {
-          mh = h_block;
-       };
-   });
-   $(".equipment__item-text").height(mh);
+		var mh2 = 0;
+		$(".interior-reviews__tabs .tab-item span").each(function () {
+			var h_block2 = parseInt($(this).height());
+			if(h_block2 > mh2) {
+				mh2 = h_block2;
+			};
+		});
+		$(".interior-reviews__tabs .tab-item span").height(mh2);
 
-   var mh2 = 0;
-   $(".interior-reviews__tabs .tab-item span").each(function () {
-       var h_block2 = parseInt($(this).height());
-       if(h_block2 > mh2) {
-          mh2 = h_block2;
-       };
-   });
-   $(".interior-reviews__tabs .tab-item span").height(mh2);
+		var mh3 = 0;
+		$(".portfolio__tabs .tab-item span").each(function () {
+			var h_block3 = parseInt($(this).height());
+			if(h_block3 > mh3) {
+				mh3 = h_block3;
+			};
+		});
+		$(".portfolio__tabs .tab-item span").height(mh3);
 
-   var mh3 = 0;
-   $(".portfolio__tabs .tab-item span").each(function () {
-       var h_block3 = parseInt($(this).height());
-       if(h_block3 > mh3) {
-          mh3 = h_block3;
-       };
-   });
-   $(".portfolio__tabs .tab-item span").height(mh3);
+		var mh4 = 0;
+		$(".portfolio__card-tabs .tab-item span").each(function () {
+			var h_block4 = parseInt($(this).height());
+			if(h_block4 > mh4) {
+				mh4 = h_block4;
+			};
+		});
+		$(".portfolio__card-tabs .tab-item span").height(mh4);
 
-   var mh4 = 0;
-   $(".portfolio__card-tabs .tab-item span").each(function () {
-       var h_block4 = parseInt($(this).height());
-       if(h_block4 > mh4) {
-          mh4 = h_block4;
-       };
-   });
-   $(".portfolio__card-tabs .tab-item span").height(mh4);
-
-   var mh5 = 0;
-   $(".service-tabs__tabs .tab-item span").each(function () {
-       var h_block5 = parseInt($(this).height());
-       if(h_block5 > mh5) {
-          mh5 = h_block5;
-       };
-   });
-   $(".service-tabs__tabs .tab-item span").height(mh5);
+		var mh5 = 0;
+		$(".service-tabs__tabs .tab-item span").each(function () {
+			var h_block5 = parseInt($(this).height());
+			if(h_block5 > mh5) {
+				mh5 = h_block5;
+			};
+		});
+		$(".service-tabs__tabs .tab-item span").height(mh5);
+	} */
 });
 
