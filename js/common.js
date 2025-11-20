@@ -1411,7 +1411,10 @@ $(document).ready(function() {
 			slidesToScroll: 1,
 			arrows: false,
 			dots: true,
-			appendDots: $('.doctor-video-reviews__dots'),
+			appendDots: $('.doctor-video-reviews .documents__dots'),
+			customPaging: function(slider, i) {
+				return '<button type="button"></button>';
+			},
 			autoplay: false,
 			infinite: false,
 			responsive: [
@@ -1446,11 +1449,11 @@ $(document).ready(function() {
 			]
 		});
 
-		$('.doctor-video-reviews__nav-prev').on('click', function() {
+		$('.doctor-video-reviews .documents__nav .doctor-video-reviews__nav-prev').on('click', function() {
 			$('.doctor-video-reviews__slider').slick('slickPrev');
 		});
 
-		$('.doctor-video-reviews__nav-next').on('click', function() {
+		$('.doctor-video-reviews .documents__nav .doctor-video-reviews__nav-next').on('click', function() {
 			$('.doctor-video-reviews__slider').slick('slickNext');
 		});
 	}

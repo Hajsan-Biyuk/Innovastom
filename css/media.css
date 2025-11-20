@@ -3663,19 +3663,6 @@
     .doctor-video-reviews__slider {
         margin-bottom: 30px;
     }
-    .doctor-video-reviews__nav {
-        gap: 20px;
-    }
-    .doctor-video-reviews__nav-prev,
-    .doctor-video-reviews__nav-next {
-        width: 40px;
-        height: 40px;
-    }
-    .doctor-video-reviews__nav-prev img,
-    .doctor-video-reviews__nav-next img {
-        width: 16px;
-        height: 16px;
-    }
 }
 
 @media only screen and (max-width : 768px) {
@@ -3769,9 +3756,6 @@
     }
     .doctor-video-reviews__slider {
         margin-bottom: 35px;
-    }
-    .doctor-video-reviews__nav {
-        gap: 30px;
     }
 }
 

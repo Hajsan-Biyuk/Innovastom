@@ -4666,76 +4666,8 @@ form .btn-main:hover {
 .doctor-video-reviews__slider .video-reviews__review-item {
 	padding: 0 15px;
 }
-.doctor-video-reviews__nav {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 40px;
-}
-.doctor-video-reviews__nav-prev,
-.doctor-video-reviews__nav-next {
-	width: 48px;
-	height: 48px;
-	background: #FFFFFF;
-	border: 1px solid #E8E8E8;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	transition: all 0.3s ease;
-}
-.doctor-video-reviews__nav-prev:hover,
-.doctor-video-reviews__nav-next:hover {
-	background: #C5A780;
-	border-color: #C5A780;
-}
-.doctor-video-reviews__nav-prev:hover img,
-.doctor-video-reviews__nav-next:hover img {
-	filter: brightness(0) invert(1);
-}
-.doctor-video-reviews__nav-prev img,
-.doctor-video-reviews__nav-next img {
-	width: 20px;
-	height: 20px;
-	transition: all 0.3s ease;
-}
-.doctor-video-reviews__dots {
-	display: flex;
-	gap: 8px;
-	align-items: center;
-}
-.doctor-video-reviews__dots .slick-dots {
-	display: flex !important;
-	gap: 8px;
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-.doctor-video-reviews__dots .slick-dots li {
-	width: 8px;
-	height: 8px;
-	margin: 0;
-	padding: 0;
-}
-.doctor-video-reviews__dots .slick-dots li button {
-	width: 8px;
-	height: 8px;
-	padding: 0;
-	border-radius: 50%;
-	background: #C5A780;
-	border: none;
-	cursor: pointer;
-	font-size: 0;
-	opacity: 0.5;
-	transition: all 0.3s ease;
-}
-.doctor-video-reviews__dots .slick-dots li button:hover {
-	opacity: 0.8;
-}
-.doctor-video-reviews__dots .slick-dots li.slick-active button {
-	opacity: 1;
-	background: #231F20;
+.doctor-video-reviews .documents__nav {
+	margin-top: 0;
 }
 
 /* Footer */
