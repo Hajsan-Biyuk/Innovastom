@@ -2374,7 +2374,7 @@
         width: 48px;
         height: 48px;
         bottom: 12px;
-        right: 12px;
+        left: 12px;
     }
     .video-reviews__review-play img {
         width: 20px;
@@ -3394,7 +3394,8 @@
         height: 20px;
     }
     .video-reviews__review-item {
-        padding: 0 5px;
+        padding: 8px;
+        margin: 0 3px;
     }
     .video-reviews__review-image {
         margin-bottom: 12px;
@@ -3403,7 +3404,7 @@
         width: 40px;
         height: 40px;
         bottom: 10px;
-        right: 10px;
+        left: 10px;
     }
     .video-reviews__review-play img {
         width: 16px;
