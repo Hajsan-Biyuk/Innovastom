@@ -560,6 +560,69 @@ $(document).ready(function() {
 		});
 	}
 
+	// Doctors Certificates Slider
+	if ($('.doctors-certificates__slider').length) {
+		const $slider = $('.doctors-certificates__slider');
+		const $dotsContainer = $('.doctors-certificates__slider-wrapper .documents__dots');
+		
+		$slider.slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: true,
+			infinite: false,
+			speed: 500,
+			appendDots: $dotsContainer,
+			customPaging: function(slider, i) {
+				return '<button type="button"></button>';
+			},
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 481,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			],
+			
+			onInit: function() {
+				setTimeout(function() {
+					$slider.slick('setPosition');
+				}, 100);
+			},
+			onAfterChange: function() {
+				$slider.slick('setPosition');
+			}
+		});
+		
+		$('.doctors-certificates__slider-wrapper .documents__nav-prev').on('click', function() {
+			$slider.slick('slickPrev');
+		});
+		
+		$('.doctors-certificates__slider-wrapper .documents__nav-next').on('click', function() {
+			$slider.slick('slickNext');
+		});
+
+		$(window).on('resize.doctorsCertificates', function() {
+			$slider.slick('setPosition');
+		});
+	}
+
 	// Promotions Grid Slider (≤480px)
 	(function initPromotionsSlider() {
 		var $promotionsGrid = $('.promotions__grid');
@@ -863,6 +926,114 @@ $(document).ready(function() {
 			if (sliderInitialized && $advantagesGrid.hasClass('slick-initialized')) {
 				setTimeout(function() {
 					$advantagesGrid.slick('setPosition');
+				}, 100);
+			}
+		});
+	})();
+
+	// Service Stages Slider (≤480px)
+	(function initServiceStagesSlider() {
+		var $serviceStagesWrapper = $('.service-stages__wrapper');
+		if (!$serviceStagesWrapper.length || typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var sliderInitialized = false;
+
+		function toggleServiceStagesSlider() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				if (!sliderInitialized) {
+					$serviceStagesWrapper.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						dots: false,
+						centerMode: true,
+						centerPadding: '20px',
+						infinite: false,
+						speed: 400,
+						adaptiveHeight: false,
+						touchMove: true,
+						swipe: true,
+						onInit: function() {
+							setTimeout(function() {
+								$serviceStagesWrapper.slick('setPosition');
+							}, 100);
+						},
+						onAfterChange: function() {
+							$serviceStagesWrapper.slick('setPosition');
+						}
+					});
+					sliderInitialized = true;
+				}
+			} else if (sliderInitialized) {
+				$serviceStagesWrapper.slick('unslick');
+				sliderInitialized = false;
+			}
+		}
+
+		toggleServiceStagesSlider();
+		$(window).on('resize.serviceStages orientationchange.serviceStages', function() {
+			toggleServiceStagesSlider();
+			// Пересчитываем позицию слайдера после изменения размера
+			if (sliderInitialized && $serviceStagesWrapper.hasClass('slick-initialized')) {
+				setTimeout(function() {
+					$serviceStagesWrapper.slick('setPosition');
+				}, 100);
+			}
+		});
+	})();
+
+	// Service Comparison Slider (≤480px)
+	(function initServiceComparisonSlider() {
+		var $serviceComparisonWrapper = $('.service-comparison__wrapper');
+		if (!$serviceComparisonWrapper.length || typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var sliderInitialized = false;
+
+		function toggleServiceComparisonSlider() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				if (!sliderInitialized) {
+					$serviceComparisonWrapper.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						arrows: false,
+						dots: false,
+						centerMode: true,
+						centerPadding: '20px',
+						infinite: false,
+						speed: 400,
+						adaptiveHeight: false,
+						touchMove: true,
+						swipe: true,
+						onInit: function() {
+							setTimeout(function() {
+								$serviceComparisonWrapper.slick('setPosition');
+							}, 100);
+						},
+						onAfterChange: function() {
+							$serviceComparisonWrapper.slick('setPosition');
+						}
+					});
+					sliderInitialized = true;
+				}
+			} else if (sliderInitialized) {
+				$serviceComparisonWrapper.slick('unslick');
+				sliderInitialized = false;
+			}
+		}
+
+		toggleServiceComparisonSlider();
+		$(window).on('resize.serviceComparison orientationchange.serviceComparison', function() {
+			toggleServiceComparisonSlider();
+			// Пересчитываем позицию слайдера после изменения размера
+			if (sliderInitialized && $serviceComparisonWrapper.hasClass('slick-initialized')) {
+				setTimeout(function() {
+					$serviceComparisonWrapper.slick('setPosition');
 				}, 100);
 			}
 		});

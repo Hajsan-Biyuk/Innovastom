@@ -2477,7 +2477,8 @@
     .interior-reviews__divider,
     .advantages__top-card-badge,
     .advantages__top-card-image,
-    .portfolio__image {
+    .portfolio__image,
+    .service-video {
         display: none;
     }
     .service-card__title,
@@ -3274,6 +3275,68 @@
         font-size: 36px;
     }
     
+    /* Service Stages Slider */
+    .service-stages__wrapper {
+        margin: 0 !important;
+    }
+    
+    .service-stages__wrapper.slick-initialized {
+        display: block;
+    }
+    
+    .service-stages__wrapper.slick-initialized .slick-slide {
+        padding: 0 10px;
+        margin: 0;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+    
+    .service-stages__wrapper.slick-initialized .slick-slide.slick-center {
+        opacity: 1;
+    }
+    
+    .service-stages__wrapper.slick-initialized .col-lg-3 {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    
+    .service-stages__wrapper.slick-initialized .service-stages__item,
+    .service-stages__wrapper.slick-initialized .service-stages__price {
+        height: auto;
+    }
+    
+    /* Service Comparison Slider */
+    .service-comparison__wrapper {
+        margin: 0 !important;
+    }
+    
+    .service-comparison__wrapper.slick-initialized {
+        display: block;
+    }
+    
+    .service-comparison__wrapper.slick-initialized .slick-slide {
+        padding: 0 10px;
+        margin: 0;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+    
+    .service-comparison__wrapper.slick-initialized .slick-slide.slick-center {
+        opacity: 1;
+    }
+    
+    .service-comparison__wrapper.slick-initialized .col-lg-6 {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    
+    .service-comparison__wrapper.slick-initialized .service-comparison__card {
+        height: auto;
+        margin-bottom: 0;
+    }
+    
     /* Service Price */
     .service-price {
         padding: 50px 0;
@@ -3441,5 +3504,96 @@
     .video-reviews__reviews-dots .slick-dots li button {
         width: 6px;
         height: 6px;
+    }
+    .video-reviews__wrapper > .row > [class*="col-"] {
+        margin-bottom: 20px;
+    }
+    
+    /* Doctors Page */
+    .doctors-page {
+        padding: 100px 0 60px;
+    }
+    .doctors-page__title {
+        font-size: 24px;
+        margin: 0 0 30px;
+    }
+    .doctors-filter {
+        margin-bottom: 40px;
+    }
+    .doctors-filter__item {
+        margin-bottom: 16px;
+    }
+    .doctors-filter__select {
+        height: 48px;
+        font-size: 14px;
+        padding: 12px 16px;
+        background-position: right 16px center;
+        padding-right: 45px;
+    }
+    .doctors-filter__button-wrapper {
+        margin-bottom: 16px;
+    }
+    .doctors-filter__button {
+        height: 48px;
+        font-size: 12px;
+    }
+    .doctors-list {
+        margin-bottom: 40px;
+    }
+    .doctors-list .row > [class*="col-"] {
+        margin-bottom: 20px;
+    }
+    .doctors-load-more__btn {
+        min-width: 280px;
+        padding: 16px 32px;
+        font-size: 12px;
+    }
+    
+    /* Doctors Certificates */
+    .doctors-certificates {
+        padding: 50px 0;
+    }
+    .doctors-certificates__title {
+        font-size: 24px;
+        margin: 0 0 30px;
+    }
+    .doctors-certificates__slider-wrapper .documents__nav {
+        gap: 20px;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    /* Doctors Page */
+    .doctors-page {
+        padding: 120px 0 60px;
+    }
+    .doctors-page__title {
+        font-size: 28px;
+    }
+    
+    /* Doctors Certificates */
+    .doctors-certificates__title {
+        font-size: 28px;
+        margin: 0 0 40px;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    /* Doctors Page */
+    .doctors-page {
+        padding: 150px 0 70px;
+    }
+    .doctors-page__title {
+        font-size: 36px;
+    }
+    
+    /* Doctors Certificates */
+    .doctors-certificates {
+        padding: 60px 0;
+    }
+    .doctors-certificates__title {
+        font-size: 32px;
+        margin: 0 0 50px;
     }
 }

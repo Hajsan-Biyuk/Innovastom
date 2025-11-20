@@ -4243,6 +4243,173 @@ form .btn-main:hover {
 	margin-bottom: 40px;
 }
 
+/* Doctors Page */
+.doctors-page {
+	padding: 228px 0 80px;
+	background: #FFFFFF;
+}
+.doctors-page__breadcrumbs {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 150%;
+	color: #858585;
+	margin-bottom: 16px;
+}
+.doctors-page__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 48px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 40px;
+}
+
+/* Doctors Filter */
+.doctors-filter {
+	margin-bottom: 60px;
+}
+.doctors-filter__item {
+	margin-bottom: 20px;
+}
+.doctors-filter__select {
+	width: 100%;
+	height: 56px;
+	background: #FFFFFF;
+	border: 1px solid #E8E8E8;
+	border-radius: 8px;
+	padding: 16px 20px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 150%;
+	color: #231F20;
+	cursor: pointer;
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23313638' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 20px center;
+	padding-right: 50px;
+	transition: all 0.3s ease;
+}
+.doctors-filter__select:hover {
+	border-color: #C5A780;
+}
+.doctors-filter__select:focus {
+	outline: none;
+	border-color: #C5A780;
+}
+.doctors-filter__select option {
+	padding: 10px;
+}
+.doctors-filter__button-wrapper {
+	margin-bottom: 20px;
+}
+.doctors-filter__button {
+	width: 100%;
+	height: 56px;
+	background: #C5A780;
+	border: none;
+	border-radius: 8px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 150%;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.doctors-filter__button:hover {
+	background: #B39670;
+}
+
+/* Doctors List */
+.doctors-list {
+	margin-bottom: 60px;
+}
+.doctors-list .row > [class*="col-"] {
+	margin-bottom: 30px;
+}
+.doctors-list .doctor-card {
+	height: 100%;
+	max-width: 100%;
+}
+
+/* Doctor Card Play Button */
+.doctor-card__play {
+	position: absolute;
+	bottom: 16px;
+	left: 16px;
+	width: 40px;
+	height: 40px;
+	background: rgba(49, 54, 56, 0.8);
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	z-index: 2;
+}
+.doctor-card__play:hover {
+	background: rgba(49, 54, 56, 1);
+	transform: scale(1.1);
+}
+.doctor-card__play svg {
+	width: 16px;
+	height: 16px;
+	margin-left: 2px;
+}
+
+/* Doctors Load More */
+.doctors-load-more {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.doctors-load-more__btn {
+	min-width: 320px;
+	padding: 18px 40px;
+}
+
+/* Doctors Certificates */
+.doctors-certificates {
+	padding: 80px 0;
+	background: #EBE4D9;
+}
+.doctors-certificates__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 38px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 60px;
+}
+.doctors-certificates__slider-wrapper {
+	position: relative;
+}
+.doctors-certificates__slider {
+	margin: 0 -15px;
+	padding: 10px 0px;
+    background: #fff;
+    border-radius: 10px;
+}
+.doctors-certificates__slide {
+	padding: 0 15px;
+	outline: none;
+}
+.doctors-certificates__slide img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.doctors-certificates__slider-wrapper .documents__nav {
+	margin-top: 40px;
+}
+
 /* Footer */
 .footer {
 	background-color: #4C4646;
@@ -4604,6 +4771,14 @@ form .btn-main:hover {
 	color: #FFFFFF;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
+}
+.service-comparison__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.service-comparison__wrapper > .col-lg-6 {
+	margin-bottom: 20px;
 }
 .service-comparison__card {
 	background: #FFFFFF;
@@ -5037,6 +5212,12 @@ form .btn-main:hover {
 }
 .service-stages__wrapper {
 	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.service-stages__wrapper > .col-lg-3 {
+	margin-bottom: 20px;
 }
 .service-stages__wrapper .row {
 	margin-bottom: 20px;
