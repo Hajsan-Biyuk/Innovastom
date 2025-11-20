@@ -4481,3 +4481,686 @@ form .btn-main:hover {
 .tabs-divider {
 	display: none !important;
 }
+
+/* Service Price Section */
+.service-price {
+	padding: 80px 0;
+	background-color: #FFFFFF;
+}
+.service-price__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 38px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 40px;
+}
+.service-price__table-wrapper {
+	overflow-x: auto;
+	margin-bottom: 40px;
+}
+.service-price__table {
+	width: 100%;
+	border-collapse: collapse;
+	background: #FFFFFF;
+}
+.service-price__table thead {
+	background: #F5F5F5;
+}
+.service-price__table thead th {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 140%;
+	font-weight: 600;
+	color: #231F20;
+	text-align: left;
+	padding: 20px 24px;
+	border-bottom: 1px solid #E8E8E8;
+}
+.service-price__table thead th:last-child {
+	text-align: right;
+}
+.service-price__table tbody tr {
+	border-bottom: 1px solid #E8E8E8;
+}
+.service-price__table tbody tr:last-child {
+	border-bottom: none;
+}
+.service-price__table tbody td {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #231F20;
+	padding: 24px;
+}
+.service-price__table tbody td:last-child {
+	text-align: right;
+	font-weight: 600;
+	white-space: nowrap;
+}
+.service-price__button-wrapper {
+	text-align: center;
+}
+.service-price__btn {
+	display: inline-block;
+	background: #C5A780;
+	border-radius: 8px;
+	padding: 18px 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 0.3s;
+	letter-spacing: 0.5px;
+}
+.service-price__btn:hover {
+	background: #B39670;
+	color: #FFFFFF;
+}
+
+/* Service Comparison Section */
+.service-comparison {
+	padding: 80px 0;
+	background-color: #EBE4D9;
+	position: relative;
+}
+.service-comparison__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 38px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 60px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #231F20;
+}
+.service-comparison__badge {
+    background: #C5A780;
+    border-radius: 12px 12px 0px 12px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+.service-comparison__badge-icon {
+	width: 32px;
+	height: 32px;
+	/* background: #FFFFFF;
+	border-radius: 50%;
+	padding: 6px; */
+}
+.service-comparison__badge span {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+.service-comparison__card {
+	background: #FFFFFF;
+	border-radius: 16px;
+	padding: 40px 32px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+.service-comparison__card-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 28px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 16px;
+	text-transform: uppercase;
+}
+.service-comparison__card-subtitle {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #231F20;
+	margin: 0 0 24px;
+}
+.service-comparison__divider {
+	width: 100%;
+	height: 1px;
+	background: #E8E8E8;
+	margin: 0 0 24px;
+}
+.service-comparison__characteristics-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+.service-comparison__list {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 32px;
+}
+.service-comparison__list li {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #231F20;
+	margin-bottom: 12px;
+}
+.service-comparison__list li:last-child {
+	margin-bottom: 0;
+}
+.service-comparison__list li strong {
+	font-weight: 600;
+}
+.service-comparison__price-block {
+	background: #EBE4D9;
+	border-radius: 12px;
+	padding: 24px;
+	margin-top: auto;
+	text-align: center;
+}
+.service-comparison__price-label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 400;
+	color: #231F20;
+	margin: 0 0 12px;
+}
+.service-comparison__price-value {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 36px;
+	line-height: 1;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0;
+}
+.service-comparison__info {
+	background: #C5A780;
+	border-radius: 12px;
+	padding: 20px 24px;
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-top: 40px;
+	max-width: 800px;
+	margin-left: auto;
+}
+.service-comparison__info-icon {
+	width: 32px;
+	height: 32px;
+	flex-shrink: 0;
+	/* background: #FFFFFF;
+	border-radius: 50%;
+	padding: 6px; */
+}
+.service-comparison__info-text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #FFFFFF;
+	margin: 0;
+}
+.service-comparison__info-text strong {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+/* Service Equipment Section */
+.service-equipment {
+	padding: 80px 0;
+	background-color: #F1F0EA;
+}
+.service-equipment__wrapper {
+	background: #FFFFFF;
+	border-radius: 24px;
+    padding: 30px;
+}
+.service-equipment__content {
+	padding-right: 40px;
+}
+.service-equipment__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 32px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 32px;
+}
+.service-equipment__benefits {
+	margin-bottom: 24px;
+}
+.service-equipment__benefit-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	margin-bottom: 20px;
+}
+.service-equipment__benefit-item:last-child {
+	margin-bottom: 0;
+}
+.service-equipment__benefit-icon {
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.service-equipment__benefit-icon img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.service-equipment__benefit-text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #231F20;
+}
+.service-equipment__note {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #666666;
+	margin: 0;
+}
+.service-equipment__image-wrapper {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.service-equipment__image {
+	width: 100%;
+	border-radius: 16px;
+	overflow: hidden;
+	margin-bottom: 16px;
+}
+.service-equipment__image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	object-fit: cover;
+}
+.service-equipment__caption {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #666666;
+	text-align: center;
+	margin: 0;
+}
+
+/* Video Reviews Section */
+.video-reviews {
+	padding: 80px 0;
+}
+
+.video-reviews__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 32px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 32px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #231F20;
+}
+.video-reviews__video-block {
+	padding: 40px;
+	background: #F1F0EA;
+	border-radius: 24px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.video-reviews__video-slider {
+	margin-bottom: 32px;
+	flex: 1;
+}
+.video-reviews__video-item {
+	outline: none;
+}
+.video-reviews__video {
+	position: relative;
+	border-radius: 16px;
+	overflow: hidden;
+}
+.video-reviews__video img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.video-reviews__play-btn {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	width: 72px;
+	height: 72px;
+	background: rgba(255, 255, 255, 0.95);
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	padding: 0;
+}
+.video-reviews__play-btn:hover {
+	background: #FFFFFF;
+	transform: scale(1.05);
+}
+.video-reviews__play-btn img {
+	width: 28px;
+	height: 28px;
+}
+.video-reviews__reviews-block {
+	padding: 40px;
+	background: #F1F0EA;
+	border-radius: 24px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.video-reviews__reviews-slider {
+	margin-bottom: 32px;
+	flex: 1;
+}
+.video-reviews__review-item {
+	outline: none;
+	padding: 10px;
+	margin: 0 5px;
+	background: #fff;
+	border-radius: 10px;
+}
+.video-reviews__review-image {
+	position: relative;
+	border-radius: 16px;
+	overflow: hidden;
+	margin-bottom: 16px;
+	padding-bottom: 75%;
+	background: #E8E8E8;
+}
+.video-reviews__review-image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.video-reviews__review-play {
+	position: absolute;
+	bottom: 16px;
+	left: 16px;
+	width: 56px;
+	height: 56px;
+	background: transparent;
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	padding: 0;
+}
+.video-reviews__review-play:hover {
+	background: #FFFFFF;
+	transform: scale(1.05);
+}
+.video-reviews__review-play img {
+	width: 24px;
+	height: 24px;
+	position: unset;
+}
+.video-reviews__review-content {
+	padding: 16px;
+	background: #FFFFFF;
+	border-radius: 12px;
+}
+.video-reviews__review-complaint,
+.video-reviews__review-solution {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #231F20;
+	margin: 0 0 12px;
+}
+.video-reviews__review-solution {
+	margin: 0;
+}
+.video-reviews__review-complaint strong,
+.video-reviews__review-solution strong {
+	font-weight: 600;
+}
+.video-reviews__nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+}
+.video-reviews__nav .slider-nav {
+	width: 48px;
+	height: 48px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s;
+	flex-shrink: 0;
+	padding: 0;
+}
+.video-reviews__nav .slider-nav:hover {
+	background: #C5A780;
+	border-color: #C5A780;
+}
+.video-reviews__nav .slider-nav img {
+	width: 20px;
+	height: 20px;
+}
+.video-reviews__dots,
+.video-reviews__reviews-dots {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+.video-reviews__dots .slick-dots,
+.video-reviews__reviews-dots .slick-dots {
+	display: flex !important;
+	gap: 8px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.video-reviews__dots .slick-dots li,
+.video-reviews__reviews-dots .slick-dots li {
+	width: 8px;
+	height: 8px;
+	margin: 0;
+	padding: 0;
+}
+.video-reviews__dots .slick-dots li button,
+.video-reviews__reviews-dots .slick-dots li button {
+	width: 8px;
+	height: 8px;
+	padding: 0;
+	border-radius: 50%;
+	background: #C5A780;
+	opacity: 0.3;
+	border: none;
+	cursor: pointer;
+	font-size: 0;
+	transition: all 0.3s;
+}
+.video-reviews__dots .slick-dots li.slick-active button,
+.video-reviews__reviews-dots .slick-dots li.slick-active button {
+	opacity: 1;
+	background: #231F20;
+}
+
+/* Service Stages Section */
+.service-stages {
+	padding: 80px 0;
+	background-color: #FFFFFF;
+}
+.service-stages__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 38px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 60px;
+	border-bottom: 1px solid #231F20;
+	padding-bottom: 24px;
+}
+.service-stages__wrapper {
+	position: relative;
+}
+.service-stages__wrapper .row {
+	margin-bottom: 20px;
+}
+.service-stages__wrapper .row:last-child {
+	margin-bottom: 0;
+}
+.service-stages__item {
+	background: #FFFFFF;
+	border: 1px solid #E8E8E8;
+	border-radius: 16px;
+	padding: 10px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-bottom: 20px;
+}
+.service-stages__badge {
+	position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 500;
+    color: #C5A780;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+.service-stages__image {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+.service-stages__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.service-stages__item-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 140%;
+	font-weight: 600;
+	color: #231F20;
+	padding: 20px;
+	margin: 0;
+}
+@media (min-width: 992px) {
+	.service-stages__item--plus::after {
+		content: '+';
+		position: absolute;
+		right: -30px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-family: 'Montserrat', sans-serif;
+		font-size: 32px;
+		line-height: 1;
+		font-weight: 600;
+		color: #231F20;
+		z-index: 10;
+	}
+	.service-stages__price--equals::before {
+		content: '=';
+		position: absolute;
+		left: -30px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-family: 'Montserrat', sans-serif;
+		font-size: 36px;
+		line-height: 1;
+		font-weight: 600;
+		color: #231F20;
+		z-index: 10;
+	}
+}
+.service-stages__price {
+	background: #EBE4D9;
+	border-radius: 16px;
+	padding: 40px 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	min-height: 280px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.service-stages__price-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 30px;
+}
+.service-stages__price-label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: 400;
+	color: #231F20;
+	margin: 0 0 12px;
+}
+.service-stages__price-value {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 48px;
+	line-height: 1;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 16px;
+}
+.service-stages__price-installment {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #231F20;
+	margin: 0;
+}

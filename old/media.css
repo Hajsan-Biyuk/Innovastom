@@ -5,11 +5,8 @@
 }
 
 @media only screen and (max-width : 1600px) {
-    .container {
+.container {
         padding: 0 60px;
-    }
-    .service-video__wrapper {
-        padding: 32px 60px;
     }
     .header__wrapper {
         gap: 30px;
@@ -1349,24 +1346,6 @@
     .footer__phone {
         font-size: 18px;
     }
-    .service-video__video-block {
-        margin-left: 0 !important;
-    }
-    
-    /* Service Stages */
-    .service-stages {
-        padding: 60px 0;
-    }
-    .service-stages__title {
-        font-size: 28px;
-        margin: 0 0 40px;
-    }
-    .service-stages__image {
-        height: 180px;
-    }
-    .service-stages__item {
-        margin-bottom: 20px;
-    }
 }
 
 @media only screen and (max-width : 768px) {
@@ -2267,119 +2246,6 @@
     .footer__copyright {
         font-size: 13px;
     }
-    
-    /* Service Stages */
-    .service-stages {
-        padding: 50px 0;
-    }
-    .service-stages__title {
-        font-size: 26px;
-        margin: 0 0 36px;
-    }
-    .service-stages__image {
-        height: 200px;
-    }
-    .service-stages__price {
-        padding: 32px 24px;
-    }
-    .service-stages__price-title {
-        font-size: 22px;
-    }
-    .service-stages__price-value {
-        font-size: 40px;
-    }
-    
-    /* Service Price */
-    .service-price {
-        padding: 60px 0;
-    }
-    .service-price__title {
-        font-size: 28px;
-        margin: 0 0 36px;
-    }
-    .service-price__table thead th {
-        font-size: 15px;
-        padding: 18px 16px;
-    }
-    .service-price__table tbody td {
-        font-size: 15px;
-        padding: 20px 16px;
-    }
-    
-    /* Service Comparison */
-    .service-comparison {
-        padding: 60px 0;
-    }
-    .service-comparison__title {
-        font-size: 28px;
-        margin: 0 0 40px;
-        padding-bottom: 20px;
-    }
-    .service-comparison__badge {
-        top: 60px;
-        padding: 10px 20px;
-    }
-    .service-comparison__card {
-        padding: 32px 24px;
-    }
-    .service-comparison__card-title {
-        font-size: 24px;
-    }
-    .service-comparison__info {
-        margin-top: 30px;
-        padding: 18px 20px;
-    }
-    
-    /* Service Equipment */
-    .service-equipment {
-        padding: 60px 0;
-    }
-    .service-equipment__content {
-        padding-right: 20px;
-    }
-    .service-equipment__title {
-        font-size: 26px;
-        margin: 0 0 24px;
-    }
-    
-    /* Video Reviews */
-    .video-reviews {
-        padding: 60px 0;
-    }
-    .video-reviews__title {
-        font-size: 26px;
-        margin: 0 0 24px;
-        padding-bottom: 20px;
-    }
-    .video-reviews__video-block,
-    .video-reviews__reviews-block {
-        padding: 30px;
-        margin-bottom: 20px;
-    }
-    .video-reviews__video-slider,
-    .video-reviews__reviews-slider {
-        margin-bottom: 24px;
-    }
-    .video-reviews__play-btn {
-        width: 64px;
-        height: 64px;
-        bottom: 16px;
-        left: 16px;
-    }
-    .video-reviews__play-btn img {
-        width: 24px;
-        height: 24px;
-    }
-    .video-reviews__review-play {
-        width: 48px;
-        height: 48px;
-        bottom: 12px;
-        right: 12px;
-    }
-    .video-reviews__review-play img {
-        width: 20px;
-        height: 20px;
-    }
 }
 
 @media only screen and (max-width : 480px) {
@@ -2525,6 +2391,7 @@
     .documents__slide {
         height: 375px;
     }
+<<<<<<< HEAD
 
     /* Service Page */
     .service-page {
@@ -2555,116 +2422,6 @@
     }
     .service-page__doctor-description p {
         font-size: 16px;
-    }
-
-    /* Service Banner */
-    .service-banner {
-        padding: 150px 0 50px;
-    }
-    .service-banner__wrapper .row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .service-banner__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-banner__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-banner__content {
-        gap: 30px;
-    }
-    .service-banner__header {
-        padding: 12px 0 20px;
-    }
-    .service-banner__title {
-        font-size: 28px;
-    }
-    .service-banner__benefits {
-        gap: 20px;
-    }
-    .service-banner__benefit-item {
-        gap: 16px;
-    }
-    .service-banner__benefit-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-banner__benefit-text {
-        font-size: 16px;
-    }
-    .service-banner__btn {
-        width: 100%;
-        text-align: center;
-    }
-    .service-banner__image {
-        height: 300px;
-    }
-
-    /* Service Video */
-    .service-video__wrapper {
-        padding: 32px 60px;
-    }
-    .service-video__wrapper .row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .service-video__wrapper .row > [class*="col-"] {
-        margin-bottom: 40px;
-    }
-    .service-video__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-video__content {
-        max-width: 100%;
-        gap: 30px;
-    }
-    .service-video__title {
-        font-size: 22px;
-    }
-    .service-video__list {
-        gap: 30px;
-    }
-    .service-video__item {
-        gap: 20px;
-    }
-    .service-video__item-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-video__item-text {
-        font-size: 16px;
-    }
-    .service-video__video-block {
-        gap: 30px;
-        align-items: center;
-    }
-    .service-video__video-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .service-video__video-row > [class*="col-"]:first-child {
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
-    .service-video__play-btn {
-        width: 120px;
-        height: 120px;
-    }
-    .service-video__play-btn img {
-        width: 48px;
-        height: 48px;
-    }
-    .service-video__video {
-        width: 100%;
-        max-width: 488px;
-        height: auto;
-        aspect-ratio: 488 / 250;
-    }
-    .service-video__description {
-        font-size: 18px;
-        max-width: 100%;
-        text-align: center;
     }
 }
 
@@ -2738,50 +2495,6 @@
     }
     .service-page__doctor-description p {
         font-size: 16px;
-    }
-
-    /* Service Banner */
-    .service-banner {
-        padding: 150px 0 50px;
-    }
-    .service-banner__wrapper .row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .service-banner__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-banner__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-banner__content {
-        gap: 30px;
-    }
-    .service-banner__header {
-        padding: 12px 0 20px;
-    }
-    .service-banner__title {
-        font-size: 28px;
-    }
-    .service-banner__benefits {
-        gap: 20px;
-    }
-    .service-banner__benefit-item {
-        gap: 16px;
-    }
-    .service-banner__benefit-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-banner__benefit-text {
-        font-size: 16px;
-    }
-    .service-banner__btn {
-        width: 100%;
-        text-align: center;
-    }
-    .service-banner__image {
-        height: 300px;
     }
 
     /* Service Tabs */
@@ -2865,105 +2578,6 @@
     }
     .service-page__doctor-description p {
         font-size: 14px;
-    }
-
-    /* Service Banner */
-    .service-banner {
-        padding: 120px 0 40px;
-    }
-    .service-banner__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-banner__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-banner__breadcrumbs {
-        font-size: 12px;
-    }
-    .service-banner__header {
-        padding: 10px 0 16px;
-    }
-    .service-banner__title {
-        font-size: 24px;
-    }
-    .service-banner__benefits {
-        gap: 20px;
-    }
-    .service-banner__benefit-item {
-        gap: 16px;
-    }
-    .service-banner__benefit-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-banner__benefit-text {
-        font-size: 14px;
-    }
-    .service-banner__btn {
-        width: 100%;
-        text-align: center;
-        padding: 16px 20px;
-        font-size: 14px;
-    }
-    .service-banner__image {
-        height: 250px;
-    }
-
-    /* Service Video */
-    .service-video__wrapper {
-        padding: 32px 40px;
-    }
-    .service-video__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-video__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-video__content {
-        gap: 24px;
-    }
-    .service-video__title {
-        font-size: 20px;
-    }
-    .service-video__list {
-        gap: 24px;
-    }
-    .service-video__item {
-        gap: 16px;
-    }
-    .service-video__item-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-video__item-text {
-        font-size: 14px;
-    }
-    .service-video__video-block {
-        gap: 24px;
-    }
-    .service-video__video-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .service-video__video-row > [class*="col-"]:first-child {
-        margin-right: 0;
-        margin-bottom: 24px;
-    }
-    .service-video__play-btn {
-        width: 100px;
-        height: 100px;
-    }
-    .service-video__play-btn img {
-        width: 40px;
-        height: 40px;
-    }
-    .service-video__video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 488 / 250;
-    }
-    .service-video__description {
-        font-size: 16px;
     }
 
     /* Service Tabs */
@@ -3065,105 +2679,6 @@
         font-size: 13px;
     }
 
-    /* Service Banner */
-    .service-banner {
-        padding: 100px 0 30px;
-    }
-    .service-banner__wrapper .row > [class*="col-"] {
-        margin-bottom: 24px;
-    }
-    .service-banner__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-banner__breadcrumbs {
-        font-size: 12px;
-    }
-    .service-banner__header {
-        padding: 8px 0 12px;
-    }
-    .service-banner__title {
-        font-size: 22px;
-    }
-    .service-banner__benefits {
-        gap: 16px;
-    }
-    .service-banner__benefit-item {
-        gap: 12px;
-    }
-    .service-banner__benefit-icon {
-        width: 18px;
-        height: 18px;
-    }
-    .service-banner__benefit-text {
-        font-size: 13px;
-    }
-    .service-banner__btn {
-        width: 100%;
-        text-align: center;
-        padding: 14px 18px;
-        font-size: 12px;
-    }
-    .service-banner__image {
-        height: 200px;
-    }
-
-    /* Service Video */
-    .service-video__wrapper {
-        padding: 32px 15px;
-    }
-    .service-video__wrapper .row > [class*="col-"] {
-        margin-bottom: 24px;
-    }
-    .service-video__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-video__content {
-        gap: 20px;
-    }
-    .service-video__title {
-        font-size: 18px;
-    }
-    .service-video__list {
-        gap: 20px;
-    }
-    .service-video__item {
-        gap: 12px;
-    }
-    .service-video__item-icon {
-        width: 18px;
-        height: 18px;
-    }
-    .service-video__item-text {
-        font-size: 13px;
-    }
-    .service-video__video-block {
-        gap: 20px;
-    }
-    .service-video__video-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .service-video__video-row > [class*="col-"]:first-child {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    .service-video__play-btn {
-        width: 80px;
-        height: 80px;
-    }
-    .service-video__play-btn img {
-        width: 32px;
-        height: 32px;
-    }
-    .service-video__video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 488 / 250;
-    }
-    .service-video__description {
-        font-size: 14px;
-    }
-
     /* Service Tabs */
     .service-tabs {
         padding: 24px 15px 30px;
@@ -3190,20 +2705,11 @@
     .service-tabs__nav {
         display: none !important;
     }
-    .service-tabs__content {
-        flex-direction: column;
-        align-items: center;
+    .service-tabs__dots {
+        display: block;
     }
     .service-tabs__slider-wrapper {
         gap: 0;
-        width: 100%;
-        order: 1;
-    }
-    .service-tabs__dots {
-        display: block;
-        width: 100%;
-        margin-top: 20px;
-        order: 2;
     }
     .service-tabs__slider .slick-list {
         margin: 0;
@@ -3248,197 +2754,5 @@
         height: auto;
         font-size: 11px;
         width: 100%;
-    }
-    
-    /* Service Stages */
-    .service-stages__title {
-        font-size: 24px;
-        margin: 0 0 40px;
-    }
-    .service-stages__image {
-        height: 180px;
-    }
-    .service-stages__item-title {
-        font-size: 14px;
-        padding: 16px;
-    }
-    .service-stages__price {
-        padding: 30px 20px;
-        min-height: auto;
-    }
-    .service-stages__price-title {
-        font-size: 20px;
-        margin: 0 0 20px;
-    }
-    .service-stages__price-value {
-        font-size: 36px;
-    }
-    
-    /* Service Price */
-    .service-price {
-        padding: 50px 0;
-    }
-    .service-price__title {
-        font-size: 24px;
-        margin: 0 0 30px;
-    }
-    .service-price__table thead th {
-        font-size: 14px;
-        padding: 16px 12px;
-    }
-    .service-price__table tbody td {
-        font-size: 14px;
-        padding: 16px 12px;
-    }
-    .service-price__btn {
-        padding: 16px 24px;
-        font-size: 12px;
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    /* Service Comparison */
-    .service-comparison {
-        padding: 50px 0;
-    }
-    .service-comparison__title {
-        font-size: 24px;
-        margin: 0 0 30px;
-        padding-bottom: 16px;
-    }
-    .service-comparison__badge {
-        position: static;
-        margin: 0 0 30px;
-        border-radius: 12px;
-        padding: 12px 20px;
-    }
-    .service-comparison__badge span {
-        font-size: 11px;
-    }
-    .service-comparison__card {
-        padding: 24px 20px;
-    }
-    .service-comparison__card-title {
-        font-size: 20px;
-        margin: 0 0 12px;
-    }
-    .service-comparison__card-subtitle {
-        font-size: 13px;
-        margin: 0 0 20px;
-    }
-    .service-comparison__list li {
-        font-size: 14px;
-        margin-bottom: 10px;
-    }
-    .service-comparison__price-block {
-        padding: 20px;
-    }
-    .service-comparison__price-value {
-        font-size: 28px;
-    }
-    .service-comparison__info {
-        margin-top: 24px;
-        padding: 16px 20px;
-        flex-direction: column;
-        text-align: center;
-    }
-    .service-comparison__info-text {
-        font-size: 13px;
-    }
-    
-    /* Service Equipment */
-    .service-equipment {
-        padding: 50px 0;
-    }
-    .service-equipment__content {
-        padding-right: 0;
-        margin-bottom: 30px;
-    }
-    .service-equipment__title {
-        font-size: 22px;
-        margin: 0 0 20px;
-    }
-    .service-equipment__benefit-item {
-        margin-bottom: 16px;
-    }
-    .service-equipment__benefit-text {
-        font-size: 14px;
-    }
-    
-    /* Video Reviews */
-    .video-reviews {
-        padding: 40px 0;
-    }
-    .video-reviews__title {
-        font-size: 20px;
-        margin: 0 0 16px;
-        padding-bottom: 12px;
-    }
-    .video-reviews__video-block,
-    .video-reviews__reviews-block {
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-    .video-reviews__video-slider,
-    .video-reviews__reviews-slider {
-        margin-bottom: 20px;
-    }
-    .video-reviews__play-btn {
-        width: 56px;
-        height: 56px;
-        bottom: 12px;
-        left: 12px;
-    }
-    .video-reviews__play-btn img {
-        width: 20px;
-        height: 20px;
-    }
-    .video-reviews__review-item {
-        padding: 0 5px;
-    }
-    .video-reviews__review-image {
-        margin-bottom: 12px;
-    }
-    .video-reviews__review-play {
-        width: 40px;
-        height: 40px;
-        bottom: 10px;
-        right: 10px;
-    }
-    .video-reviews__review-play img {
-        width: 16px;
-        height: 16px;
-    }
-    .video-reviews__review-content {
-        padding: 12px;
-    }
-    .video-reviews__review-complaint,
-    .video-reviews__review-solution {
-        font-size: 12px;
-        margin: 0 0 8px;
-    }
-    .video-reviews__review-solution {
-        margin: 0;
-    }
-    .video-reviews__nav {
-        gap: 12px;
-    }
-    .video-reviews__nav .slider-nav {
-        width: 40px;
-        height: 40px;
-    }
-    .video-reviews__nav .slider-nav img {
-        width: 16px;
-        height: 16px;
-    }
-    .video-reviews__dots .slick-dots li,
-    .video-reviews__reviews-dots .slick-dots li {
-        width: 6px;
-        height: 6px;
-    }
-    .video-reviews__dots .slick-dots li button,
-    .video-reviews__reviews-dots .slick-dots li button {
-        width: 6px;
-        height: 6px;
     }
 }

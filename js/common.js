@@ -1158,5 +1158,61 @@ $(document).ready(function() {
 		});
 		$(".service-tabs__tabs .tab-item span").height(mh5);
 	} */
+
+	// Video Reviews Sliders
+	if ($('.video-reviews__video-slider').length) {
+		$('.video-reviews__video-slider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: true,
+			appendDots: $('.video-reviews__video-block .video-reviews__dots'),
+			autoplay: false,
+			adaptiveHeight: true
+		});
+
+		$('.video-reviews__nav-prev').on('click', function() {
+			$('.video-reviews__video-slider').slick('slickPrev');
+		});
+
+		$('.video-reviews__nav-next').on('click', function() {
+			$('.video-reviews__video-slider').slick('slickNext');
+		});
+	}
+
+	if ($('.video-reviews__reviews-slider').length) {
+		$('.video-reviews__reviews-slider').slick({
+			slidesToShow: 2,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: true,
+			appendDots: $('.video-reviews__reviews-block .video-reviews__reviews-dots'),
+			autoplay: false,
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+
+		$('.video-reviews__reviews-nav-prev').on('click', function() {
+			$('.video-reviews__reviews-slider').slick('slickPrev');
+		});
+
+		$('.video-reviews__reviews-nav-next').on('click', function() {
+			$('.video-reviews__reviews-slider').slick('slickNext');
+		});
+	}
 });
 
