@@ -1791,7 +1791,6 @@ form {
 	gap: 10px;
 	padding: 10px 0 24px;
 	width: 100%;
-	max-width: 1555.46px;
 	border-bottom: 1px solid #313638;
 }
 .promotions__title {
@@ -4408,6 +4407,335 @@ form .btn-main:hover {
 }
 .doctors-certificates__slider-wrapper .documents__nav {
 	margin-top: 40px;
+}
+
+/* Doctor Banner (Single Doctor Page) */
+.doctor-banner {
+	padding: 228px 0 80px;
+}
+.doctor-banner__breadcrumbs {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 140%;
+	color: #808080;
+	margin-bottom: 20px;
+}
+.doctor-banner__breadcrumbs a {
+	color: #808080;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+.doctor-banner__breadcrumbs a:hover {
+	color: #C5A780;
+}
+.doctor-banner__page-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 48px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 60px;
+}
+.doctor-banner__content {
+	background: #F1F0EA;
+	border-radius: 24px;
+	padding: 60px;
+}
+.doctor-banner__image-wrapper {
+	position: relative;
+	width: 100%;
+	border-radius: 16px;
+	overflow: hidden;
+}
+.doctor-banner__image {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.doctor-banner__play-btn {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	width: 64px;
+	height: 64px;
+    background: rgba(49, 54, 56, 0.8);
+	border: none;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	padding-left: 4px;
+}
+.doctor-banner__play-btn:hover {
+	background: rgba(49, 54, 56, 1);
+	transform: scale(1.05);
+}
+.doctor-banner__play-btn svg {
+	width: 24px;
+	height: 24px;
+}
+.doctor-banner__info {
+	padding-left: 40px;
+}
+.doctor-banner__name {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 38px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 30px;
+}
+.doctor-banner__details {
+	margin-bottom: 40px;
+}
+.doctor-banner__detail-item {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 160%;
+	color: #231F20;
+	margin: 0 0 16px;
+}
+.doctor-banner__detail-item:last-child {
+	margin-bottom: 0;
+}
+.doctor-banner__detail-item strong {
+	font-weight: 600;
+}
+.doctor-banner__education {
+	margin-bottom: 40px;
+}
+.doctor-banner__education-title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 140%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 20px;
+}
+.doctor-banner__education-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.doctor-banner__education-list li {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 160%;
+	color: #231F20;
+	margin-bottom: 16px;
+	padding-left: 24px;
+	position: relative;
+}
+.doctor-banner__education-list li:last-child {
+	margin-bottom: 0;
+}
+.doctor-banner__education-list li:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 10px;
+	width: 8px;
+	height: 8px;
+	background: #C5A780;
+	border-radius: 50%;
+}
+.doctor-banner__btn {
+	width: 100%;
+	max-width: 100%;
+	padding: 20px 30px;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* Doctor Qualifications (Tabs Section) */
+.doctor-qualifications {
+	padding: 0 0 80px;
+}
+.doctor-qualifications__tabs {
+	display: flex;
+	gap: 60px;
+	margin-bottom: 60px;
+	border-bottom: 2px solid #E0DDD5;
+}
+.doctor-qualifications__tab {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 140%;
+	font-weight: 400;
+	color: #231F20;
+	background: none;
+	border: none;
+	padding: 0 0 20px;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.3s ease;
+}
+.doctor-qualifications__tab:hover {
+	color: #C5A780;
+}
+.doctor-qualifications__tab.active {
+	font-weight: 600;
+}
+.doctor-qualifications__tab.active:after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: #231F20;
+}
+.doctor-qualifications__content {
+	position: relative;
+}
+.doctor-qualifications__tab-content {
+	display: none;
+	opacity: 0;
+	animation: fadeOut 0.3s ease;
+}
+.doctor-qualifications__tab-content.active {
+	display: block;
+	opacity: 1;
+	animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+}
+.qualification-item {
+	margin-bottom: 60px;
+}
+.qualification-item:last-child {
+	margin-bottom: 0;
+}
+.qualification-item__year {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 38px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 20px;
+}
+.qualification-item__text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 160%;
+	color: #231F20;
+	margin: 0;
+}
+
+/* Doctor Video Reviews Section */
+.doctor-video-reviews {
+	padding: 80px 0;
+	background: #F1F0EA;
+}
+.doctor-video-reviews__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 38px;
+	line-height: 130%;
+	font-weight: 600;
+	color: #231F20;
+	margin: 0 0 60px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #231F20;
+}
+.doctor-video-reviews__slider-wrapper {
+	position: relative;
+}
+.doctor-video-reviews__slider {
+	margin-bottom: 40px;
+}
+.doctor-video-reviews__slider .video-reviews__review-item {
+	padding: 0 15px;
+}
+.doctor-video-reviews__nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 40px;
+}
+.doctor-video-reviews__nav-prev,
+.doctor-video-reviews__nav-next {
+	width: 48px;
+	height: 48px;
+	background: #FFFFFF;
+	border: 1px solid #E8E8E8;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.doctor-video-reviews__nav-prev:hover,
+.doctor-video-reviews__nav-next:hover {
+	background: #C5A780;
+	border-color: #C5A780;
+}
+.doctor-video-reviews__nav-prev:hover img,
+.doctor-video-reviews__nav-next:hover img {
+	filter: brightness(0) invert(1);
+}
+.doctor-video-reviews__nav-prev img,
+.doctor-video-reviews__nav-next img {
+	width: 20px;
+	height: 20px;
+	transition: all 0.3s ease;
+}
+.doctor-video-reviews__dots {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+.doctor-video-reviews__dots .slick-dots {
+	display: flex !important;
+	gap: 8px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.doctor-video-reviews__dots .slick-dots li {
+	width: 8px;
+	height: 8px;
+	margin: 0;
+	padding: 0;
+}
+.doctor-video-reviews__dots .slick-dots li button {
+	width: 8px;
+	height: 8px;
+	padding: 0;
+	border-radius: 50%;
+	background: #C5A780;
+	border: none;
+	cursor: pointer;
+	font-size: 0;
+	opacity: 0.5;
+	transition: all 0.3s ease;
+}
+.doctor-video-reviews__dots .slick-dots li button:hover {
+	opacity: 0.8;
+}
+.doctor-video-reviews__dots .slick-dots li.slick-active button {
+	opacity: 1;
+	background: #231F20;
 }
 
 /* Footer */

@@ -1385,5 +1385,74 @@ $(document).ready(function() {
 			$('.video-reviews__reviews-slider').slick('slickNext');
 		});
 	}
+	
+	// Doctor Qualifications Tabs
+	if ($('.doctor-qualifications').length) {
+		$('.doctor-qualifications__tab').on('click', function() {
+			var $this = $(this);
+			var targetTab = $this.data('tab');
+			
+			// Удаляем активный класс у всех табов
+			$('.doctor-qualifications__tab').removeClass('active');
+			// Добавляем активный класс к текущему табу
+			$this.addClass('active');
+			
+			// Скрываем все контентные блоки
+			$('.doctor-qualifications__tab-content').removeClass('active');
+			// Показываем нужный контентный блок
+			$('.doctor-qualifications__tab-content[data-content="' + targetTab + '"]').addClass('active');
+		});
+	}
+	
+	// Doctor Video Reviews Slider
+	if ($('.doctor-video-reviews__slider').length) {
+		$('.doctor-video-reviews__slider').slick({
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			arrows: false,
+			dots: true,
+			appendDots: $('.doctor-video-reviews__dots'),
+			autoplay: false,
+			infinite: false,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+
+		$('.doctor-video-reviews__nav-prev').on('click', function() {
+			$('.doctor-video-reviews__slider').slick('slickPrev');
+		});
+
+		$('.doctor-video-reviews__nav-next').on('click', function() {
+			$('.doctor-video-reviews__slider').slick('slickNext');
+		});
+	}
 });
 
