@@ -646,7 +646,7 @@ form {
 	flex-direction: column;
 	gap: 22px;
 }
-.service-page__breadcrumbs {
+.breadcrumbs {
 	font-size: 14px;
 	line-height: 160%;
 	font-weight: 500;
@@ -654,7 +654,7 @@ form {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 }
-.service-page__title {
+.main-page-title {
 	font-size: 32px;
 	line-height: 140%;
 	font-weight: 600;
@@ -782,14 +782,14 @@ form {
 	width: 100%;
 	padding: 16px 0 28px;
 }
-.service-banner__breadcrumbs {
+/* .service-banner__breadcrumbs {
 	font-size: 14px;
 	line-height: 160%;
 	font-weight: 500;
 	color: #313638;
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
-}
+} */
 .service-banner__title {
 	font-size: 32px;
 	line-height: 140%;
@@ -1758,7 +1758,7 @@ form {
 
 /* Promotions Section */
 .promotions {
-	padding: 70px 0 0;
+	padding: 70px 0 20px;
 	background-color: #FFFFFF;
 	display: flex;
 	flex-direction: column;
@@ -2878,7 +2878,6 @@ form .btn-main:hover {
 	flex-direction: column;
 	gap: 55px;
 	width: 100%;
-	max-width: 1558px;
 	margin: 0 auto;
 }
 .doctors__header {
@@ -4247,21 +4246,21 @@ form .btn-main:hover {
 	padding: 228px 0 80px;
 	background: #FFFFFF;
 }
-.doctors-page__breadcrumbs {
+/* .doctors-page__breadcrumbs {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	line-height: 150%;
 	color: #858585;
 	margin-bottom: 16px;
-}
-.doctors-page__title {
+} */
+/* .doctors-page__title {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 48px;
 	line-height: 130%;
 	font-weight: 600;
 	color: #231F20;
 	margin: 0 0 40px;
-}
+} */
 
 /* Doctors Filter */
 .doctors-filter {
@@ -4413,33 +4412,36 @@ form .btn-main:hover {
 .doctor-banner {
 	padding: 228px 0 80px;
 }
-.doctor-banner__breadcrumbs {
+/* .doctor-banner__breadcrumbs {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
-	line-height: 140%;
-	color: #808080;
+	line-height: 160%;
+	font-weight: 500;
+	color: #313638;
 	margin-bottom: 20px;
-}
-.doctor-banner__breadcrumbs a {
-	color: #808080;
+} */
+.breadcrumbs a {
+	color: #313638;
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
-.doctor-banner__breadcrumbs a:hover {
+.breadcrumbs a:hover {
 	color: #C5A780;
 }
 .doctor-banner__page-title {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 48px;
-	line-height: 130%;
+	font-size: 32px;
+	line-height: 140%;
 	font-weight: 600;
-	color: #231F20;
+	color: #1D1D1B;
 	margin: 0 0 60px;
 }
 .doctor-banner__content {
 	background: #F1F0EA;
 	border-radius: 24px;
-	padding: 60px;
+	padding: 24px;
+	display: flex;
+	gap: 32px;
 }
 .doctor-banner__image-wrapper {
 	position: relative;
@@ -4477,25 +4479,30 @@ form .btn-main:hover {
 	height: 24px;
 }
 .doctor-banner__info {
-	padding-left: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
 }
 .doctor-banner__name {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 38px;
-	line-height: 130%;
+	font-size: 36px;
+	line-height: 140%;
 	font-weight: 600;
-	color: #231F20;
-	margin: 0 0 30px;
+	color: #1D1D1B;
+	margin: 0;
 }
 .doctor-banner__details {
-	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 .doctor-banner__detail-item {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	line-height: 160%;
-	color: #231F20;
-	margin: 0 0 16px;
+	font-size: 20px;
+	line-height: 140%;
+	font-weight: 500;
+	color: #313638;
+	margin: 0;
 }
 .doctor-banner__detail-item:last-child {
 	margin-bottom: 0;
@@ -4504,27 +4511,32 @@ form .btn-main:hover {
 	font-weight: 600;
 }
 .doctor-banner__education {
-	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
 }
 .doctor-banner__education-title {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 140%;
-	font-weight: 600;
-	color: #231F20;
-	margin: 0 0 20px;
+	font-weight: 500;
+	color: #1D1D1B;
+	margin: 0 0 16px;
 }
 .doctor-banner__education-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 }
 .doctor-banner__education-list li {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	line-height: 160%;
-	color: #231F20;
-	margin-bottom: 16px;
+	font-size: 20px;
+	line-height: 140%;
+	font-weight: 500;
+	color: #313638;
+	margin-bottom: 0;
 	padding-left: 24px;
 	position: relative;
 }
@@ -4564,7 +4576,7 @@ form .btn-main:hover {
 	font-size: 18px;
 	line-height: 140%;
 	font-weight: 400;
-	color: #231F20;
+	color: #1D1D1B;
 	background: none;
 	border: none;
 	padding: 0 0 20px;
@@ -4585,7 +4597,7 @@ form .btn-main:hover {
 	left: 0;
 	right: 0;
 	height: 2px;
-	background: #231F20;
+	background: #1D1D1B;
 }
 .doctor-qualifications__content {
 	position: relative;
@@ -4621,24 +4633,28 @@ form .btn-main:hover {
 	}
 }
 .qualification-item {
-	margin-bottom: 60px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-bottom: 48px;
 }
 .qualification-item:last-child {
 	margin-bottom: 0;
 }
 .qualification-item__year {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 38px;
-	line-height: 130%;
+	font-size: 36px;
+	line-height: 194.4%;
 	font-weight: 600;
-	color: #231F20;
-	margin: 0 0 20px;
+	color: #1D1D1B;
+	margin: 0;
 }
 .qualification-item__text {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 160%;
-	color: #231F20;
+	font-weight: 500;
+	color: #313638;
 	margin: 0;
 }
 
@@ -4649,13 +4665,13 @@ form .btn-main:hover {
 }
 .doctor-video-reviews__title {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 38px;
-	line-height: 130%;
+	font-size: 32px;
+	line-height: 140%;
 	font-weight: 600;
-	color: #231F20;
+	color: #1D1D1B;
 	margin: 0 0 60px;
-	padding-bottom: 30px;
-	border-bottom: 1px solid #231F20;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #313638;
 }
 .doctor-video-reviews__slider-wrapper {
 	position: relative;
@@ -5604,4 +5620,16 @@ form .btn-main:hover {
 	font-weight: 400;
 	color: #231F20;
 	margin: 0;
+}
+
+.actions-page {
+	padding: 228px 0 80px;
+}
+
+.actions-list .promotions__grid > div {
+	margin-bottom: 20px;
+}
+
+.portfolio-page {
+	padding: 228px 0 0;
 }

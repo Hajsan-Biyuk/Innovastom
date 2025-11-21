@@ -2537,7 +2537,7 @@
     .service-page__wrapper .row > [class*="col-"]:last-child {
         margin-bottom: 0;
     }
-    .service-page__title {
+    .main-page-title {
         font-size: 28px;
         padding: 12px 0 20px;
     }
@@ -2721,7 +2721,7 @@
     .service-page__wrapper .row > [class*="col-"]:last-child {
         margin-bottom: 0;
     }
-    .service-page__title {
+    .main-page-title {
         font-size: 28px;
         padding: 12px 0 20px;
     }
@@ -2831,10 +2831,10 @@
     .service-page__wrapper .row > [class*="col-"]:last-child {
         margin-bottom: 0;
     }
-    .service-page__breadcrumbs {
+    .breadcrumbs {
         font-size: 12px;
     }
-    .service-page__title {
+    .main-page-title {
         font-size: 24px;
         padding: 10px 0 16px;
     }
@@ -2878,7 +2878,7 @@
     .service-banner__wrapper .row > [class*="col-"]:last-child {
         margin-bottom: 0;
     }
-    .service-banner__breadcrumbs {
+    .breadcrumbs {
         font-size: 12px;
     }
     .service-banner__header {
@@ -3033,10 +3033,10 @@
     .service-page__wrapper .row > [class*="col-"]:last-child {
         margin-bottom: 0;
     }
-    .service-page__breadcrumbs {
+    .breadcrumbs {
         font-size: 12px;
     }
-    .service-page__title {
+    .main-page-title {
         font-size: 22px;
         padding: 8px 0 12px;
     }
@@ -3076,9 +3076,9 @@
     .service-banner__wrapper .row > [class*="col-"]:last-child {
         margin-bottom: 0;
     }
-    .service-banner__breadcrumbs {
+    /* .breadcrumbs {
         font-size: 12px;
-    }
+    } */
     .service-banner__header {
         padding: 8px 0 12px;
     }
@@ -3513,7 +3513,7 @@
     .doctors-page {
         padding: 100px 0 60px;
     }
-    .doctors-page__title {
+    .main-page-title {
         font-size: 24px;
         margin: 0 0 30px;
     }
@@ -3566,17 +3566,22 @@
     .doctor-banner {
         padding: 100px 0 50px;
     }
-    .doctor-banner__breadcrumbs {
+    /* .doctor-banner__breadcrumbs {
         font-size: 12px;
+        line-height: 160%;
+        font-weight: 500;
         margin-bottom: 16px;
-    }
+    } */
     .doctor-banner__page-title {
         font-size: 24px;
+        line-height: 140%;
         margin: 0 0 30px;
     }
     .doctor-banner__content {
-        padding: 30px 20px;
+        padding: 20px;
         border-radius: 16px;
+        flex-direction: column;
+        gap: 20px;
     }
     .doctor-banner__play-btn {
         width: 52px;
@@ -3589,30 +3594,32 @@
         height: 20px;
     }
     .doctor-banner__info {
-        padding-left: 0;
-        padding-top: 24px;
+        gap: 20px;
     }
     .doctor-banner__name {
         font-size: 24px;
-        margin: 0 0 20px;
+        line-height: 140%;
     }
     .doctor-banner__details {
-        margin-bottom: 24px;
+        gap: 10px;
     }
     .doctor-banner__detail-item {
         font-size: 14px;
-        margin-bottom: 10px;
-    }
-    .doctor-banner__education {
-        margin-bottom: 24px;
+        line-height: 140%;
+        font-weight: 500;
     }
     .doctor-banner__education-title {
         font-size: 15px;
+        font-weight: 500;
         margin-bottom: 12px;
+    }
+    .doctor-banner__education-list {
+        gap: 10px;
     }
     .doctor-banner__education-list li {
         font-size: 14px;
-        margin-bottom: 10px;
+        line-height: 140%;
+        font-weight: 500;
         padding-left: 20px;
     }
     .doctor-banner__education-list li:before {
@@ -3641,14 +3648,17 @@
         white-space: nowrap;
     }
     .qualification-item {
-        margin-bottom: 40px;
+        gap: 12px;
+        margin-bottom: 30px;
     }
     .qualification-item__year {
         font-size: 24px;
-        margin: 0 0 12px;
+        line-height: 194.4%;
     }
     .qualification-item__text {
         font-size: 14px;
+        line-height: 160%;
+        font-weight: 500;
     }
     
     /* Doctor Video Reviews */
@@ -3657,11 +3667,19 @@
     }
     .doctor-video-reviews__title {
         font-size: 24px;
+        line-height: 140%;
         margin: 0 0 40px;
         padding-bottom: 20px;
     }
     .doctor-video-reviews__slider {
         margin-bottom: 30px;
+    }
+
+    .actions-page {
+        padding: 100px 0 60px;
+    }
+    .portfolio-page {
+        padding: 100px 0 0;
     }
 }
 
@@ -3670,7 +3688,7 @@
     .doctors-page {
         padding: 120px 0 60px;
     }
-    .doctors-page__title {
+    .main-page-title{
         font-size: 28px;
     }
     
@@ -3686,40 +3704,45 @@
     }
     .doctor-banner__page-title {
         font-size: 28px;
+        line-height: 140%;
         margin: 0 0 40px;
     }
     .doctor-banner__content {
-        padding: 40px 30px;
+        padding: 24px;
+        flex-direction: column;
+        gap: 24px;
     }
     .doctor-banner__info {
-        padding-left: 0;
-        padding-top: 30px;
+        gap: 20px;
     }
     .doctor-banner__name {
         font-size: 28px;
-        margin: 0 0 24px;
+        line-height: 140%;
     }
     .doctor-banner__details {
-        margin-bottom: 30px;
+        gap: 10px;
     }
     .doctor-banner__detail-item {
-        font-size: 15px;
-        margin-bottom: 12px;
-    }
-    .doctor-banner__education {
-        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 500;
     }
     .doctor-banner__education-title {
         font-size: 16px;
-        margin-bottom: 16px;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+    .doctor-banner__education-list {
+        gap: 10px;
     }
     .doctor-banner__education-list li {
-        font-size: 15px;
-        margin-bottom: 12px;
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 500;
     }
     .doctor-banner__btn {
         padding: 18px 24px;
-        font-size: 15px;
+        font-size: 14px;
     }
     
     /* Doctor Qualifications */
@@ -3735,14 +3758,17 @@
         padding: 0 0 16px;
     }
     .qualification-item {
-        margin-bottom: 50px;
+        gap: 14px;
+        margin-bottom: 40px;
     }
     .qualification-item__year {
         font-size: 28px;
-        margin: 0 0 16px;
+        line-height: 194.4%;
     }
     .qualification-item__text {
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 160%;
+        font-weight: 500;
     }
     
     /* Doctor Video Reviews */
@@ -3751,11 +3777,19 @@
     }
     .doctor-video-reviews__title {
         font-size: 28px;
+        line-height: 140%;
         margin: 0 0 50px;
-        padding-bottom: 24px;
+        padding-bottom: 20px;
     }
     .doctor-video-reviews__slider {
         margin-bottom: 35px;
+    }
+
+    .actions-page {
+        padding: 120px 0 60px;
+    }
+    .portfolio-page {
+        padding: 120px 0 0;
     }
 }
 
@@ -3782,17 +3816,34 @@
         padding: 150px 0 70px;
     }
     .doctor-banner__page-title {
-        font-size: 36px;
+        font-size: 32px;
+        line-height: 140%;
         margin: 0 0 50px;
     }
     .doctor-banner__content {
-        padding: 50px 40px;
+        padding: 24px;
+        gap: 28px;
     }
     .doctor-banner__info {
-        padding-left: 30px;
+        gap: 22px;
     }
     .doctor-banner__name {
         font-size: 32px;
+        line-height: 140%;
+    }
+    .doctor-banner__detail-item {
+        font-size: 18px;
+        line-height: 140%;
+        font-weight: 500;
+    }
+    .doctor-banner__education-title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .doctor-banner__education-list li {
+        font-size: 18px;
+        line-height: 140%;
+        font-weight: 500;
     }
     
     /* Doctor Qualifications */
@@ -3807,11 +3858,17 @@
         font-size: 17px;
     }
     .qualification-item {
-        margin-bottom: 50px;
+        gap: 15px;
+        margin-bottom: 45px;
     }
     .qualification-item__year {
         font-size: 32px;
-        margin: 0 0 16px;
+        line-height: 194.4%;
+    }
+    .qualification-item__text {
+        font-size: 17px;
+        line-height: 160%;
+        font-weight: 500;
     }
     
     /* Doctor Video Reviews */
@@ -3820,7 +3877,14 @@
     }
     .doctor-video-reviews__title {
         font-size: 32px;
+        line-height: 140%;
         margin: 0 0 50px;
-        padding-bottom: 26px;
+        padding-bottom: 24px;
+    }
+    .actions-page {
+        padding: 150px 0 70px;
+    }
+    .portfolio-page {
+        padding: 150px 0 0;
     }
 }
