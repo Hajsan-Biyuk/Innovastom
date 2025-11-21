@@ -627,11 +627,9 @@ form {
 
 /* Страница услуги */
 .service-page {
-	padding: 228px 0 70px;
 	background-color: #FFFFFF;
 }
 .service-page__wrapper {
-	max-width: 1920px;
 	margin: 0 auto;
 }
 .service-page__wrapper .row {
@@ -754,12 +752,11 @@ form {
 }
 
 /* Service Banner Section */
-.service-banner {
+.page_section {
 	padding: 228px 0 70px;
 	background-color: #FFFFFF;
 }
-.service-banner__wrapper {
-	max-width: 1560px;
+.service-banner__wrapper {	
 	margin: 0 auto;
 }
 .service-banner__wrapper .row {
@@ -999,7 +996,7 @@ form {
 
 /* Service Tabs Section */
 .service-tabs {
-	padding: 24px 128px 48px;
+	padding: 24px 0px 48px;
 	background-color: #F1F0EA;
 }
 .service-tabs__wrapper {
@@ -4243,7 +4240,6 @@ form .btn-main:hover {
 
 /* Doctors Page */
 .doctors-page {
-	padding: 228px 0 80px;
 	background: #FFFFFF;
 }
 /* .doctors-page__breadcrumbs {
@@ -4409,9 +4405,7 @@ form .btn-main:hover {
 }
 
 /* Doctor Banner (Single Doctor Page) */
-.doctor-banner {
-	padding: 228px 0 80px;
-}
+
 /* .doctor-banner__breadcrumbs {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
@@ -5622,9 +5616,7 @@ form .btn-main:hover {
 	margin: 0;
 }
 
-.actions-page {
-	padding: 228px 0 80px;
-}
+
 
 .actions-list .promotions__grid > div {
 	margin-bottom: 20px;
@@ -5632,4 +5624,428 @@ form .btn-main:hover {
 
 .portfolio-page {
 	padding: 228px 0 0;
+}
+
+/* Single Case Page */
+.single-case {
+	padding: 228px 0 0;
+}
+.single-case__content {
+	margin-top: 40px;
+}
+
+.case-main {
+	margin-bottom: 60px;
+}
+
+.case-main .row {
+	align-items: flex-start;
+}
+
+.case-main__content {
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+}
+
+.case-main__header {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.case-main__badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px 16px;
+	background: rgba(239, 223, 205, 0.5);
+	border-radius: 16px;
+	width: fit-content;
+}
+
+.case-main__badge-text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.case-main__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 32px;
+	line-height: 1.4;
+	font-weight: 600;
+	color: #1D1D1B;
+	margin: 0;
+}
+
+.case-main__info {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.case-main__info-item {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+	font-weight: 400;
+	color: #313638;
+	margin: 0;
+}
+
+.case-main__image {
+	width: 100%;
+	height: 370px;
+	border-radius: 12px;
+	border: 1px solid #F1F0EA;
+	overflow: hidden;
+}
+
+.case-main__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.case-stages {
+	margin-bottom: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 36px;
+}
+
+.case-stages__list {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	width: 100%;
+}
+
+.case-stage {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+}
+
+.case-stage__header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 30px;
+}
+
+.case-stage__icon {
+	width: 48px;
+	height: 48px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.case-stage__icon img {
+	width: 48px;
+	height: 48px;
+	display: block;
+}
+
+.case-stage__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	line-height: 1.6;
+	font-weight: 600;
+	color: #313638;
+	margin: 0;
+}
+
+.case-stage__content {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+	font-weight: 500;
+	color: #313638;
+}
+
+.case-stage__content p {
+	margin: 0;
+}
+
+.button-case {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-case .btn-main {
+	padding: 20px 24px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: 500;
+	text-transform: uppercase;
+	background: #C4AA9B;
+	color: #1D1D1B;
+	border: none;
+	border-radius: 6px;
+}
+
+.button-case .btn-main:hover {
+	background: #B89A8A;
+}
+
+.title-section_case {
+	margin-bottom: 36px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 32px;
+	line-height: 1.4;
+	font-weight: 600;
+	color: #1D1D1B;
+}
+
+.single-case .portfolio__card {
+	margin-bottom: 60px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.single-case .portfolio__card-nav {
+	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.single-case .portfolio__card-tabs {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	flex: 1;
+	justify-content: center;
+}
+
+.single-case .portfolio__card-content {
+	margin-top: 0;
+	margin-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	box-shadow: 0px 4px 15px 0px rgba(239, 223, 205, 0.5);
+	background-color: #fff;
+	border-radius: 24px;
+	padding: 24px;
+}
+
+.single-case .portfolio__card-images {
+	display: flex;
+	gap: 24px;
+	width: 100%;
+}
+
+.single-case .portfolio__card-image {
+	flex: 1;
+	height: 380px;
+	border-radius: 24px;
+	overflow: hidden;
+	border: 1px solid #F1F0EA;
+}
+
+.single-case .portfolio__card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.single-case .portfolio__card-info {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.single-case .portfolio__card-name {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 600;
+	color: #1D1D1B;
+	margin: 0;
+}
+
+.single-case .portfolio__card-description {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	color: #313638;
+	margin: 0;
+}
+
+.single-case .portfolio__card-description strong {
+	font-weight: 600;
+	color: #1D1D1B;
+}
+
+.single-case .portfolio__card-btn {
+	width: 272px;
+	height: 42px;
+	background-color: #C4AA9B;
+	border: none;
+	border-radius: 6px;
+	padding: 20px 24px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	font-weight: 500;
+	color: #1D1D1B;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.single-case .portfolio__card-btn:hover {
+	background-color: #B89A8A;
+}
+
+.sidebar-page {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.nav-page {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	background: #F1F0EA;
+	border-radius: 24px;
+	padding: 20px 16px;
+}
+
+.nav-page__item {
+	padding: 0 0 16px 24px;
+	border-bottom: 1px solid #313638;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: 500;
+	color: #1D1D1B;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.nav-page__item:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.nav-page__item:hover {
+	color: #C5A780;
+}
+
+.sidebar-doctor {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.sidebar-doctor__header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+}
+
+.sidebar-doctor__icon {
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+}
+
+.sidebar-doctor__label {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	line-height: 1.4;
+	font-weight: 500;
+	color: #313638;
+	margin: 0;
+}
+
+.sidebar-doctor__card {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background: #F1F0EA;
+	border-radius: 24px;
+	padding: 24px;
+}
+
+.sidebar-doctor__image {
+	width: 100%;
+	height: 240px;
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.sidebar-doctor__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sidebar-doctor__info {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.sidebar-doctor__name {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 600;
+	color: #1D1D1B;
+	margin: 0;
+}
+
+.sidebar-doctor__position {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: 500;
+	color: #313638;
+	margin: 0;
+}
+
+.portfolio.portfolio_case_single {
+	padding: 0px;
+}
+
+.portfolio.portfolio_case_single .portfolio__content {
+	border-radius: 24px;
+}
+
+.case-procedures__content {
+	padding: 40px;
+    background: #F1F0EA;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+	margin-bottom: 40px;
+}
+.case-procedures__content .service-tabs__card {
+	height: auto;
+}
+.case-review {
+	margin-bottom: 60px;
 }

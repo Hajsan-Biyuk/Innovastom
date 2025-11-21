@@ -1457,5 +1457,12 @@ $(document).ready(function() {
 			$('.doctor-video-reviews__slider').slick('slickNext');
 		});
 	}
+
+	// Плавная прокрутка для навигации на странице single-case
+	if ($('.nav-page').length && typeof $.fn.mPageScroll2id === 'function') {
+		$('.nav-page__item').mPageScroll2id({
+			offset: 160
+		});
+	}
 });
 

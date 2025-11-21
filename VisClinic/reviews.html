@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Заголовок</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.css" />
+	<link rel="stylesheet" href="libs/fontawesome-free-5.12.0-web/css/all.min.css" />
+	<link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
+	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css?ver=1.8" />
+	<link rel="stylesheet" href="css/media.css?ver=1.8" />
+</head>
+<body>
+
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="logo-wrap">
+						<a href="#" class="logo">
+							<img src="img/logo.svg" alt="alt">
+						</a>
+						<div class="logo-descr">Лицензированная клиника косметологии и омоложения</div>
+					</div>
+					<div class="header__info">г. Москва, пр-т Вернадского, 44, корп. 2 <br>Пн-Пт: 09:00-18:00</div>
+					<div class="header__buttons">
+						<a href="#" class="btn-main">Прайс-лист</a>
+						<a href="#" class="btn-main btn-main_page">On-line запись</a>
+					</div>
+					<div class="header__contacts">
+						<a href="tel:+79168059894" class="phone-main">+7 (916) 805-98-94</a>
+						<ul class="socials-list">
+							<li><a href="#" target="_blank"><img src="img/wp.svg" alt="alt"></a></li>
+							<li><a href="#" target="_blank"><img src="img/tg.svg" alt="alt"></a></li>
+						</ul>
+					</div>
+					<div class="mobile-buttons">
+						<a href="#" class="btn-mob"><img src="img/calendar.svg" alt="alt"></a>
+						<a href="tel:+79168059894" class="btn-mob btn-mob_phone"><img src="img/phone.svg" alt="alt"></a>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<span class='sandwich'>
+						<span class='sw-topper'></span>
+						<span class='sw-bottom'></span>
+						<span class='sw-footer'></span>
+					</span>
+					<div class="main-menu">
+						<div class="row">
+							<div class="col-lg-4 col-6">
+								<div class="main-menu__title">Получить услуги:</div>
+								<ul class="menu__nav">
+									<li><a href="#">Косметология</a></li>
+									<li><a href="#">Дерматология</a></li>
+									<li><a href="#">Трихология</a></li>
+									<li><a href="#">Антивозрастная медицина</a></li>
+									<li><a href="#">Травматология</a></li>
+									<li><a href="#">Ортопедия</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-4 col-6">
+								<div class="main-menu__title">Прайсы:</div>
+								<ul class="menu__nav">
+									<li><a href="#">Прайс-лист <br>на услуги клиники</a></li>
+								</ul>
+								<div class="main-menu__title">Поиск по клиническим случаям:</div>
+								<ul class="menu__nav">
+									<li><a href="#">Лицо</a></li>
+									<li><a href="#">Тело</a></li>
+									<li><a href="#">Суставы</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-4">
+								<div class="main-menu__title">О нас:</div>
+								<ul class="menu__nav">
+									<li><a href="#">Информация о клинике</a></li>
+									<li><a href="#">Врачи клиники</a></li>
+									<li><a href="#">Акции</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="main-menu__mobile">
+							<div class="header__buttons">
+								<a href="#" class="btn-main">Прайс-лист</a>
+								<a href="#" class="btn-main btn-main_page">On-line запись</a>
+							</div>
+							<div class="header__contacts">
+								<a href="tel:+79168059894" class="phone-main">+7 (916) 805-98-94</a>
+								<ul class="socials-list">
+									<li><a href="#" target="_blank"><img src="img/wp.svg" alt="alt"></a></li>
+									<li><a href="#" target="_blank"><img src="img/tg.svg" alt="alt"></a></li>
+								</ul>
+							</div>
+							<div class="header__info">г. Москва, пр-т Вернадского, 44, корп. 2 <br>Пн-Пт: 09:00-18:00</div>
+						</div>
+					</div>
+					<ul class="menu">
+						<li class="menu__haschild">
+							<a href="#">Косметология</a>
+							<div class="menu__dropdown">
+								<div class="row">
+									<div class="col-lg-3">
+										<ul class="menu__nav">
+											<li><a href="#">Аппаратная</a></li>
+											<li><a href="#">Инъекционная</a></li>
+											<li><a href="#">Эстетическая</a></li>
+										</ul>
+									</div>
+									<div class="col-lg-9">
+										<ul class="menu__sub">
+											<li><a href="#">Липоредукция</a></li>
+											<li><a href="#">Биоревитализация</a></li>
+											<li><a href="#">Омоложение зоны вокруг глаз</a></li>
+											<li><a href="#">Бланширование морщин</a></li>
+											<li><a href="#">Пластика губ</a></li>
+											<li><a href="#">Векторный лифтинг</a></li>
+											<li><a href="#">Контурная пластика</a></li>
+											<li><a href="#">Биорепарация</a></li>
+											<li><a href="#">Нитевой лифтинг</a></li>
+											<li><a href="#">Плазмолифтинг</a></li>
+											<li><a href="#">Лечение целлюлита</a></li>
+											<li><a href="#">Ботокс</a></li>
+											<li><a href="#">Мезотерапия</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="menu__haschild">
+							<a href="#">Дерматология</a>
+							<div class="menu__dropdown">
+								<div class="row">
+									<div class="col-lg-3">
+										<ul class="menu__nav">
+											<li><a href="#">Аппаратная</a></li>
+											<li><a href="#">Инъекционная</a></li>
+											<li><a href="#">Эстетическая</a></li>
+										</ul>
+									</div>
+									<div class="col-lg-9">
+										<ul class="menu__sub">
+											<li><a href="#">Липоредукция</a></li>
+											<li><a href="#">Биоревитализация</a></li>
+											<li><a href="#">Омоложение зоны вокруг глаз</a></li>
+											<li><a href="#">Бланширование морщин</a></li>
+											<li><a href="#">Пластика губ</a></li>
+											<li><a href="#">Векторный лифтинг</a></li>
+											<li><a href="#">Контурная пластика</a></li>
+											<li><a href="#">Биорепарация</a></li>
+											<li><a href="#">Нитевой лифтинг</a></li>
+											<li><a href="#">Плазмолифтинг</a></li>
+											<li><a href="#">Лечение целлюлита</a></li>
+											<li><a href="#">Ботокс</a></li>
+											<li><a href="#">Мезотерапия</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="#">Трихология</a></li>
+						<li><a href="#">Антивозрастная медицина</a></li>
+						<li><a href="#">Ортопедия</a></li>
+						<li class="menu__haschild">
+							<a href="#">Травматология</a>
+							<div class="menu__dropdown">
+								<div class="row">
+									<div class="col-lg-3">
+										<ul class="menu__nav">
+											<li><a href="#">Аппаратная</a></li>
+											<li><a href="#">Инъекционная</a></li>
+											<li><a href="#">Эстетическая</a></li>
+										</ul>
+									</div>
+									<div class="col-lg-9">
+										<ul class="menu__sub">
+											<li><a href="#">Липоредукция</a></li>
+											<li><a href="#">Биоревитализация</a></li>
+											<li><a href="#">Омоложение зоны вокруг глаз</a></li>
+											<li><a href="#">Бланширование морщин</a></li>
+											<li><a href="#">Пластика губ</a></li>
+											<li><a href="#">Векторный лифтинг</a></li>
+											<li><a href="#">Контурная пластика</a></li>
+											<li><a href="#">Биорепарация</a></li>
+											<li><a href="#">Нитевой лифтинг</a></li>
+											<li><a href="#">Плазмолифтинг</a></li>
+											<li><a href="#">Лечение целлюлита</a></li>
+											<li><a href="#">Ботокс</a></li>
+											<li><a href="#">Мезотерапия</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="#">Врачи</a></li>
+						<li><a href="#">Акции</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<section class="reviews">
+			<div class="container">
+				<ul class="breadcrumbs">
+					<li><a href="#">Главная</a></li>
+					<li>Отзывы</li>
+				</ul>
+				<div class="row">
+					<div class="col-lg-6">
+						<h2 class="title-section">Отзывы Visclinic на Яндексе</h2>
+						<div class="reviews__block">
+							<div class="reviews__item">
+								<img src="img/review1.jpg" alt="alt">
+							</div>
+							<div class="reviews__item">
+								<img src="img/review2.jpg" alt="alt">
+							</div>
+							<div class="reviews__button">
+								<a href="#" class="btn-main btn-main_border">Больше отзывов на Яндексе</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<h2 class="title-section">Интерьер клиники</h2>
+						<div class="reviews__block">
+							<div class="slider-for">
+								<div>
+									<a href="img/slider_for1.jpg" class="slider-for__item fancybox" data-fancybox="for">
+										<img src="img/slider_for1.jpg" alt="alt">
+									</a>
+								</div>
+								<div>
+									<a href="img/slider_for1.jpg" class="slider-for__item fancybox" data-fancybox="for">
+										<img src="img/slider_for1.jpg" alt="alt">
+									</a>
+								</div>
+								<div>
+									<a href="img/slider_for1.jpg" class="slider-for__item fancybox" data-fancybox="for">
+										<img src="img/slider_for1.jpg" alt="alt">
+									</a>
+								</div>
+								<div>
+									<a href="img/slider_for1.jpg" class="slider-for__item fancybox" data-fancybox="for">
+										<img src="img/slider_for1.jpg" alt="alt">
+									</a>
+								</div>
+							</div>
+							<div class="slider-nav">
+								<div>
+									<div class="slider-nav__item">
+										<img src="img/slider_nav1.jpg" alt="alt">
+									</div>
+								</div>
+								<div>
+									<div class="slider-nav__item">
+										<img src="img/slider_nav1.jpg" alt="alt">
+									</div>
+								</div>
+								<div>
+									<div class="slider-nav__item">
+										<img src="img/slider_nav1.jpg" alt="alt">
+									</div>
+								</div>
+								<div>
+									<div class="slider-nav__item">
+										<img src="img/slider_nav1.jpg" alt="alt">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section-reviews">
+			<div class="container">
+				<h2 class="title-section">Отзывы по процедурам и направлениям</h2>
+				<ul class="filter-list filter-list_tabs">
+					<li><a href="#tab_review1">Инъекционная косметология</a></li>
+					<li><a href="#tab_review2">Травматология</a></li>
+					<li><a href="#tab_review3">Ортопедия</a></li>
+					<li><a href="#tab_review4">SMAS-лифтинг</a></li>
+					<li><a href="#tab_review5">Ботулинотерапия</a></li>
+					<li><a href="#tab_review6">PRP-терапия</a></li>
+					<li><a href="#tab_review7">Микроигольчатый RF-лифтинг</a></li>
+				</ul>
+				<div class="tab-container-filter">
+					<div class="tab-pane-filter" id="tab_review1">
+						<div class="wrap-reviews">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/telegram.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> исправить неровный рельеф кожи на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/vk.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> коррекция неглубоких морщин на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/youtube.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> убрать темные пятна постакне</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane-filter" id="tab_review2">
+						<div class="wrap-reviews">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/telegram.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> исправить неровный рельеф кожи на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/vk.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> коррекция неглубоких морщин на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/youtube.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> убрать темные пятна постакне</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane-filter" id="tab_review3">
+						<div class="wrap-reviews">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/telegram.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> исправить неровный рельеф кожи на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/vk.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> коррекция неглубоких морщин на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/youtube.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> убрать темные пятна постакне</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane-filter" id="tab_review4">
+						<div class="wrap-reviews">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/telegram.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> исправить неровный рельеф кожи на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/vk.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> коррекция неглубоких морщин на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/youtube.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> убрать темные пятна постакне</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane-filter" id="tab_review5">
+						<div class="wrap-reviews">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/telegram.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> исправить неровный рельеф кожи на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/vk.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> коррекция неглубоких морщин на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/youtube.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> убрать темные пятна постакне</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane-filter" id="tab_review6">
+						<div class="wrap-reviews">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/telegram.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> исправить неровный рельеф кожи на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/vk.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> коррекция неглубоких морщин на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/youtube.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> убрать темные пятна постакне</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane-filter" id="tab_review7">
+						<div class="wrap-reviews">
+							<div class="row">
+								<div class="col-lg-4">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/telegram.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review1.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> исправить неровный рельеф кожи на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/vk.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review2.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> коррекция неглубоких морщин на лице</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 hidden-mob">
+									<div class="unit-review">
+										<a href="#" target="_blank" class="btn-social"><img src="img/youtube.svg" alt="alt"></a>
+										<div class="slider-reviews">
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+											<div>
+												<div class="unit-review__image">
+													<img src="img/unit_review3.jpg" alt="alt">
+												</div>
+											</div>
+										</div>
+										<div class="unit-review__content">
+											<p><strong>Запрос пациента:</strong> убрать темные пятна постакне</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="footer__top">
+							<div class="footer__logo">
+								<a href="#" class="logo">
+									<img src="img/logo2.svg" alt="alt">
+								</a>
+								<div class="logo-descr">Лицензированная клиника косметологии и омоложения</div>
+							</div>
+							<div class="footer__recomend">
+								<img src="img/recomend.png" alt="alt">
+							</div>
+						</div>
+						<a href="#" class="footer__link hidden-mob">Политика конфиденциальности</a>
+						<a href="#" class="btn-block"><img src="img/eye.svg" alt="">Версия для слабовидящих</a>
+					</div>
+					<div class="col-lg-3 col_nav">
+						<div class="footer__title">Важная информация</div>
+						<ul class="footer__nav">
+							<li><a href="#">О Компании</a></li>
+							<li><a href="#">Услуги</a></li>
+							<li><a href="#">Инъекционная косметология</a></li>
+							<li><a href="#">Аппаратная косметология</a></li>
+							<li><a href="#">Эстетическая косметология</a></li>
+							<li><a href="#">Дерматология</a></li>
+							<li><a href="#">Трихология</a></li>
+							<li><a href="#">Антивозрастная медицина</a></li>
+							<li><a href="#">Травматология</a></li>
+							<li><a href="#">Ортопедия</a></li>
+							<li><a href="#">Врачи</a></li>
+							<li><a href="#">Полный прайс</a></li>
+							<li><a href="#">Документы</a></li>
+							<li><a href="#">Блог</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col_requisites">
+						<div class="footer__title">Реквизиты Visclinic</div>
+						<p>ИП Платонова Е. Д.</p>
+						<p>ОГРН 321774600238553 </p>
+						<p>ИНН 772850647424 1</p>
+						<br>
+						<p>Лицензия на осуществление медицинской деятельности –№Л041-01137-77/01033587 от 26.04.2024 г.</p>
+						<a href="#" class="footer__link show-mob">Политика конфиденциальности</a>
+					</div>
+					<div class="col-lg-3">
+						<div class="row">
+							<div class="col-lg-12 col-6">
+								<div class="footer__title">Контакты</div>
+								<div class="footer__location">
+									<p>г. Москва, пр-т Вернадского, 44, корп. 2</p>
+								</div>
+							</div>
+							<div class="col-12 col_contacts">
+								<div class="footer__contacts">
+									<a href="tel:+79168059894" class="phone-main">+7 (916) 805-98-94</a>
+									<ul class="socials-list">
+										<li><a href="#" target="_blank"><img src="img/wp.svg" alt="alt"></a></li>
+										<li><a href="#" target="_blank"><img src="img/tg.svg" alt="alt"></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-12 col-6">
+								<div class="footer__title">Режим работы</div>
+								<p>Пн-Пт с 10:00 до 20:00</p>
+								<p>Сб с 10:00 до 17:00, </p>
+								<p>Вс - выходной.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+	</div>
+
+
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="libs/fancybox-master/dist/jquery.fancybox.min.js"></script>
+	<script src="libs/slick-1.5.9/slick/slick.min.js"></script>
+	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
+	<script src="libs/mask/jquery.maskedinput.js"></script>
+	<script src="libs/jQueryFormStyler-master/jquery.formstyler.min.js"></script>
+	<script src="js/common.js?ver=1.8"></script>
+	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>

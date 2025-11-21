@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>Клинический случай - Инновационная стоматология</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="shortcut icon" href="favicon.png" />
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.css" />
+	<link rel="stylesheet" href="libs/fontawesome-free-5.12.0-web/css/all.min.css" />
+	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
+	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
+	<link rel="stylesheet" href="css/fonts.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/media.css" />
+</head>
+<body>
+
+	<div class="wrapper wrapper-page">
+
+		<header class="header">
+			<div class="container">
+				<div class="header__wrapper">
+					<div class="logo-wrap">
+						<a href="index.html" class="logo">
+							<img src="img/logo-text.svg" alt="" class="logo__text">
+							<div class="logo__right">
+								<img src="img/logo-icon.svg" alt="Инновационная стоматология" class="logo__icon">
+								<div class="logo__title">Инновационная стоматология</div>
+							</div>
+						</a>
+					</div>
+					<div class="header__info">
+						Смоленск, ул. Нормандия-Неман, 24Б<br>
+						Пн-Сб: 09:00-21:00 Вс: 10:00- 16:00
+					</div>
+					<div class="header__buttons">
+						<a href="#" class="btn-main btn-main_border">прайс-лист</a>
+						<a href="#" class="btn-main btn-main_fill">онлайн запись</a>
+					</div>
+					<div class="header__contacts">
+						<a href="tel:+74812545224" class="phone-main">+7 (4812) 54-52-24</a>
+						<ul class="socials-list">
+							<li><a href="#" target="_blank"><img src="img/social1.svg" alt="alt"></a></li>
+							<li><a href="#" target="_blank"><img src="img/social2.svg" alt="alt"></a></li>
+						</ul>
+					</div>
+					<div class="mobile-buttons">
+						<a href="#" class="btn-mob"><img src="img/calendar.svg" alt="alt"></a>
+						<a href="tel:+74812545224" class="btn-mob btn-mob_phone"><img src="img/phone.svg" alt="alt"></a>
+					</div>
+				</div>
+				<div class="header__bottom">
+					<div class="main-menu">
+						<div class="row">
+							<div class="col-lg-4 col-6">
+								<div class="main-menu__title">Услуги клиники</div>
+								<ul class="menu__nav">
+									<li><a href="#">Лечение зубов</a></li>
+									<li><a href="#">Детская стоматология</a></li>
+									<li><a href="#">Имплантация</a></li>
+									<li><a href="#">Протезирование</a></li>
+									<li><a href="#">Виниры</a></li>
+									<li><a href="#">Ортодонтия</a></li>
+									<li><a href="#">Профгигиена</a></li>
+									<li><a href="#">Рентген (КТ)</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-4 col-6">
+								<div class="main-menu__title">Пациентам</div>
+								<ul class="menu__nav">
+									<li><a href="#">Прайс-лист</a></li>
+									<li><a href="#">Акции</a></li>
+									<li><a href="#">Наши работы</a></li>
+									<li><a href="#">Документы</a></li>
+									<li><a href="#">Отзывы</a></li>
+									<li><a href="#">Вопрос — ответ</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-4 d-none d-lg-block">
+								<div class="main-menu__title">О клинике</div>
+								<ul class="menu__nav">
+									<li><a href="#">О нас</a></li>
+									<li><a href="#">Врачи</a></li>
+									<li><a href="#">Интерьер</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Вакансии</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="main-menu__mobile">
+							<div class="header__buttons">
+								<a href="#" class="btn-main btn-main_border">прайс-лист</a>
+								<a href="#" class="btn-main btn-main_fill">онлайн запись</a>
+							</div>
+							<div class="header__contacts">
+								<a href="tel:+74812545224" class="phone-main">+7 (4812) 54-52-24</a>
+								<ul class="socials-list">
+									<li><a href="#" target="_blank"><img src="img/social1.svg" alt="alt"></a></li>
+									<li><a href="#" target="_blank"><img src="img/social2.svg" alt="alt"></a></li>
+								</ul>
+							</div>
+							<div class="header__info">
+								Смоленск, ул. Нормандия-Неман, 24Б<br>
+								Пн-Сб: 09:00-21:00 Вс: 10:00- 16:00
+							</div>
+						</div>
+					</div>
+					<ul class="menu">
+						<li class="menu__haschild">
+							<a href="#">Лечение зубов</a>
+							<div class="menu__dropdown">
+								<div class="row">
+									<div class="col-lg-4">
+										<div class="main-menu__title">Терапевтическая</div>
+										<ul class="menu__nav">
+											<li><a href="#">Лечение кариеса</a></li>
+											<li><a href="#">Лечение пульпита</a></li>
+											<li><a href="#">Эндодонтическое лечение</a></li>
+											<li><a href="#">Эстетические реставрации</a></li>
+											<li><a href="#">Профессиональное отбеливание</a></li>
+										</ul>
+									</div>
+									<div class="col-lg-4">
+										<div class="main-menu__title">Хирургическая</div>
+										<ul class="menu__nav">
+											<li><a href="#">Удаление зубов</a></li>
+											<li><a href="#">Имплантация зубов</a></li>
+											<li><a href="#">Костная пластика</a></li>
+											<li><a href="#">Синус-лифтинг</a></li>
+											<li><a href="#">Пластика уздечки</a></li>
+										</ul>
+									</div>
+									<div class="col-lg-4">
+										<div class="main-menu__title">Диагностика</div>
+										<ul class="menu__nav">
+											<li><a href="#">КТ (3D) зубов и челюстей</a></li>
+											<li><a href="#">Рентген-снимок</a></li>
+											<li><a href="#">Консультация врача</a></li>
+											<li><a href="#">План лечения</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><a href="#">Детская стоматология</a></li>
+						<li><a href="#">имплантация</a></li>
+						<li><a href="#">протезирование</a></li>
+						<li><a href="#">виниры</a></li>
+						<li><a href="#">ортодонтия</a></li>
+						<li><a href="#">кт зубов</a></li>
+						<li><a href="#">портфолио</a></li>
+					</ul>
+					<span class='sandwich'>
+						<span class="sandwich__line sandwich__line_top"></span>
+						<span class="sandwich__line sandwich__line_middle"></span>
+						<span class="sandwich__line sandwich__line_bottom"></span>
+					</span>
+					<div class="menu-overlay"></div>
+				</div>
+			</div>
+		</header>		
+
+		<section class="single-case page_section">
+			<div class="container">
+				<div class="breadcrumbs">
+					Главная   |   Портфолио   |   Имплантация "все на 6-ти"
+				</div>
+				<div class="single-case__content">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="sidebar-page">
+								<div class="nav-page">
+									<a href="#sect-1" class="nav-page__item">Основная информация</a>
+									<a href="#sect-2" class="nav-page__item">Лечение</a>
+									<a href="#sect-3" class="nav-page__item">До / после</a>
+									<a href="#sect-4" class="nav-page__item">Отзыв пациента</a>
+									<a href="#sect-5" class="nav-page__item">Перечень процедур</a>
+								</div>
+								<div class="sidebar-doctor">
+									<div class="sidebar-doctor__header">
+										<img src="img/icon-editor.svg" alt="" class="sidebar-doctor__icon">
+										<p class="sidebar-doctor__label">Материал подготовил:</p>
+									</div>
+									<div class="sidebar-doctor__card">
+										<div class="sidebar-doctor__image">
+											<img src="img/doctor-1.jpg" alt="Денисенко Анатолий Александрович">
+										</div>
+										<div class="sidebar-doctor__info">
+											<div class="sidebar-doctor__name">Денисенко<br>Анатолий Александрович</div>
+											<p class="sidebar-doctor__position">Хирург имплантолог<br>Стаж: 15 лет</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-9">
+							<div class="case-main" id="sect-1">
+								<div class="row">
+									<div class="col-lg-7">
+										<div class="case-main__content">
+											<div class="case-main__header">
+												<div class="case-main__badge">
+													<span class="case-main__badge-text">Клинический случай</span>
+												</div>
+												<h1 class="case-main__title">Имплантация зубов «Все на шести» (All in 6)</h1>
+											</div>
+											<div class="case-main__info">
+												<p class="case-main__info-item">Возраст пациента: 55 лет</p>
+												<p class="case-main__info-item">Жалоба: Отсутствуют зубы верхней и нижней челюсти, отсутствует функция жевания, имеется выраженный фонетический и эстетический недостаток</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-5">
+										<div class="case-main__image">
+											<img src="img/work-1-before.jpg" alt="До лечения">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="case-stages" id="sect-2">
+								<div class="case-stages__list">
+									<div class="case-stage">
+										<div class="case-stage__header">
+											<div class="case-stage__icon">
+												<img src="img/advantage-tooth.svg" alt="Проблема">
+											</div>
+											<h3 class="case-stage__title">Проблема</h3>
+										</div>
+										<div class="case-stage__content">
+											<p>Пациент 55 лет обратился в клинику с полным отсутствием зубов на обеих челюстях. Из-за этого он был лишен возможности нормально пережевывать пищу, что вынуждало его соблюдать строгую диету и негативно сказывалось на пищеварении. Кроме того, пациента крайне беспокоили серьезные эстетические нарушения (запавшие губы, старение овала лица) и нечеткость дикции, что снижало качество его социальной жизни.</p>
+										</div>
+									</div>
+
+									<div class="case-stage">
+										<div class="case-stage__header">
+											<div class="case-stage__icon">
+												<img src="img/advantage-digital.svg" alt="Диагностика">
+											</div>
+											<h3 class="case-stage__title">Диагностика</h3>
+										</div>
+										<div class="case-stage__content">
+											<p>Для составления плана лечения было проведено комплексное обследование, включающее компьютерную томографию (КТ) челюстей. Анализ снимков показал выраженную атрофию костной ткани, особенно в боковых отделах, однако ее объем был достаточным для установки шести имплантатов на каждой челюсти без проведения костной пластики. На основе полученных данных было принято решение о применении протокола немедленной нагрузки по методике «All-on-6», который полностью соответствовал потребностям пациента</p>
+										</div>
+									</div>
+
+									<div class="case-stage">
+										<div class="case-stage__header">
+											<div class="case-stage__icon">
+												<img src="img/advantage-comfort.svg" alt="Лечение">
+											</div>
+											<h3 class="case-stage__title">Лечение</h3>
+										</div>
+										<div class="case-stage__content">
+											<p>В назначенный день под седацией было проведено удаление оставшихся корней зубов с одновременной установкой шести имплантатов на верхней и шести на нижней челюсти по заранее разработанному хирургическому шаблону. Сразу после фиксации имплантатов на них установили адаптационные металлопластмассовые протезы, вернув пациенту функцию и эстетику в течение одного дня.<br><br>Через 6 месяцев, после полного приживления имплантатов, временные протезы были заменены на постоянные, изготовленные из диоксида циркония.</p>
+										</div>
+									</div>
+
+									<div class="case-stage">
+										<div class="case-stage__header">
+											<div class="case-stage__icon">
+												<img src="img/advantage-warranty.svg" alt="Результат">
+											</div>
+											<h3 class="case-stage__title">Результат</h3>
+										</div>
+										<div class="case-stage__content">
+											<p>В результате лечения у пациента была полностью восстановлена жевательная функция, что позволило ему вернуться к привычному рациону питания без каких-либо ограничений. Эстетический результат превзошел ожидания – значительно помолодел овал лица, исчезли морщины вокруг рта, а фонетические проблемы были полностью устранены. Пациент отмечает высокое качество жизни, уверенность в себе и надежность конструкции, которой он пользуется уже более года.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="button-case">
+									<a href="#" class="btn-main btn-ui">У меня похожая ситуация, нужна консультация</a>
+								</div>
+							</div>
+
+							<div class="portfolio portfolio_case_single portfolio__card" id="sect-3">
+								<h2 class="title-section_case">До/После установки имплантов</h2>						
+								<div class="portfolio__content">
+									<div class="portfolio__slider-container">
+										<div class="portfolio__tabs-content">
+											<div class="portfolio__tab-content active">
+												<div class="portfolio__slider">
+													<div class="row">									
+														<div class="col-lg-12">
+															<div class="portfolio__card">
+																<div class="portfolio__card-nav">
+																	<button class="slider-nav portfolio__card-nav-btn portfolio__card-nav-prev" type="button">
+																		<img src="img/arrow-slick-left.svg" alt="Предыдущий">
+																	</button>
+																	<div class="portfolio__card-tabs tabs-header">
+																		<div class="portfolio__card-tab tab-item active" data-card-tab="before-after" role="button">
+																			<span>До /После</span>
+																		</div>
+																		<div href="#" class="portfolio__card-tab tab-item" data-card-tab="before-detail" role="button">
+																			<span>До (подробно)</span>
+																		</div>
+																		<div href="#" class="portfolio__card-tab tab-item" data-card-tab="3d-plan" role="button">
+																			<span>3D планирование</span>
+																		</div>
+																	</div>
+																	<button class="slider-nav portfolio__card-nav-btn portfolio__card-nav-next" type="button">
+																		<img src="img/arrow-slick-right.svg" alt="Следующий">
+																	</button>
+																</div>
+					
+																<div class="portfolio__card-content">
+																	<div class="portfolio__card-tab-content active" data-card-content="before-after">
+																		<div class="portfolio__card-images">
+																			<div class="portfolio__card-image">
+																				<img src="img/work-2-before.jpg" alt="До">
+																			</div>
+																			<div class="portfolio__card-image">
+																				<img src="img/work-2-after.jpg" alt="После">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="portfolio__card-tab-content" data-card-content="before-detail">
+																		<div class="portfolio__card-images">
+																			<div class="portfolio__card-image">
+																				<img src="img/work-2-before.jpg" alt="До подробно">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="portfolio__card-tab-content" data-card-content="3d-plan">
+																		<div class="portfolio__card-images">
+																			<div class="portfolio__card-image">
+																				<img src="img/work-2-3d.jpg" alt="3D планирование">
+																			</div>
+																		</div>
+																	</div>
+					
+																	<div class="portfolio__card-info">
+																		<h3 class="portfolio__card-name">Марина, 32 года</h3>
+																		<p class="portfolio__card-description">Проблема: отсутствие жевательных зубов<br>Решение: имплантация 6 и 7 жевательных зубов по навигационному шаблону. После удаления разрушенного зуба и полного заживления лунки (3-4 месяца) пациенту установили титановый имплант, который приживался около полугода. Финал лечения - установка керамической коронки, полное восстановление жевательной функции.</p>
+																	</div>
+					
+																	<a href="#" class="portfolio__card-btn btn-ui" role="button">подробнее о случае</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>			
+									</div>
+								</div>
+							</div>				
+						
+
+							
+							<div class="case-review" id="sect-4">							
+								<div class="video-reviews__reviews-block">
+									<h2 class="video-reviews__title">Отзыв пациента о процедуре имплантация зубов</h2>
+									<div class="video-reviews__reviews-slider">
+										<div class="video-reviews__review-item">
+											<div class="video-reviews__review-image">
+												<img src="img/video-review.png" alt="Отзыв пациента">
+												<button class="video-reviews__review-play" type="button">
+													<img src="img/play-icon.svg" alt="Воспроизвести">
+												</button>
+											</div>
+											<div class="video-reviews__review-content">
+												<p class="video-reviews__review-complaint"><strong>Жалоба пациента:</strong> "не нравится своя улыбка, чувствую неуверенность при общении"</p>
+												<p class="video-reviews__review-solution"><strong>Решение проблемы:</strong> протезирование винирами</p>
+											</div>
+										</div>
+										<div class="video-reviews__review-item">
+											<div class="video-reviews__review-image">
+												<img src="img/video-review.png" alt="Отзыв пациента">
+												<button class="video-reviews__review-play" type="button">
+													<img src="img/play-icon.svg" alt="Воспроизвести">
+												</button>
+											</div>
+											<div class="video-reviews__review-content">
+												<p class="video-reviews__review-complaint"><strong>Жалоба пациента:</strong> "не нравится своя улыбка, чувствую неуверенность при общении"</p>
+												<p class="video-reviews__review-solution"><strong>Решение проблемы:</strong> протезирование винирами</p>
+											</div>
+										</div>
+										<div class="video-reviews__review-item">
+											<div class="video-reviews__review-image">
+												<img src="img/video-review.png" alt="Отзыв пациента">
+												<button class="video-reviews__review-play" type="button">
+													<img src="img/play-icon.svg" alt="Воспроизвести">
+												</button>
+											</div>
+											<div class="video-reviews__review-content">
+												<p class="video-reviews__review-complaint"><strong>Жалоба пациента:</strong> "не нравится своя улыбка, чувствую неуверенность при общении"</p>
+												<p class="video-reviews__review-solution"><strong>Решение проблемы:</strong> протезирование винирами</p>
+											</div>
+										</div>
+										<div class="video-reviews__review-item">
+											<div class="video-reviews__review-image">
+												<img src="img/video-review.png" alt="Отзыв пациента">
+												<button class="video-reviews__review-play" type="button">
+													<img src="img/play-icon.svg" alt="Воспроизвести">
+												</button>
+											</div>
+											<div class="video-reviews__review-content">
+												<p class="video-reviews__review-complaint"><strong>Жалоба пациента:</strong> "не нравится своя улыбка, чувствую неуверенность при общении"</p>
+												<p class="video-reviews__review-solution"><strong>Решение проблемы:</strong> протезирование винирами</p>
+											</div>
+										</div>
+									</div>
+									<div class="video-reviews__nav">
+										<button class="slider-nav video-reviews__reviews-nav-prev" type="button">
+											<img src="img/arrow-slick-left.svg" alt="Назад">
+										</button>
+										<div class="video-reviews__reviews-dots"></div>
+										<button class="slider-nav video-reviews__reviews-nav-next" type="button">
+											<img src="img/arrow-slick-right.svg" alt="Вперед">
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="case-procedures" id="sect-5">
+								<h2 class="title-section_case">Процедуры, которые могут применяться в аналогичных случаях</h2>
+								<div class="case-procedures__content">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="service-tabs__card">
+												<div class="service-tabs__card-image">
+													<img src="img/implant.png" alt="Керамическая коронка на зуб">
+												</div>
+												<div class="service-tabs__card-content">
+													<h3 class="service-tabs__card-title">Керамическая коронка на зуб</h3>
+													<p class="service-tabs__card-description">Получите идеальную улыбку с помощью безметалловой керамики: современные коронки, виниры и мостовидные ...</p>
+												</div>
+												<div class="service-tabs__card-footer">
+													<span class="service-tabs__card-price">3 900 ₽</span>
+													<a href="#" class="btn-main btn-main_consultation service-tabs__card-btn" tabindex="0">подробнее</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="service-tabs__card">
+												<div class="service-tabs__card-image">
+													<img src="img/implant.png" alt="Керамическая коронка на зуб">
+												</div>
+												<div class="service-tabs__card-content">
+													<h3 class="service-tabs__card-title">Керамическая коронка на зуб</h3>
+													<p class="service-tabs__card-description">Получите идеальную улыбку с помощью безметалловой керамики: современные коронки, виниры и мостовидные ...</p>
+												</div>
+												<div class="service-tabs__card-footer">
+													<span class="service-tabs__card-price">3 900 ₽</span>
+													<a href="#" class="btn-main btn-main_consultation service-tabs__card-btn" tabindex="0">подробнее</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="button-case">
+									<a href="#" class="btn-main btn-ui">Получить консультацию по индивидуальному подбору услуги</a>
+								</div>
+							</div>
+
+							<section class="consultation">
+								<div class="consultation__block">
+										<div class="consultation__background">
+											<img src="img/consultation-bg.jpg" alt="">
+										</div>
+										<div class="consultation__wrapper row align-items-center">
+											<div class="consultation__content col-lg-6">
+												<div class="consultation__header">
+													<h2 class="consultation__title">Впервые у нас?</h2>
+													<div class="consultation__subtitle">
+														<span class="consultation__subtitle-highlight">Дарим сертификат*</span>
+														<span class="consultation__subtitle-text">на 5 000 ₽</span>
+														<span class="consultation__subtitle-bottom">на лечение зубов</span>
+													</div>
+												</div>
+												<p class="consultation__note">* Можно потратить на оплату 50% от стоимости любой процедуры в рамках одного визита.<br><br>Выдается однократно - только новым пациентам</p>
+											</div>
+											<div class="consultation__form-wrapper col-lg-6">
+												<h3 class="consultation__form-title">Куда отправим сертификат?</h3>
+												<form class="consultation__form">
+													<div class="item-form">
+														<input type="text" placeholder="Имя" required>
+													</div>
+													<div class="item-form">
+														<input type="tel" placeholder="+7 (___) ___-__-__" class="input-phone" inputmode="numeric" required>
+													</div>
+													<div class="item-form">
+														<input type="email" placeholder="Почта" required>
+													</div>
+													<input type="submit" value="получить сертификат" class="btn-main">
+													<div class="checkbox">
+														<label>
+															<input type="checkbox" required="required" checked="checked" />
+															<span>Я даю согласие на обработку моих персональных данных ООО «Инновастом» (ИНН 910206342908) в целях обработки заявки и обратной связи. Политика конфиденциальности — по ссылке</span>
+														</label>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+							</section>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+	<footer class="footer">
+		<div class="footer__content">
+			<div class="container">
+				<div class="footer__top">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="footer__about">
+								<img src="img/logo-footer.svg" alt="Инновастом" class="footer__logo">
+								<p class="footer__company-info">
+									ООО «КЛИНИКА ИННОВАЦИОННОЙ СТОМАТОЛОГИИ»<br>
+									ОГРН 1136733013042<br>
+									ИНН 6732061732<br>
+									КПП 673201001
+								</p>
+								<a href="#" class="footer__accessibility">
+									<span>версия для слабовидящих</span>
+									<img src="img/eye-icon.svg" alt="Версия для слабовидящих" class="footer__accessibility-icon">									
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="footer__column">
+								<h3 class="footer__column-title">Услуги</h3>
+								<ul class="footer__links">
+									<li><a href="#">Лечение зубов</a></li>
+									<li><a href="#">Протезирование</a></li>
+									<li><a href="#">Хирургия</a></li>
+									<li><a href="#">Детская стоматология</a></li>
+									<li><a href="#">Лечение кариеса</a></li>
+									<li><a href="#">Рентген диагностика</a></li>
+									<li><a href="#">Профгигиена</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="footer__column">
+								<h3 class="footer__column-title">Информация</h3>
+								<ul class="footer__links">
+									<li><a href="#">О клинике</a></li>
+									<li><a href="#">Врачи</a></li>
+									<li><a href="#">Акции</a></li>
+									<li><a href="#">Прайс</a></li>
+									<li><a href="#">Клинические случаи</a></li>
+									<li><a href="#">Отзывы</a></li>
+									<li><a href="#">Статьи</a></li>
+									<li><a href="#">Вакансии</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Нормативно-правовые документы</a></li>
+									<li><a href="#">Политика конфиденциальности</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 col-sm-12">
+							<div class="footer__contacts">
+								<h3 class="footer__column-title">Контакты</h3>
+								<div class="footer__contacts-info">
+									<p class="footer__address">Смоленск,<br>ул. Нормандия-Неман, 24Б</p>
+									<div class="footer__phone-wrapper">
+										<a href="tel:+74812545224" class="footer__phone">+7 (4812) 54-52-24</a>									
+									</div>
+									<ul class="socials-list">
+										<li><a href="#" target="_blank"><img src="img/social1.svg" alt="alt"></a></li>
+										<li><a href="#" target="_blank"><img src="img/social2.svg" alt="alt"></a></li>
+									</ul>
+									<p class="footer__schedule">Пн-Сб: 09:00 - 21:00<br>Вс: 10:00 - 16:00</p>
+								</div>
+								<ul class="socials-list">
+									<li><a href="#" target="_blank"><img src="img/social1.svg" alt="alt"></a></li>
+									<li><a href="#" target="_blank"><img src="img/vk.svg" alt="alt"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="footer__extra">					
+						<div class="footer__extra-row">
+							<p class="footer__disclaimer">Лицензия на осуществление медицинской деятельности<br> Лицезия № ЛО-67-01-001318 от 05.03.2018</p>
+							<p class="footer__disclaimer">Имеются противопоказания. Необходима консультация специалиста.<br>
+Материалы на сайте носят информационный характер и не являются медицинской консультацией или публичной офертой.</p>							
+						</div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<p class="footer__copyright">© 2025 Инновастом. Все права защищены</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="libs/jquery/jquery-3.6.0.min.js"></script>
+	<script src="libs/slick-1.5.9/slick/slick.min.js"></script>
+	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+</body>
+</html>
+
+
