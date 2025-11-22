@@ -1381,8 +1381,6 @@ form {
 .billboard-image-card__media {
 	width: 100%;
 	height: 100%;
-	border-radius: 20px;
-	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
 	position: relative;
 }
 .billboard-image-card__media img {
@@ -1402,6 +1400,14 @@ form {
 	justify-content: center;
 	z-index: 2;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+	animation: iconBounce 2s ease-in-out infinite;
+	transition: all 0.3s ease;
+}
+.billboard-image-card__icon:hover {
+	animation: iconPulse 0.6s ease-in-out infinite;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+	transform: scale(1.1);
 }
 .billboard-image-card__icon img {
 	width: 24px;
@@ -4849,6 +4855,22 @@ form .btn-main:hover {
 	to {
 		opacity: 0;
 		transform: translateY(10px);
+	}
+}
+@keyframes iconPulse {
+	0%, 100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+}
+@keyframes iconBounce {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-3px);
 	}
 }
 .qualification-item {
