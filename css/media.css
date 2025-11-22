@@ -2548,7 +2548,7 @@
 
     /* Service Banner */
     .page_section {
-        padding: 150px 0 50px;
+        padding: 120px 0 50px;
     }
     .service-banner__wrapper .row {
         flex-direction: column;
@@ -3008,6 +3008,9 @@
 }
 
 @media only screen and (max-width : 480px) {
+    .interior-reviews {
+        padding: 40px 0 0;
+    }
    
     .service-page__wrapper .row > [class*="col-"] {
         margin-bottom: 24px;
@@ -3049,9 +3052,7 @@
     }
 
     /* Service Banner */
-    .page_section {
-        padding: 100px 0 30px;
-    }
+  
     .service-banner__wrapper .row > [class*="col-"] {
         margin-bottom: 24px;
     }
@@ -4237,4 +4238,51 @@
     .contacts-transport__info-text {
         font-size: 14px;
     }
+}
+
+/* About Page Responsive */
+@media only screen and (max-width : 992px) {
+	.about-content .row {
+		gap: 24px;
+	}
+	.about-content .row > [class*="col-"] {
+		padding: 0;
+	}
+	.about-content__doctor-card {
+		min-height: 400px;
+		margin-top: 24px;
+	}
+}
+@media only screen and (max-width : 768px) {
+	.about-content__text {
+		font-size: 18px;
+	}
+	.about-content__history-year {
+		font-size: 32px;
+	}
+	.about-content__history-text {
+		font-size: 16px;
+	}
+	.about-content__doctor-name {
+		font-size: 18px;
+	}
+	.about-content__doctor-description {
+		font-size: 14px;
+	}
+	.about-content__doctor-card {
+		min-height: 350px;
+		padding: 24px;
+	}
+
+
+	.about-features__image {
+		height: 400px;
+		margin-bottom: 24px;
+	}
+	.about-features__title {
+		font-size: 18px;
+	}
+	.about-features__text {
+		font-size: 16px;
+	}
 }
