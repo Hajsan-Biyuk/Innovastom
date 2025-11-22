@@ -2191,7 +2191,8 @@ form {
 	flex-direction: row;
 	align-items: center;
 	gap: 30px;
-	width: 100%;
+	width: max-content;
+	border-bottom: 1px solid #313638;
 }
 .tab-item {
 	display: flex;
@@ -2215,7 +2216,7 @@ form {
 	font-family: 'Montserrat', sans-serif;
 	text-align: center;
 	transition: color 0.3s;
-	display: block;
+	display: block; 
 	border-bottom: 2px solid transparent;
 }
 .tab-item:hover span {
