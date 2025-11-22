@@ -2805,6 +2805,9 @@
     .service-tabs__card-price {
         font-size: 22px;
     }
+    .service-comparison__card .service-comparison__badge { 
+        top: -20px;      
+    }
 }
 
 @media only screen and (max-width : 768px) {
@@ -3289,6 +3292,38 @@
         height: auto;
     }
     
+    /* Service Stages Row Slider */
+    .service-stages__row {
+        margin: 0 !important;
+    }
+    
+    .service-stages__row.slick-initialized {
+        display: block;
+    }
+    
+    .service-stages__row.slick-initialized .slick-slide {
+        padding: 0 10px;
+        margin: 0;
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+    }
+    
+    .service-stages__row.slick-initialized .slick-slide.slick-center {
+        opacity: 1;
+    }
+    
+    .service-stages__row.slick-initialized .service-stages__col {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    
+    .service-stages__row.slick-initialized .service-stages__item,
+    .service-stages__row.slick-initialized .service-stages__price {
+        height: auto;
+        width: 100%;
+    }
+    
     /* Service Comparison Slider */
     .service-comparison__wrapper {
         margin: 0 !important;
@@ -3309,6 +3344,7 @@
         opacity: 1;
     }
     
+    .service-comparison__wrapper.slick-initialized .col-lg-4,
     .service-comparison__wrapper.slick-initialized .col-lg-6 {
         width: 100%;
         padding: 0;
@@ -4284,5 +4320,51 @@
 	}
 	.about-features__text {
 		font-size: 16px;
+	}
+	.service-stages__wrapper {
+		margin: 0;
+	}
+	.service-stages__wrapper > .col-lg-3 {
+		padding: 0;
+		margin-bottom: 0;
+		width: 100%;
+	}
+	.service-stages__section {
+		margin-bottom: 40px;
+	}
+	.service-stages__section-title {
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+	.service-stages__row {
+		margin: 0;
+	}
+	.service-stages__col {
+		width: 100%;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	.service-stages__item {
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.service-stages__price {
+		width: 100%;
+		margin-bottom: 0;
+	}
+	.service-stages__wrapper > .col-lg-3 > .service-stages__item--plus::after,
+	.service-stages__row .service-stages__item--plus::after {
+		display: none;
+	}
+	.service-stages__wrapper > .col-lg-3 > .service-stages__price--equals::before,
+	.service-stages__row .service-stages__price--equals::before {
+		display: none;
+	}
+	.service-comparison__card .service-comparison__badge {
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-bottom: 20px;
+		max-width: 100%;
 	}
 }

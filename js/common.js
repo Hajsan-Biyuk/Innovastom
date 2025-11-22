@@ -985,6 +985,75 @@ $(document).ready(function() {
 		});
 	})();
 
+	// Service Stages Row Slider (≤480px) для card-service-implant.html
+	(function initServiceStagesRowSlider() {
+		var $serviceStagesRows = $('.service-stages__row');
+		if (!$serviceStagesRows.length || typeof $.fn.slick !== 'function') {
+			return;
+		}
+
+		var sliderInitialized = false;
+
+		function toggleServiceStagesRowSlider() {
+			var windowWidth = $(window).width();
+			if (windowWidth <= 480) {
+				if (!sliderInitialized) {
+					$serviceStagesRows.each(function() {
+						var $row = $(this);
+						if (!$row.hasClass('slick-initialized')) {
+							$row.slick({
+								slidesToShow: 1,
+								slidesToScroll: 1,
+								arrows: false,
+								dots: false,
+								centerMode: true,
+								centerPadding: '20px',
+								infinite: false,
+								speed: 400,
+								adaptiveHeight: false,
+								touchMove: true,
+								swipe: true,
+								onInit: function() {
+									setTimeout(function() {
+										$row.slick('setPosition');
+									}, 100);
+								},
+								onAfterChange: function() {
+									$row.slick('setPosition');
+								}
+							});
+						}
+					});
+					sliderInitialized = true;
+				}
+			} else if (sliderInitialized) {
+				$serviceStagesRows.each(function() {
+					var $row = $(this);
+					if ($row.hasClass('slick-initialized')) {
+						$row.slick('unslick');
+					}
+				});
+				sliderInitialized = false;
+			}
+		}
+
+		toggleServiceStagesRowSlider();
+		$(window).on('resize.serviceStagesRow orientationchange.serviceStagesRow', function() {
+			toggleServiceStagesRowSlider();
+			// Пересчитываем позицию слайдера после изменения размера
+			if (sliderInitialized) {
+				$serviceStagesRows.each(function() {
+					var $row = $(this);
+					if ($row.hasClass('slick-initialized')) {
+						setTimeout(function() {
+							$row.slick('setPosition');
+						}, 100);
+					}
+				});
+			}
+		});
+	})();
+
 	// Service Comparison Slider (≤480px)
 	(function initServiceComparisonSlider() {
 		var $serviceComparisonWrapper = $('.service-comparison__wrapper');
@@ -1664,5 +1733,6 @@ $(document).ready(function() {
 			offset: 160
 		});
 	}
+
 });
 
