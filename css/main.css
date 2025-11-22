@@ -3107,10 +3107,7 @@ form .btn-main:hover {
 }
 
 /* Interior and Reviews Section */
-.interior-reviews {
-	padding: 70px 0 0;
-	background-color: #FFFFFF;
-}
+
 .interior-reviews__wrapper {
 	display: flex;
 	flex-direction: column;
@@ -4871,6 +4868,50 @@ form .btn-main:hover {
 	margin: 0 0 60px;
 	padding-bottom: 24px;
 	border-bottom: 1px solid #313638;
+}
+.doctor-video-reviews__tabs-nav {
+	margin-bottom: 24px;
+}
+.doctor-video-reviews__tabs {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 30px;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.doctor-video-reviews__tab {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.doctor-video-reviews__tab span {
+	font-size: 16px;
+	line-height: 140%;
+	font-weight: 500;
+	color: #1D1D1B;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+	white-space: nowrap;
+}
+.doctor-video-reviews__tab.active span {
+	font-weight: 600;
+}
+.doctor-video-reviews__divider {
+	margin-bottom: 24px;
+}
+.doctor-video-reviews__tabs-content {
+	position: relative;
+	width: 100%;
+}
+.doctor-video-reviews__tab-content {
+	display: none;
+	width: 100%;
+}
+.doctor-video-reviews__tab-content.active {
+	display: block;
 }
 .doctor-video-reviews__slider-wrapper {
 	position: relative;

@@ -1492,11 +1492,169 @@ $(document).ready(function() {
 		});
 
 		$('.doctor-video-reviews .documents__nav .doctor-video-reviews__nav-prev').on('click', function() {
-			$('.doctor-video-reviews__slider').slick('slickPrev');
+			var $activeTab = $('.doctor-video-reviews__tab-content.active');
+			if ($activeTab.length) {
+				var $slider = $activeTab.find('.doctor-video-reviews__slider');
+				if ($slider.length && $slider.hasClass('slick-initialized')) {
+					$slider.slick('slickPrev');
+				}
+			} else {
+				$('.doctor-video-reviews__slider').slick('slickPrev');
+			}
 		});
 
 		$('.doctor-video-reviews .documents__nav .doctor-video-reviews__nav-next').on('click', function() {
-			$('.doctor-video-reviews__slider').slick('slickNext');
+			var $activeTab = $('.doctor-video-reviews__tab-content.active');
+			if ($activeTab.length) {
+				var $slider = $activeTab.find('.doctor-video-reviews__slider');
+				if ($slider.length && $slider.hasClass('slick-initialized')) {
+					$slider.slick('slickNext');
+				}
+			} else {
+				$('.doctor-video-reviews__slider').slick('slickNext');
+			}
+		});
+	}
+
+	// Doctor Video Reviews Tabs
+	if ($('.doctor-video-reviews__tab').length) {
+		// Обработчик кликов на табы
+		$(document).on('click', '.doctor-video-reviews__tab', function() {
+			var $this = $(this);
+			var targetTab = $this.data('tab');
+			
+			// Удаляем активный класс у всех табов
+			$('.doctor-video-reviews__tab').removeClass('active');
+			// Добавляем активный класс к текущему табу
+			$this.addClass('active');
+			
+			// Скрываем все контентные блоки
+			$('.doctor-video-reviews__tab-content').removeClass('active');
+			// Показываем нужный контентный блок
+			var $targetContent = $('.doctor-video-reviews__tab-content[data-content="' + targetTab + '"]');
+			$targetContent.addClass('active');
+			
+			// Инициализируем слайдер для активного таба, если еще не инициализирован
+			setTimeout(function() {
+				var $slider = $targetContent.find('.doctor-video-reviews__slider');
+				if ($slider.length && !$slider.hasClass('slick-initialized')) {
+					$slider.slick({
+						slidesToShow: 4,
+						slidesToScroll: 1,
+						arrows: false,
+						dots: true,
+						appendDots: $targetContent.find('.documents__dots'),
+						customPaging: function(slider, i) {
+							return '<button type="button"></button>';
+						},
+						autoplay: false,
+						infinite: false,
+						responsive: [
+							{
+								breakpoint: 1200,
+								settings: {
+									slidesToShow: 3,
+									slidesToScroll: 1
+								}
+							},
+							{
+								breakpoint: 992,
+								settings: {
+									slidesToShow: 2,
+									slidesToScroll: 1
+								}
+							},
+							{
+								breakpoint: 768,
+								settings: {
+									slidesToShow: 2,
+									slidesToScroll: 1
+								}
+							},
+							{
+								breakpoint: 480,
+								settings: {
+									slidesToShow: 1,
+									slidesToScroll: 1
+								}
+							}
+						]
+					});
+				} else if ($slider.length && $slider.hasClass('slick-initialized')) {
+					$slider.slick('setPosition');
+				}
+			}, 50);
+		});
+
+		// Инициализация слайдера для первого активного таба при загрузке
+		var $firstActiveTab = $('.doctor-video-reviews__tab-content.active');
+		if ($firstActiveTab.length) {
+			var $firstSlider = $firstActiveTab.find('.doctor-video-reviews__slider');
+			if ($firstSlider.length && !$firstSlider.hasClass('slick-initialized')) {
+				$firstSlider.slick({
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					arrows: false,
+					dots: true,
+					appendDots: $firstActiveTab.find('.documents__dots'),
+					customPaging: function(slider, i) {
+						return '<button type="button"></button>';
+					},
+					autoplay: false,
+					infinite: false,
+					responsive: [
+						{
+							breakpoint: 1200,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 1
+							}
+						},
+						{
+							breakpoint: 992,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 1
+							}
+						},
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 1
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+				});
+			}
+		}
+
+		// Обработчики навигации для каждого таба
+		$(document).on('click', '.doctor-video-reviews__nav-prev', function() {
+			var $activeTab = $('.doctor-video-reviews__tab-content.active');
+			if ($activeTab.length) {
+				var $slider = $activeTab.find('.doctor-video-reviews__slider');
+				if ($slider.length && $slider.hasClass('slick-initialized')) {
+					$slider.slick('slickPrev');
+				}
+			}
+		});
+
+		$(document).on('click', '.doctor-video-reviews__nav-next', function() {
+			var $activeTab = $('.doctor-video-reviews__tab-content.active');
+			if ($activeTab.length) {
+				var $slider = $activeTab.find('.doctor-video-reviews__slider');
+				if ($slider.length && $slider.hasClass('slick-initialized')) {
+					$slider.slick('slickNext');
+				}
+			}
 		});
 	}
 
