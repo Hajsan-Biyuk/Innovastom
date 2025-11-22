@@ -546,10 +546,16 @@ form {
 	top: 0;
 	width: 1px;
 	height: 100%;
-	background: rgba(197, 167, 128, 0.6); /* #C5A780 c прозрачностью */
+	background: #313638; /* #C5A780 c прозрачностью */
 }
 .main-menu .row > [class*="col-"] + [class*="col-"] {
 	padding-left: 24px;
+}
+.main-menu .row > [class*="col-"] > .main-menu__title {
+	padding: 0 40px;
+}
+.main-menu .row > [class*="col-"] > .menu__nav {
+	padding: 0 22px;
 }
 .mobile-buttons {
 	gap: 7px;

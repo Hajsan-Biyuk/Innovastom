@@ -548,9 +548,42 @@
     .footer__top {
         padding-bottom: 40px;
     }
+    /* Service Page */
+    .service-page__wrapper .row > [class*="col-"] {
+        margin-bottom: 40px;
+    }
+    .service-page__wrapper .row > [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Service Tabs */
+    .service-tabs {
+        padding: 24px 60px 40px;
+    }
+    .service-tabs__wrapper {
+        gap: 40px;
+    }
+    .service-tabs__title {
+        font-size: 28px;
+    }
+    .service-tabs__tabs {
+        gap: 24px;
+    }
+    .service-tabs__slider .slick-list {
+        margin: 0 -10px;
+    }
+    .service-tabs__slider .slick-slide {
+        padding: 0 10px;
+    }
+    .service-tabs__card {
+        height: 480px;
+    }
 }
 
 @media only screen and (max-width : 992px) {
+    .header {
+        padding: 10px 0;
+    }
 .menu-overlay {
         display: none;
         position: fixed;
@@ -637,6 +670,12 @@
         padding: 9px 13px;
         font-size: 13px;
         border-radius: 11px;
+    }
+    .main-menu .row > [class*="col-"] > .main-menu__title {
+	padding: 0px;
+    }
+    .main-menu .row > [class*="col-"] > .menu__nav {
+        padding: 0px;
     }
     .header.active {
         background: #000;
@@ -1360,6 +1399,454 @@
     }
     .service-stages__item {
         margin-bottom: 20px;
+    }
+    /* Service Page */
+    .service-page__wrapper .row > [class*="col-"] {
+        margin-bottom: 30px;
+    }
+    .service-page__wrapper .row > [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+    .main-page-title {
+        font-size: 28px;
+        padding: 12px 0 20px;
+    }
+    .service-page__benefit-text {
+        font-size: 16px;
+    }
+    .service-page__doctor {
+        flex-direction: column;
+    }
+    .service-page__doctor-image {
+        height: 300px;
+    }
+    .service-page__doctor-name {
+        font-size: 22px;
+    }
+    .service-page__doctor-description p {
+        font-size: 16px;
+    }
+
+    /* Service Banner */
+    .page_section {
+        padding: 150px 0 50px;
+    }
+    .service-banner__wrapper .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .service-banner__wrapper .row > [class*="col-"] {
+        margin-bottom: 30px;
+    }
+    .service-banner__wrapper .row > [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+    .service-banner__content {
+        gap: 30px;
+    }
+    .service-banner__header {
+        padding: 12px 0 20px;
+    }
+    .service-banner__title {
+        font-size: 28px;
+    }
+    .service-banner__benefits {
+        gap: 20px;
+    }
+    .service-banner__benefit-item {
+        gap: 16px;
+    }
+    .service-banner__benefit-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .service-banner__benefit-text {
+        font-size: 16px;
+    }
+    .service-banner__btn {
+        width: 100%;
+        text-align: center;
+    }
+    .service-banner__image {
+        height: 300px;
+    }
+
+    /* Service Tabs */
+    .service-tabs {
+        padding: 24px 40px 36px;
+    }
+    .service-tabs__wrapper {
+        gap: 30px;
+    }
+    .service-tabs__title {
+        font-size: 24px;
+    }
+    .service-tabs__tabs {
+        gap: 20px;
+    }
+    .service-tabs__tab span {
+        font-size: 14px;
+    }
+    .service-tabs__slider .slick-list {
+        margin: 0 -8px;
+    }
+    .service-tabs__slider .slick-slide {
+        padding: 0 8px;
+    }
+    .service-tabs__card {
+        height: 450px;
+    }
+    .service-tabs__card-title {
+        font-size: 18px;
+    }
+    .service-tabs__card-description {
+        font-size: 13px;
+    }
+    .service-tabs__card-price {
+        font-size: 22px;
+    }
+    .service-comparison__card .service-comparison__badge { 
+        top: -20px;      
+    }
+    /* Doctors Page */
+    .doctors-page__title {
+        font-size: 36px;
+    }
+    
+    /* Doctors Certificates */
+    .doctors-certificates {
+        padding: 60px 0;
+    }
+    .doctors-certificates__title {
+        font-size: 32px;
+        margin: 0 0 50px;
+    }
+    
+    /* Doctor Banner */
+    .doctor-banner__page-title {
+        font-size: 32px;
+        line-height: 140%;
+        margin: 0 0 50px;
+    }
+    .doctor-banner__content {
+        padding: 24px;
+        gap: 28px;
+    }
+    .doctor-banner__info {
+        gap: 22px;
+    }
+    .doctor-banner__name {
+        font-size: 32px;
+        line-height: 140%;
+    }
+    .doctor-banner__detail-item {
+        font-size: 18px;
+        line-height: 140%;
+        font-weight: 500;
+    }
+    .doctor-banner__education-title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .doctor-banner__education-list li {
+        font-size: 18px;
+        line-height: 140%;
+        font-weight: 500;
+    }
+    
+    /* Doctor Qualifications */
+    .doctor-qualifications {
+        padding: 0 0 70px;
+    }
+    .doctor-qualifications__tabs {
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+    .doctor-qualifications__tab {
+        font-size: 17px;
+    }
+    .qualification-item {
+        gap: 15px;
+        margin-bottom: 45px;
+    }
+    .qualification-item__year {
+        font-size: 32px;
+        line-height: 194.4%;
+    }
+    .qualification-item__text {
+        font-size: 17px;
+        line-height: 160%;
+        font-weight: 500;
+    }
+    
+    /* Doctor Video Reviews */
+    .doctor-video-reviews {
+        padding: 70px 0;
+    }
+    .doctor-video-reviews__title {
+        font-size: 32px;
+        line-height: 140%;
+        margin: 0 0 50px;
+        padding-bottom: 24px;
+    }
+
+    .portfolio-page {
+        padding: 150px 0 0;
+    }
+
+    /* Single Case Page */
+    .single-case {
+        padding: 150px 0 0;
+    }
+
+    .case-main {
+        margin-bottom: 40px;
+    }
+
+    .case-main__content {
+        gap: 30px;
+    }
+
+    .case-main__header {
+        gap: 8px;
+    }
+
+    .case-main__badge {
+        padding: 10px 20px 14px;
+    }
+
+    .case-main__badge-text {
+        font-size: 18px;
+    }
+
+    .case-main__title {
+        font-size: 28px;
+    }
+
+    .case-main__info {
+        gap: 10px;
+    }
+
+    .case-main__info-item {
+        font-size: 16px;
+    }
+
+    .case-main__image {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    .case-stages {
+        margin-bottom: 40px;
+        gap: 30px;
+    }
+
+    .case-stages__list {
+        gap: 20px;
+    }
+
+    .case-stage {
+        gap: 20px;
+    }
+
+    .case-stage__header {
+        gap: 20px;
+    }
+
+    .case-stage__icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .case-stage__icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .case-stage__title {
+        font-size: 20px;
+    }
+
+    .case-stage__content {
+        font-size: 16px;
+    }
+
+    .button-case .btn-main {
+        padding: 16px 20px;
+        font-size: 14px;
+    }
+
+    .title-section_case {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+
+    .single-case .portfolio__card {
+        margin-bottom: 40px;
+    }
+
+    .single-case .portfolio__card-nav {
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .single-case .portfolio__card-tabs {
+        gap: 15px;
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .single-case .portfolio__card-content {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .single-case .portfolio__card-images {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .single-case .portfolio__card-image {
+        height: 300px;
+    }
+
+    .single-case .portfolio__card-name {
+        font-size: 18px;
+    }
+
+    .single-case .portfolio__card-description {
+        font-size: 14px;
+    }
+
+    .single-case .portfolio__card-btn {
+        width: 100%;
+        max-width: 272px;
+    }
+
+    .sidebar-page {
+        margin-bottom: 30px;
+    }
+
+    .nav-page {
+        gap: 8px;
+        padding: 14px;
+        border-radius: 14px 0 0 14px;
+        margin-right: -15px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .nav-page__item {
+        padding: 12px 16px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .nav-page::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+
+    .nav-page::-webkit-scrollbar:vertical {
+        width: 0px;
+    }
+
+    .nav-page::-webkit-scrollbar:horizontal {
+        height: 0px;
+    }
+
+    .nav-page::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
+    .nav-page::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background-color: transparent;
+    }
+
+    .sidebar-doctor {
+        gap: 20px;
+        margin-bottom: 24px;
+    }
+
+    .sidebar-doctor__header {
+        gap: 12px;
+    }
+
+    .sidebar-doctor__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .sidebar-doctor__label {
+        font-size: 16px;
+    }
+
+    .sidebar-doctor__card {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .sidebar-doctor__image {
+        height: 200px;
+    }
+
+    .sidebar-doctor__name {
+        font-size: 18px;
+    }
+
+    .sidebar-doctor__position {
+        font-size: 14px;
+    }
+    /* Contacts Info & Callback Section */
+    .contacts-info {
+        padding: 40px 0 60px;
+    }
+    .contacts-info .row {
+        margin: 0 -15px;
+    }
+    .contacts-info .row > div {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    .contacts-info__block {
+        max-width: 100%;
+    }
+    .contacts-callback {
+        max-width: 100%;
+    }
+    /* Contacts Transport Section */
+    .contacts-transport {
+        padding: 40px 0 60px;
+    }
+    .contacts-transport__header {
+        margin-bottom: 40px;
+    }
+    .contacts-transport__content .row {
+        margin: 0 -15px;
+    }
+    .contacts-transport__content .row > div {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    .contacts-transport__map {
+        height: 300px;
+    }
+    .contacts-transport__info {
+        max-width: 100%;
+    }
+    /* About Page Responsive */
+    .about-content .row {
+        gap: 24px;
+    }
+    .about-content .row > [class*="col-"] {
+        padding: 0;
+    }
+    .about-content__doctor-card {
+        min-height: 400px;
+        margin-top: 24px;
     }
 }
 
@@ -2370,9 +2857,513 @@
         width: 20px;
         height: 20px;
     }
+    /* Service Page */
+    .service-page__wrapper .row > [class*="col-"] {
+        margin-bottom: 30px;
+    }
+    .service-page__wrapper .row > [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+    .breadcrumbs {
+        font-size: 12px;
+    }
+    .main-page-title {
+        font-size: 24px;
+        padding: 10px 0 16px;
+    }
+    .service-page__benefits {
+        gap: 20px;
+    }
+    .service-page__benefit-item {
+        gap: 16px;
+    }
+    .service-page__benefit-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .service-page__benefit-text {
+        font-size: 14px;
+    }
+    .service-page__btn {
+        width: 100%;
+        text-align: center;
+    }
+    .service-page__doctor {
+        padding: 20px;
+    }
+    .service-page__doctor-image {
+        height: 250px;
+    }
+    .service-page__doctor-name {
+        font-size: 20px;
+    }
+    .service-page__doctor-description p {
+        font-size: 14px;
+    }
+
+    /* Service Banner */
+    .page_section {
+        padding: 120px 0 40px;
+    }
+    .service-banner__wrapper .row > [class*="col-"] {
+        margin-bottom: 30px;
+    }
+    .service-banner__wrapper .row > [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+    .service-banner__header {
+        padding: 10px 0 16px;
+    }
+    .service-banner__title {
+        font-size: 24px;
+    }
+    .service-banner__benefits {
+        gap: 20px;
+    }
+    .service-banner__benefit-item {
+        gap: 16px;
+    }
+    .service-banner__benefit-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .service-banner__benefit-text {
+        font-size: 14px;
+    }
+    .service-banner__btn {
+        width: 100%;
+        text-align: center;
+        padding: 16px 20px;
+        font-size: 14px;
+    }
+    .service-banner__image {
+        height: 250px;
+    }
+
+    /* Service Video */
+    .service-video__wrapper {
+        padding: 32px 40px;
+    }
+    .service-video__wrapper .row > [class*="col-"] {
+        margin-bottom: 30px;
+    }
+    .service-video__wrapper .row > [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+    .service-video__content {
+        gap: 24px;
+    }
+    .service-video__title {
+        font-size: 20px;
+    }
+    .service-video__list {
+        gap: 24px;
+    }
+    .service-video__item {
+        gap: 16px;
+    }
+    .service-video__item-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .service-video__item-text {
+        font-size: 14px;
+    }
+    .service-video__video-block {
+        gap: 24px;
+    }
+    .service-video__video-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-video__video-row > [class*="col-"]:first-child {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+    .service-video__play-btn {
+        width: 100px;
+        height: 100px;
+    }
+    .service-video__play-btn img {
+        width: 40px;
+        height: 40px;
+    }
+    .service-video__video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 488 / 250;
+    }
+    .service-video__description {
+        font-size: 16px;
+    }
+
+    /* Service Tabs */
+    .service-tabs {
+        padding: 24px 30px 30px;
+    }
+    .service-tabs__wrapper {
+        gap: 24px;
+    }
+    .service-tabs__header {
+        padding: 8px 0 20px;
+    }
+    .service-tabs__title {
+        font-size: 22px;
+    }
+    .service-tabs__tabs {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .service-tabs__tab {
+        padding: 0 0 12px;
+    }
+    .service-tabs__tab span {
+        font-size: 14px;
+    }
+    .service-tabs__slider .slick-list {
+        margin: 0 -6px;
+    }
+    .service-tabs__slider .slick-slide {
+        padding: 0 6px;
+    }
+    .service-tabs__card {
+        height: 420px;
+        padding: 10px;
+    }
+    .service-tabs__card-content {
+        padding: 0 10px;
+        gap: 12px;
+    }
+    .service-tabs__card-title {
+        font-size: 16px;
+    }
+    .service-tabs__card-description {
+        font-size: 12px;
+    }
+    .service-tabs__card-footer {
+        padding: 0 10px;
+        gap: 12px;
+    }
+    .service-tabs__card-price {
+        font-size: 20px;
+    }
+    .service-tabs__card-btn {
+        padding: 14px 18px;
+        font-size: 12px;
+    }
+    /* Doctors Page */
+    .main-page-title{
+        font-size: 28px;
+    }
+    
+    /* Doctors Certificates */
+    .doctors-certificates__title {
+        font-size: 28px;
+        margin: 0 0 40px;
+    }
+    
+    /* Doctor Banner */
+    .doctor-banner__page-title {
+        font-size: 28px;
+        line-height: 140%;
+        margin: 0 0 40px;
+    }
+    .doctor-banner__content {
+        padding: 24px;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .doctor-banner__info {
+        gap: 20px;
+    }
+    .doctor-banner__name {
+        font-size: 28px;
+        line-height: 140%;
+    }
+    .doctor-banner__details {
+        gap: 10px;
+    }
+    .doctor-banner__detail-item {
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 500;
+    }
+    .doctor-banner__education-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+    .doctor-banner__education-list {
+        gap: 10px;
+    }
+    .doctor-banner__education-list li {
+        font-size: 16px;
+        line-height: 140%;
+        font-weight: 500;
+    }
+    .doctor-banner__btn {
+        padding: 18px 24px;
+        font-size: 14px;
+    }
+    
+    /* Doctor Qualifications */
+    .doctor-qualifications {
+        padding: 0 0 60px;
+    }
+    .doctor-qualifications__tabs {
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+    .doctor-qualifications__tab {
+        font-size: 16px;
+        padding: 0 0 16px;
+    }
+    .qualification-item {
+        gap: 14px;
+        margin-bottom: 40px;
+    }
+    .qualification-item__year {
+        font-size: 28px;
+        line-height: 194.4%;
+    }
+    .qualification-item__text {
+        font-size: 16px;
+        line-height: 160%;
+        font-weight: 500;
+    }
+    
+    /* Doctor Video Reviews */
+    .doctor-video-reviews {
+        padding: 60px 0;
+    }
+    .doctor-video-reviews__title {
+        font-size: 28px;
+        line-height: 140%;
+        margin: 0 0 50px;
+        padding-bottom: 20px;
+    }
+    .doctor-video-reviews__slider {
+        margin-bottom: 35px;
+    }
+
+    .portfolio-page {
+        padding: 120px 0 0;
+    }
+    /* Contacts Info & Callback Section */
+    .contacts-info {
+        padding: 30px 0 40px;
+    }
+    .contacts-info .row {
+        margin: 0 -12px;
+    }
+    .contacts-info .row > div {
+        padding: 0 12px;
+        margin-bottom: 24px;
+    }
+    .contacts-info__title {
+        font-size: 18px;
+    }
+    .contacts-info__item {
+        font-size: 18px;
+    }
+    .contacts-info__phone-link {
+        font-size: 18px;
+    }
+    .contacts-info__subtitle {
+        font-size: 18px;
+    }
+    .contacts-info__social-text {
+        font-size: 18px;
+    }
+    .contacts-callback {
+        padding: 24px;
+        gap: 24px;
+    }
+    .contacts-callback__title {
+        font-size: 20px;
+    }
+    .contacts-callback__subtitle {
+        font-size: 14px;
+    }
+    .contacts-callback__form form {
+        gap: 24px;
+    }
+    /* Contacts Transport Section */
+    .contacts-transport {
+        padding: 30px 0 40px;
+    }
+    .contacts-transport__header {
+        margin-bottom: 30px;
+    }
+    .contacts-transport__title {
+        font-size: 28px;
+    }
+    .contacts-transport__content .row {
+        margin: 0 -12px;
+    }
+    .contacts-transport__content .row > div {
+        padding: 0 12px;
+        margin-bottom: 24px;
+    }
+    .contacts-transport__map {
+        height: 250px;
+    }
+    .contacts-transport__info {
+        gap: 24px;
+    }
+    .contacts-transport__info-title {
+        font-size: 20px;
+    }
+    .contacts-transport__info-text {
+        font-size: 16px;
+    }
+    /* About Page Responsive */
+    .about-content__text {
+        font-size: 18px;
+    }
+    .about-content__history-year {
+        font-size: 32px;
+    }
+    .about-content__history-text {
+        font-size: 16px;
+    }
+    .about-content__doctor-name {
+        font-size: 18px;
+    }
+    .about-content__doctor-description {
+        font-size: 14px;
+    }
+    .about-content__doctor-card {
+        min-height: 350px;
+        padding: 24px;
+    }
+    .about-features__image {
+        height: 400px;
+        margin-bottom: 24px;
+    }
+    .about-features__title {
+        font-size: 18px;
+    }
+    .about-features__text {
+        font-size: 16px;
+    }
+    .service-stages__wrapper {
+        margin: 0;
+    }
+    .service-stages__wrapper > .col-lg-3 {
+        padding: 0;
+        margin-bottom: 0;
+        width: 100%;
+    }
+    .service-stages__section {
+        margin-bottom: 40px;
+    }
+    .service-stages__section-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .service-stages__row {
+        margin: 0;
+    }
+    .service-stages__col {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    .service-stages__item {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .service-stages__price {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .service-stages__wrapper > .col-lg-3 > .service-stages__item--plus::after,
+    .service-stages__row .service-stages__item--plus::after {
+        display: none;
+    }
+    .service-stages__wrapper > .col-lg-3 > .service-stages__price--equals::before,
+    .service-stages__row .service-stages__price--equals::before {
+        display: none;
+    }
+    .service-comparison__card .service-comparison__badge {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width : 576px) {
+    .contacts-info {
+        padding: 24px 0 32px;
+    }
+    .contacts-info .row {
+        margin: 0;
+    }
+    .contacts-info .row > div {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .contacts-callback {
+        padding: 20px;
+        gap: 20px;
+    }
+    .contacts-callback__header {
+        gap: 12px;
+    }
+    .contacts-callback__title {
+        font-size: 18px;
+    }
+    .contacts-callback__subtitle {
+        font-size: 14px;
+    }
+    .contacts-callback__form {
+        gap: 20px;
+    }
+    .contacts-transport {
+        padding: 24px 0 32px;
+    }
+    .contacts-transport__header {
+        padding: 10px 0 20px;
+        margin-bottom: 24px;
+    }
+    .contacts-transport__title {
+        font-size: 24px;
+    }
+    .contacts-transport__content .row {
+        margin: 0;
+    }
+    .contacts-transport__content .row > div {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .contacts-transport__map {
+        height: 200px;
+    }
+    .contacts-transport__info {
+        gap: 20px;
+    }
+    .contacts-transport__info-block {
+        gap: 16px;
+    }
+    .contacts-transport__info-title {
+        font-size: 18px;
+    }
+    .contacts-transport__info-text {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width : 480px) {
+    .header {
+        position: relative;
+        background-color: rgba(29, 29, 27, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 5px 0px;
+        min-height: 90px;
+    }
 .logo__icon {
         width: 130px;
     }
@@ -2527,7 +3518,6 @@
     }
     .main-page-title {
         font-size: 28px;
-        padding: 12px 0 20px;
     }
     .service-page__benefit-text {
         font-size: 16px;
@@ -2547,9 +3537,7 @@
     }
 
     /* Service Banner */
-    .page_section {
-        padding: 120px 0 50px;
-    }
+
     .service-banner__wrapper .row {
         flex-direction: column;
         align-items: stretch;
@@ -2655,365 +3643,14 @@
         max-width: 100%;
         text-align: center;
     }
-}
-
-@media only screen and (min-width : 992px) {
-.info-mob,
-    .main-menu__mobile,
-    .mobile-buttons,
-    .show-mob {
-        display: none !important;
-    }
-}
-
-/* Service Page Media Queries */
-@media only screen and (max-width : 1200px) {
-    .service-page__wrapper .row > [class*="col-"] {
-        margin-bottom: 40px;
-    }
-    .service-page__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
+    .interior-reviews__content {
+        margin-top: 25px;
     }
 
-    /* Service Tabs */
-    .service-tabs {
-        padding: 24px 60px 40px;
+    .page_section {
+        padding-top: 0px;
     }
-    .service-tabs__wrapper {
-        gap: 40px;
-    }
-    .service-tabs__title {
-        font-size: 28px;
-    }
-    .service-tabs__tabs {
-        gap: 24px;
-    }
-    .service-tabs__slider .slick-list {
-        margin: 0 -10px;
-    }
-    .service-tabs__slider .slick-slide {
-        padding: 0 10px;
-    }
-    .service-tabs__card {
-        height: 480px;
-    }
-}
-
-@media only screen and (max-width : 992px) {
  
-    .service-page__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-page__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .main-page-title {
-        font-size: 28px;
-        padding: 12px 0 20px;
-    }
-    .service-page__benefit-text {
-        font-size: 16px;
-    }
-    .service-page__doctor {
-        flex-direction: column;
-    }
-    .service-page__doctor-image {
-        height: 300px;
-    }
-    .service-page__doctor-name {
-        font-size: 22px;
-    }
-    .service-page__doctor-description p {
-        font-size: 16px;
-    }
-
-    /* Service Banner */
-    .page_section {
-        padding: 150px 0 50px;
-    }
-    .service-banner__wrapper .row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    .service-banner__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-banner__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-banner__content {
-        gap: 30px;
-    }
-    .service-banner__header {
-        padding: 12px 0 20px;
-    }
-    .service-banner__title {
-        font-size: 28px;
-    }
-    .service-banner__benefits {
-        gap: 20px;
-    }
-    .service-banner__benefit-item {
-        gap: 16px;
-    }
-    .service-banner__benefit-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-banner__benefit-text {
-        font-size: 16px;
-    }
-    .service-banner__btn {
-        width: 100%;
-        text-align: center;
-    }
-    .service-banner__image {
-        height: 300px;
-    }
-
-    /* Service Tabs */
-    .service-tabs {
-        padding: 24px 40px 36px;
-    }
-    .service-tabs__wrapper {
-        gap: 30px;
-    }
-    .service-tabs__title {
-        font-size: 24px;
-    }
-    .service-tabs__tabs {
-        gap: 20px;
-    }
-    .service-tabs__tab span {
-        font-size: 14px;
-    }
-    .service-tabs__slider .slick-list {
-        margin: 0 -8px;
-    }
-    .service-tabs__slider .slick-slide {
-        padding: 0 8px;
-    }
-    .service-tabs__card {
-        height: 450px;
-    }
-    .service-tabs__card-title {
-        font-size: 18px;
-    }
-    .service-tabs__card-description {
-        font-size: 13px;
-    }
-    .service-tabs__card-price {
-        font-size: 22px;
-    }
-    .service-comparison__card .service-comparison__badge { 
-        top: -20px;      
-    }
-}
-
-@media only screen and (max-width : 768px) {
-
-    .service-page__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-page__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .breadcrumbs {
-        font-size: 12px;
-    }
-    .main-page-title {
-        font-size: 24px;
-        padding: 10px 0 16px;
-    }
-    .service-page__benefits {
-        gap: 20px;
-    }
-    .service-page__benefit-item {
-        gap: 16px;
-    }
-    .service-page__benefit-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-page__benefit-text {
-        font-size: 14px;
-    }
-    .service-page__btn {
-        width: 100%;
-        text-align: center;
-    }
-    .service-page__doctor {
-        padding: 20px;
-    }
-    .service-page__doctor-image {
-        height: 250px;
-    }
-    .service-page__doctor-name {
-        font-size: 20px;
-    }
-    .service-page__doctor-description p {
-        font-size: 14px;
-    }
-
-    /* Service Banner */
-    .page_section {
-        padding: 120px 0 40px;
-    }
-    .service-banner__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-banner__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .breadcrumbs {
-        font-size: 12px;
-    }
-    .service-banner__header {
-        padding: 10px 0 16px;
-    }
-    .service-banner__title {
-        font-size: 24px;
-    }
-    .service-banner__benefits {
-        gap: 20px;
-    }
-    .service-banner__benefit-item {
-        gap: 16px;
-    }
-    .service-banner__benefit-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-banner__benefit-text {
-        font-size: 14px;
-    }
-    .service-banner__btn {
-        width: 100%;
-        text-align: center;
-        padding: 16px 20px;
-        font-size: 14px;
-    }
-    .service-banner__image {
-        height: 250px;
-    }
-
-    /* Service Video */
-    .service-video__wrapper {
-        padding: 32px 40px;
-    }
-    .service-video__wrapper .row > [class*="col-"] {
-        margin-bottom: 30px;
-    }
-    .service-video__wrapper .row > [class*="col-"]:last-child {
-        margin-bottom: 0;
-    }
-    .service-video__content {
-        gap: 24px;
-    }
-    .service-video__title {
-        font-size: 20px;
-    }
-    .service-video__list {
-        gap: 24px;
-    }
-    .service-video__item {
-        gap: 16px;
-    }
-    .service-video__item-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .service-video__item-text {
-        font-size: 14px;
-    }
-    .service-video__video-block {
-        gap: 24px;
-    }
-    .service-video__video-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .service-video__video-row > [class*="col-"]:first-child {
-        margin-right: 0;
-        margin-bottom: 24px;
-    }
-    .service-video__play-btn {
-        width: 100px;
-        height: 100px;
-    }
-    .service-video__play-btn img {
-        width: 40px;
-        height: 40px;
-    }
-    .service-video__video {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 488 / 250;
-    }
-    .service-video__description {
-        font-size: 16px;
-    }
-
-    /* Service Tabs */
-    .service-tabs {
-        padding: 24px 30px 30px;
-    }
-    .service-tabs__wrapper {
-        gap: 24px;
-    }
-    .service-tabs__header {
-        padding: 8px 0 20px;
-    }
-    .service-tabs__title {
-        font-size: 22px;
-    }
-    .service-tabs__tabs {
-        flex-wrap: wrap;
-        gap: 16px;
-    }
-    .service-tabs__tab {
-        padding: 0 0 12px;
-    }
-    .service-tabs__tab span {
-        font-size: 14px;
-    }
-    .service-tabs__slider .slick-list {
-        margin: 0 -6px;
-    }
-    .service-tabs__slider .slick-slide {
-        padding: 0 6px;
-    }
-    .service-tabs__card {
-        height: 420px;
-        padding: 10px;
-    }
-    .service-tabs__card-content {
-        padding: 0 10px;
-        gap: 12px;
-    }
-    .service-tabs__card-title {
-        font-size: 16px;
-    }
-    .service-tabs__card-description {
-        font-size: 12px;
-    }
-    .service-tabs__card-footer {
-        padding: 0 10px;
-        gap: 12px;
-    }
-    .service-tabs__card-price {
-        font-size: 20px;
-    }
-    .service-tabs__card-btn {
-        padding: 14px 18px;
-        font-size: 12px;
-    }
-}
-
-@media only screen and (max-width : 480px) {
-    .interior-reviews {
-        padding: 40px 0 0;
-    }
    
     .service-page__wrapper .row > [class*="col-"] {
         margin-bottom: 24px;
@@ -3532,7 +4169,6 @@
  
     .main-page-title {
         font-size: 24px;
-        margin: 0 0 30px;
     }
     .doctors-filter {
         margin-bottom: 40px;
@@ -3691,680 +4327,16 @@
     }
 
 
-    .portfolio-page {
-        padding: 100px 0 0;
-    }
-}
-
-@media only screen and (max-width : 768px) {
-    /* Doctors Page */
-
-    .main-page-title{
-        font-size: 28px;
-    }
-    
-    /* Doctors Certificates */
-    .doctors-certificates__title {
-        font-size: 28px;
-        margin: 0 0 40px;
-    }
-    
-    /* Doctor Banner */
    
-    .doctor-banner__page-title {
-        font-size: 28px;
-        line-height: 140%;
-        margin: 0 0 40px;
-    }
-    .doctor-banner__content {
-        padding: 24px;
-        flex-direction: column;
-        gap: 24px;
-    }
-    .doctor-banner__info {
-        gap: 20px;
-    }
-    .doctor-banner__name {
-        font-size: 28px;
-        line-height: 140%;
-    }
-    .doctor-banner__details {
-        gap: 10px;
-    }
-    .doctor-banner__detail-item {
-        font-size: 16px;
-        line-height: 140%;
-        font-weight: 500;
-    }
-    .doctor-banner__education-title {
-        font-size: 16px;
-        font-weight: 500;
-        margin-bottom: 12px;
-    }
-    .doctor-banner__education-list {
-        gap: 10px;
-    }
-    .doctor-banner__education-list li {
-        font-size: 16px;
-        line-height: 140%;
-        font-weight: 500;
-    }
-    .doctor-banner__btn {
-        padding: 18px 24px;
-        font-size: 14px;
-    }
-    
-    /* Doctor Qualifications */
-    .doctor-qualifications {
-        padding: 0 0 60px;
-    }
-    .doctor-qualifications__tabs {
-        gap: 40px;
-        margin-bottom: 50px;
-    }
-    .doctor-qualifications__tab {
-        font-size: 16px;
-        padding: 0 0 16px;
-    }
-    .qualification-item {
-        gap: 14px;
-        margin-bottom: 40px;
-    }
-    .qualification-item__year {
-        font-size: 28px;
-        line-height: 194.4%;
-    }
-    .qualification-item__text {
-        font-size: 16px;
-        line-height: 160%;
-        font-weight: 500;
-    }
-    
-    /* Doctor Video Reviews */
-    .doctor-video-reviews {
-        padding: 60px 0;
-    }
-    .doctor-video-reviews__title {
-        font-size: 28px;
-        line-height: 140%;
-        margin: 0 0 50px;
-        padding-bottom: 20px;
-    }
-    .doctor-video-reviews__slider {
-        margin-bottom: 35px;
-    }
+}
 
-
-    .portfolio-page {
-        padding: 120px 0 0;
+@media only screen and (min-width : 992px) {
+.info-mob,
+    .main-menu__mobile,
+    .mobile-buttons,
+    .show-mob {
+        display: none !important;
     }
 }
 
-@media only screen and (max-width : 992px) {
-    /* Doctors Page */
-  
-    .doctors-page__title {
-        font-size: 36px;
-    }
-    
-    /* Doctors Certificates */
-    .doctors-certificates {
-        padding: 60px 0;
-    }
-    .doctors-certificates__title {
-        font-size: 32px;
-        margin: 0 0 50px;
-    }
-    
-    /* Doctor Banner */
- 
-    .doctor-banner__page-title {
-        font-size: 32px;
-        line-height: 140%;
-        margin: 0 0 50px;
-    }
-    .doctor-banner__content {
-        padding: 24px;
-        gap: 28px;
-    }
-    .doctor-banner__info {
-        gap: 22px;
-    }
-    .doctor-banner__name {
-        font-size: 32px;
-        line-height: 140%;
-    }
-    .doctor-banner__detail-item {
-        font-size: 18px;
-        line-height: 140%;
-        font-weight: 500;
-    }
-    .doctor-banner__education-title {
-        font-size: 18px;
-        font-weight: 500;
-    }
-    .doctor-banner__education-list li {
-        font-size: 18px;
-        line-height: 140%;
-        font-weight: 500;
-    }
-    
-    /* Doctor Qualifications */
-    .doctor-qualifications {
-        padding: 0 0 70px;
-    }
-    .doctor-qualifications__tabs {
-        gap: 50px;
-        margin-bottom: 50px;
-    }
-    .doctor-qualifications__tab {
-        font-size: 17px;
-    }
-    .qualification-item {
-        gap: 15px;
-        margin-bottom: 45px;
-    }
-    .qualification-item__year {
-        font-size: 32px;
-        line-height: 194.4%;
-    }
-    .qualification-item__text {
-        font-size: 17px;
-        line-height: 160%;
-        font-weight: 500;
-    }
-    
-    /* Doctor Video Reviews */
-    .doctor-video-reviews {
-        padding: 70px 0;
-    }
-    .doctor-video-reviews__title {
-        font-size: 32px;
-        line-height: 140%;
-        margin: 0 0 50px;
-        padding-bottom: 24px;
-    }
 
-    .portfolio-page {
-        padding: 150px 0 0;
-    }
-
-    /* Single Case Page */
-    .single-case {
-        padding: 150px 0 0;
-    }
-
-    .case-main {
-        margin-bottom: 40px;
-    }
-
-    .case-main__content {
-        gap: 30px;
-    }
-
-    .case-main__header {
-        gap: 8px;
-    }
-
-    .case-main__badge {
-        padding: 10px 20px 14px;
-    }
-
-    .case-main__badge-text {
-        font-size: 18px;
-    }
-
-    .case-main__title {
-        font-size: 28px;
-    }
-
-    .case-main__info {
-        gap: 10px;
-    }
-
-    .case-main__info-item {
-        font-size: 16px;
-    }
-
-    .case-main__image {
-        height: 300px;
-        margin-top: 20px;
-    }
-
-    .case-stages {
-        margin-bottom: 40px;
-        gap: 30px;
-    }
-
-    .case-stages__list {
-        gap: 20px;
-    }
-
-    .case-stage {
-        gap: 20px;
-    }
-
-    .case-stage__header {
-        gap: 20px;
-    }
-
-    .case-stage__icon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .case-stage__icon img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .case-stage__title {
-        font-size: 20px;
-    }
-
-    .case-stage__content {
-        font-size: 16px;
-    }
-
-    .button-case .btn-main {
-        padding: 16px 20px;
-        font-size: 14px;
-    }
-
-    .title-section_case {
-        margin-bottom: 30px;
-        font-size: 28px;
-    }
-
-    .single-case .portfolio__card {
-        margin-bottom: 40px;
-    }
-
-    .single-case .portfolio__card-nav {
-        margin-bottom: 20px;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .single-case .portfolio__card-tabs {
-        gap: 15px;
-        order: 3;
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-    .single-case .portfolio__card-content {
-        padding: 20px;
-        gap: 20px;
-    }
-
-    .single-case .portfolio__card-images {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .single-case .portfolio__card-image {
-        height: 300px;
-    }
-
-    .single-case .portfolio__card-name {
-        font-size: 18px;
-    }
-
-    .single-case .portfolio__card-description {
-        font-size: 14px;
-    }
-
-    .single-case .portfolio__card-btn {
-        width: 100%;
-        max-width: 272px;
-    }
-
-    .sidebar-page {
-        margin-bottom: 30px;
-    }
-
-    .nav-page {
-        gap: 8px;
-        padding: 14px;
-        border-radius: 14px 0 0 14px;
-        margin-right: -15px;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    .nav-page__item {
-        padding: 12px 16px;
-        white-space: nowrap;
-        flex-shrink: 0;
-    }
-
-    .nav-page::-webkit-scrollbar {
-        -webkit-appearance: none;
-    }
-
-    .nav-page::-webkit-scrollbar:vertical {
-        width: 0px;
-    }
-
-    .nav-page::-webkit-scrollbar:horizontal {
-        height: 0px;
-    }
-
-    .nav-page::-webkit-scrollbar-thumb {
-        background-color: transparent;
-        border-radius: 10px;
-    }
-
-    .nav-page::-webkit-scrollbar-track {
-        border-radius: 10px;
-        background-color: transparent;
-    }
-
-    .sidebar-doctor {
-        gap: 20px;
-        margin-bottom: 24px;
-    }
-
-    .sidebar-doctor__header {
-        gap: 12px;
-    }
-
-    .sidebar-doctor__icon {
-        width: 24px;
-        height: 24px;
-    }
-
-    .sidebar-doctor__label {
-        font-size: 16px;
-    }
-
-    .sidebar-doctor__card {
-        gap: 20px;
-        padding: 20px;
-    }
-
-    .sidebar-doctor__image {
-        height: 200px;
-    }
-
-    .sidebar-doctor__name {
-        font-size: 18px;
-    }
-
-    .sidebar-doctor__position {
-        font-size: 14px;
-    }
-}
-
-/* Contacts Info & Callback Section */
-@media only screen and (max-width : 992px) {
-    .contacts-info {
-        padding: 40px 0 60px;
-    }
-    .contacts-info .row {
-        margin: 0 -15px;
-    }
-    .contacts-info .row > div {
-        padding: 0 15px;
-        margin-bottom: 30px;
-    }
-    .contacts-info__block {
-        max-width: 100%;
-    }
-    .contacts-callback {
-        max-width: 100%;
-    }
-}
-
-@media only screen and (max-width : 768px) {
-    .contacts-info {
-        padding: 30px 0 40px;
-    }
-    .contacts-info .row {
-        margin: 0 -12px;
-    }
-    .contacts-info .row > div {
-        padding: 0 12px;
-        margin-bottom: 24px;
-    }
-    .contacts-info__title {
-        font-size: 18px;
-    }
-    .contacts-info__item {
-        font-size: 18px;
-    }
-    .contacts-info__phone-link {
-        font-size: 18px;
-    }
-    .contacts-info__subtitle {
-        font-size: 18px;
-    }
-    .contacts-info__social-text {
-        font-size: 18px;
-    }
-    .contacts-callback {
-        padding: 24px;
-        gap: 24px;
-    }
-    .contacts-callback__title {
-        font-size: 20px;
-    }
-    .contacts-callback__subtitle {
-        font-size: 14px;
-    }
-    .contacts-callback__form form {
-        gap: 24px;
-    }
-}
-
-@media only screen and (max-width : 576px) {
-    .contacts-info {
-        padding: 24px 0 32px;
-    }
-    .contacts-info .row {
-        margin: 0;
-    }
-    .contacts-info .row > div {
-        padding: 0;
-        margin-bottom: 20px;
-    }
-    .contacts-callback {
-        padding: 20px;
-        gap: 20px;
-    }
-    .contacts-callback__header {
-        gap: 12px;
-    }
-    .contacts-callback__title {
-        font-size: 18px;
-    }
-    .contacts-callback__subtitle {
-        font-size: 14px;
-    }
-    .contacts-callback__form {
-        gap: 20px;
-    }
-}
-
-/* Contacts Transport Section */
-@media only screen and (max-width : 992px) {
-    .contacts-transport {
-        padding: 40px 0 60px;
-    }
-    .contacts-transport__header {
-        margin-bottom: 40px;
-    }
-    .contacts-transport__content .row {
-        margin: 0 -15px;
-    }
-    .contacts-transport__content .row > div {
-        padding: 0 15px;
-        margin-bottom: 30px;
-    }
-    .contacts-transport__map {
-        height: 300px;
-    }
-    .contacts-transport__info {
-        max-width: 100%;
-    }
-}
-
-@media only screen and (max-width : 768px) {
-    .contacts-transport {
-        padding: 30px 0 40px;
-    }
-    .contacts-transport__header {
-        margin-bottom: 30px;
-    }
-    .contacts-transport__title {
-        font-size: 28px;
-    }
-    .contacts-transport__content .row {
-        margin: 0 -12px;
-    }
-    .contacts-transport__content .row > div {
-        padding: 0 12px;
-        margin-bottom: 24px;
-    }
-    .contacts-transport__map {
-        height: 250px;
-    }
-    .contacts-transport__info {
-        gap: 24px;
-    }
-    .contacts-transport__info-title {
-        font-size: 20px;
-    }
-    .contacts-transport__info-text {
-        font-size: 16px;
-    }
-}
-
-@media only screen and (max-width : 576px) {
-    .contacts-transport {
-        padding: 24px 0 32px;
-    }
-    .contacts-transport__header {
-        padding: 10px 0 20px;
-        margin-bottom: 24px;
-    }
-    .contacts-transport__title {
-        font-size: 24px;
-    }
-    .contacts-transport__content .row {
-        margin: 0;
-    }
-    .contacts-transport__content .row > div {
-        padding: 0;
-        margin-bottom: 20px;
-    }
-    .contacts-transport__map {
-        height: 200px;
-    }
-    .contacts-transport__info {
-        gap: 20px;
-    }
-    .contacts-transport__info-block {
-        gap: 16px;
-    }
-    .contacts-transport__info-title {
-        font-size: 18px;
-    }
-    .contacts-transport__info-text {
-        font-size: 14px;
-    }
-}
-
-/* About Page Responsive */
-@media only screen and (max-width : 992px) {
-	.about-content .row {
-		gap: 24px;
-	}
-	.about-content .row > [class*="col-"] {
-		padding: 0;
-	}
-	.about-content__doctor-card {
-		min-height: 400px;
-		margin-top: 24px;
-	}
-}
-@media only screen and (max-width : 768px) {
-	.about-content__text {
-		font-size: 18px;
-	}
-	.about-content__history-year {
-		font-size: 32px;
-	}
-	.about-content__history-text {
-		font-size: 16px;
-	}
-	.about-content__doctor-name {
-		font-size: 18px;
-	}
-	.about-content__doctor-description {
-		font-size: 14px;
-	}
-	.about-content__doctor-card {
-		min-height: 350px;
-		padding: 24px;
-	}
-
-
-	.about-features__image {
-		height: 400px;
-		margin-bottom: 24px;
-	}
-	.about-features__title {
-		font-size: 18px;
-	}
-	.about-features__text {
-		font-size: 16px;
-	}
-	.service-stages__wrapper {
-		margin: 0;
-	}
-	.service-stages__wrapper > .col-lg-3 {
-		padding: 0;
-		margin-bottom: 0;
-		width: 100%;
-	}
-	.service-stages__section {
-		margin-bottom: 40px;
-	}
-	.service-stages__section-title {
-		font-size: 20px;
-		margin-bottom: 30px;
-	}
-	.service-stages__row {
-		margin: 0;
-	}
-	.service-stages__col {
-		width: 100%;
-		padding: 0;
-		margin-bottom: 0;
-	}
-	.service-stages__item {
-		width: 100%;
-		margin-bottom: 0;
-	}
-	.service-stages__price {
-		width: 100%;
-		margin-bottom: 0;
-	}
-	.service-stages__wrapper > .col-lg-3 > .service-stages__item--plus::after,
-	.service-stages__row .service-stages__item--plus::after {
-		display: none;
-	}
-	.service-stages__wrapper > .col-lg-3 > .service-stages__price--equals::before,
-	.service-stages__row .service-stages__price--equals::before {
-		display: none;
-	}
-	.service-comparison__card .service-comparison__badge {
-		position: relative;
-		top: 0;
-		left: 0;
-		margin-bottom: 20px;
-		max-width: 100%;
-	}
-}
