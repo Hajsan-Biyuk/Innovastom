@@ -492,7 +492,7 @@
         width: 40%;
         gap: 50px;
     }
-    .installment__form {
+    .installment__form form {
         width: 100%;
     }
     .installment__form .checkbox {
@@ -2037,7 +2037,7 @@
     .installment__form-description {
         font-size: 16px;
     }
-    .installment__form {
+    .installment__form form {
         gap: 12px;
     }
 

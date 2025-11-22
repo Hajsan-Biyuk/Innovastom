@@ -51,6 +51,7 @@ $(document).ready(function() {
 		}
 	});
 
+
 	$(".input-phone").mask("+7 (999) 999-99-99");
 	//Попап менеджер FancyBox
 	//Документация: http://fancybox.net/howto
@@ -1380,6 +1381,7 @@ $(document).ready(function() {
 			}, 150);
 		}
 
+		// Переключение табов
 		// Переключение табов
 		$('.service-tabs__tab').on('click', function() {
 			var tabIndex = parseInt($(this).data('tab'));
