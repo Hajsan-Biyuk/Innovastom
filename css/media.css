@@ -407,7 +407,7 @@
     .consultation__form-wrapper {
         width: 320px;
     }
-    .consultation__form {
+    .consultation__form form {
         width: 300px;
     }
 
@@ -963,7 +963,7 @@
         width: 100%;
         max-width: 400px;
     }
-    .consultation__form {
+    .consultation__form form {
         width: 100%;
     }
 
@@ -4153,7 +4153,7 @@
     .contacts-callback__subtitle {
         font-size: 14px;
     }
-    .contacts-callback__form {
+    .contacts-callback__form form {
         gap: 24px;
     }
 }

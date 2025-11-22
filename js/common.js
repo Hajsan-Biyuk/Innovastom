@@ -1,5 +1,22 @@
 $(document).ready(function() {
 
+	$.getJSON("https://api.ipify.org/?format=json", function(e) {
+		console.log(e.ip);
+		$('form').find('[name=your-ip]').val(e.ip).attr('readonly', true);
+		});
+	
+		  if (localStorage.getItem("show_cookies") === null) {    
+			$('.cookies-modal').show();     
+			$('.cookies-modal .cookie-policy-button, .cookies-modal .yes-cookie').click(function(){     
+				$('.cookies-modal').hide();
+				localStorage.setItem('show_cookies', true); 
+			}); 
+			$('.cookies-modal .no-cookie').click(function(){            
+				window.location.href = 'https://ya.ru/';        
+			});
+		}
+	
+
 	//кнопка sandwich
 	$(".sandwich").click(function() {
 		if ($(".main-menu").is(":hidden")) {
@@ -32,6 +49,16 @@ $(document).ready(function() {
 		} else {
 			$(".header").removeClass("scrolled");
 		}
+	});
+
+	$(".input-phone").mask("+7 (999) 999-99-99");
+	//Попап менеджер FancyBox
+	//Документация: http://fancybox.net/howto
+	//<a class="fancybox"><img src="image.jpg" /></a>
+	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
+	$(".fancybox").fancybox({
+		autoFocus: false,
+		backFocus: false,
 	});
 
 	// Слайдер преимуществ на мобильных (<=480px)

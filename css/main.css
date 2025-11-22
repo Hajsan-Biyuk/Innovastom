@@ -2536,7 +2536,7 @@ form {
 	width: 100%;
 	text-align: center;
 }
-.consultation__form {
+.consultation__form form {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
@@ -4341,7 +4341,7 @@ form .btn-main:hover {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 }
-.contacts-callback__form {
+.contacts-callback__form form {
 	width: 100%;
 	gap: 32px;
 }
@@ -6513,4 +6513,141 @@ form .btn-main:hover {
 }
 .case-review {
 	margin-bottom: 60px;
+}
+
+.modal-block {
+	display: none;
+	padding: 0;
+	background: transparent;
+}
+.modal-wrap {
+	width: 100%;
+}
+
+.cookies-modal {
+display: none;
+position: fixed;
+z-index: 1000000000;
+bottom: 0px;
+left: 0px;
+transform: translateX(-50%);
+margin: 0px -50% 15px 50%;
+padding: 9px 43px 9px 14px;
+font-size: 12px;
+font-family: Dodo, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-weight: 500;
+text-align: left;
+border-radius: 4px;
+background-color: #D8D8D8;
+pointer-events: auto;
+max-width: 1280px;
+box-shadow: rgba(6, 5, 50, 0.1) 0px 6px 20px;
+color: #5c5c5c;
+}
+
+.cookies-modal a {
+text-decoration: none;
+cursor: pointer;
+outline: none;
+font-family: Dodo, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-weight: 600;
+color: #000;
+text-decoration: underline;
+}
+
+.cookies-modal .cookie-policy-button {
+margin: 0px;
+padding: 0px;
+background: none;
+border: none;
+font: inherit;
+cursor: pointer;
+position: absolute;
+top: 9px;
+right: 7px;
+display: inline-block;
+width: 28px;
+color: rgb(92, 99, 112);
+text-align: center;
+}
+
+.cookies-modal .cookies-btns {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    width: max-content;
+}
+
+.cookies-modal .cookies-btns .cookies-btn {
+  border: 1px solid #C4AA9B;
+  color: #C4AA9B;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.cookies-modal .cookies-btns .cookies-btn.yes-cookie {
+  margin-left: 0px;
+  color: #fff;
+  background-color: #C4AA9B;
+}
+
+.cookies-modal .cookies-btns .cookies-btn:hover {
+  opacity: 0.8;
+}
+
+/***/
+form .btn-main {
+	cursor: pointer;
+  }
+  
+  div.wpcf7-validation-errors {
+	border: 0px;
+	font-size: 0px;
+	opacity: 0;
+	position: absolute;
+  }
+  
+  span.wpcf7-not-valid-tip {
+	color: #f00;
+	font-size: 14px !important;
+	font-weight: normal;
+	display: block;
+	position: relative;
+	top: -10px;
+	display: none !important;
+  }
+  
+  
+  input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.input-form.wpcf7-not-valid,
+  textarea.wpcf7-form-control.wpcf7-textarea.wpcf7-validates-as-required.input-form.wpcf7-not-valid {
+	border: 1px solid #ffb400 !important;
+	background-color: #ccc;
+  }
+  
+  
+  form .wpcf7-response-output {
+  display: none !important;
+  }
+  div.wpcf7-mail-sent-ok {
+	font-size: 0px;
+	border: 0px !important;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	top: 17px;
+  }
+  
+  img.alignright { float: right; margin: 0 0 1em 1em; }
+  img.alignleft { float: left; margin: 0 1em 1em 0; }
+  img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+  .alignright { float: right; }
+  .alignleft { float: left; }
+  .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+  .fancybox-button svg path {
+    fill: #000;
 }

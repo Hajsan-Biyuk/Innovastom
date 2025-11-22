@@ -14,6 +14,7 @@
 	<link rel="shortcut icon" href="favicon.png" />
 	<link rel="stylesheet" href="libs/bootstrap/bootstrap-grid.css" />
 	<link rel="stylesheet" href="libs/fontawesome-free-5.12.0-web/css/all.min.css" />
+	<link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick.css" />
 	<link rel="stylesheet" href="libs/slick-1.5.9/slick/slick-theme.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
@@ -1608,6 +1609,43 @@
 				</div>
 			</footer>
 		
+			<div class="cookies-modal">
+				<span>Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете <a class="cookie-policy-link" href="/privacy-policy/">условия обработки персональных данных</a></span>
+				<div class="cookies-btns">
+					<div class="cookies-btn yes-cookie">Согласен</div>
+					<div class="cookies-btn no-cookie">Не согласен</div>
+				</div>
+				<button type="button" class="cookie-policy-button">✕</button>
+			</div>
+		
+			<div id="callback" class="modal-block">
+				<div class="modal-wrap">
+					<div class="contacts-callback">
+						<div class="contacts-callback__header">
+							<h3 class="contacts-callback__title">Заказать обратный звонок</h3>
+							<p class="contacts-callback__subtitle">Получите бесплатную консультацию по телефону</p>
+						</div>
+						<div class="consultation__form contacts-callback__form">
+							<form>
+								<div class="item-form">
+									<input type="text" placeholder="Имя" required>
+								</div>
+								<div class="item-form">
+									<input type="tel" placeholder="Телефон" class="input-phone" inputmode="numeric" required>
+								</div>
+								<input type="submit" value="отправить" class="btn-main contacts-callback__btn">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" required="required" checked="checked" />
+										<span>Я даю согласие на обработку моих персональных данных ООО «Инновастом» (ИНН 910206342908) в целях обработки заявки и обратной связи. Политика конфиденциальности — по ссылке</span>
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		
 			<!--[if lt IE 9]>
 			<script src="libs/html5shiv/es5-shim.min.js"></script>
 			<script src="libs/html5shiv/html5shiv.min.js"></script>
@@ -1616,6 +1654,8 @@
 			<![endif]-->
 			<script src="libs/jquery/jquery-3.6.0.min.js"></script>
 			<script src="libs/slick-1.5.9/slick/slick.min.js"></script>
+			<script src="libs/fancybox-master/dist/jquery.fancybox.min.js"></script>	
+			<script src="libs/mask/jquery.maskedinput.js"></script>
 			<script src="js/common.js"></script>
 			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 		</body>
