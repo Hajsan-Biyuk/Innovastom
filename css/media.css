@@ -3364,6 +3364,16 @@
         padding: 5px 0px;
         min-height: 90px;
     }
+    .show-mobile {
+        display: block;
+    }
+    .show-desktop {
+        display: none;
+    }
+    .installment__content,
+    .consultation__wrapper {
+        gap: 240px;
+    }
 .logo__icon {
         width: 130px;
     }
@@ -4325,6 +4335,13 @@
     .doctor-video-reviews__slider {
         margin-bottom: 30px;
     }
+    
+    .about-bottom-image__nav-btn {
+		display: none;
+	}
+	.about-bottom-image__nav {
+		gap: 0;
+	}
 
 
    
