@@ -530,9 +530,7 @@
         margin-bottom: 40px;
     }
 
-.contacts-map {
-        padding: 40px 0 0;
-    }
+
     .contacts-map__features {
         margin-bottom: 40px;
     }
@@ -1268,9 +1266,7 @@
         font-size: 32px;
     }
 
-.contacts-map {
-        padding: 30px 0 0;
-    }
+
     .contacts-map__header {
         padding: 10px 0 20px;
         margin-bottom: 24px;
@@ -2152,9 +2148,7 @@
         font-size: 14px;
     }
 
-.contacts-map {
-        padding: 24px 0 0;
-    }
+
     .contacts-map__header {
         padding: 10px 0 16px;
         margin-bottom: 20px;
@@ -4066,6 +4060,185 @@
     }
 
     .sidebar-doctor__position {
+        font-size: 14px;
+    }
+}
+
+/* Contacts Info & Callback Section */
+@media only screen and (max-width : 992px) {
+    .contacts-info {
+        padding: 40px 0 60px;
+    }
+    .contacts-info .row {
+        margin: 0 -15px;
+    }
+    .contacts-info .row > div {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    .contacts-info__block {
+        max-width: 100%;
+    }
+    .contacts-callback {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .contacts-info {
+        padding: 30px 0 40px;
+    }
+    .contacts-info .row {
+        margin: 0 -12px;
+    }
+    .contacts-info .row > div {
+        padding: 0 12px;
+        margin-bottom: 24px;
+    }
+    .contacts-info__title {
+        font-size: 18px;
+    }
+    .contacts-info__item {
+        font-size: 18px;
+    }
+    .contacts-info__phone-link {
+        font-size: 18px;
+    }
+    .contacts-info__subtitle {
+        font-size: 18px;
+    }
+    .contacts-info__social-text {
+        font-size: 18px;
+    }
+    .contacts-callback {
+        padding: 24px;
+        gap: 24px;
+    }
+    .contacts-callback__title {
+        font-size: 20px;
+    }
+    .contacts-callback__subtitle {
+        font-size: 14px;
+    }
+    .contacts-callback__form {
+        gap: 24px;
+    }
+}
+
+@media only screen and (max-width : 576px) {
+    .contacts-info {
+        padding: 24px 0 32px;
+    }
+    .contacts-info .row {
+        margin: 0;
+    }
+    .contacts-info .row > div {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .contacts-callback {
+        padding: 20px;
+        gap: 20px;
+    }
+    .contacts-callback__header {
+        gap: 12px;
+    }
+    .contacts-callback__title {
+        font-size: 18px;
+    }
+    .contacts-callback__subtitle {
+        font-size: 14px;
+    }
+    .contacts-callback__form {
+        gap: 20px;
+    }
+}
+
+/* Contacts Transport Section */
+@media only screen and (max-width : 992px) {
+    .contacts-transport {
+        padding: 40px 0 60px;
+    }
+    .contacts-transport__header {
+        margin-bottom: 40px;
+    }
+    .contacts-transport__content .row {
+        margin: 0 -15px;
+    }
+    .contacts-transport__content .row > div {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    .contacts-transport__map {
+        height: 300px;
+    }
+    .contacts-transport__info {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .contacts-transport {
+        padding: 30px 0 40px;
+    }
+    .contacts-transport__header {
+        margin-bottom: 30px;
+    }
+    .contacts-transport__title {
+        font-size: 28px;
+    }
+    .contacts-transport__content .row {
+        margin: 0 -12px;
+    }
+    .contacts-transport__content .row > div {
+        padding: 0 12px;
+        margin-bottom: 24px;
+    }
+    .contacts-transport__map {
+        height: 250px;
+    }
+    .contacts-transport__info {
+        gap: 24px;
+    }
+    .contacts-transport__info-title {
+        font-size: 20px;
+    }
+    .contacts-transport__info-text {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width : 576px) {
+    .contacts-transport {
+        padding: 24px 0 32px;
+    }
+    .contacts-transport__header {
+        padding: 10px 0 20px;
+        margin-bottom: 24px;
+    }
+    .contacts-transport__title {
+        font-size: 24px;
+    }
+    .contacts-transport__content .row {
+        margin: 0;
+    }
+    .contacts-transport__content .row > div {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .contacts-transport__map {
+        height: 200px;
+    }
+    .contacts-transport__info {
+        gap: 20px;
+    }
+    .contacts-transport__info-block {
+        gap: 16px;
+    }
+    .contacts-transport__info-title {
+        font-size: 18px;
+    }
+    .contacts-transport__info-text {
         font-size: 14px;
     }
 }

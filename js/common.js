@@ -1102,6 +1102,48 @@ $(document).ready(function() {
 		}
 	}
 
+	// Инициализация карты транспорта
+	if ($('#map-transport').length) {
+		if (window.ymaps && typeof window.ymaps.ready === 'function') {
+			window.ymaps.ready(initMapTransport);
+		} else {
+			// Если API подгрузится позже
+			var checkYmapsTransportInterval = setInterval(function() {
+				if (window.ymaps && typeof window.ymaps.ready === 'function') {
+					clearInterval(checkYmapsTransportInterval);
+					window.ymaps.ready(initMapTransport);
+				}
+			}, 100);
+		}
+	}
+
+	function initMapTransport() {
+		try {
+			var centerCoords = [54.777967, 32.017502]; // Смоленск, ул. Нормандия-Неман, 24Б
+			var map = new ymaps.Map('map-transport', {
+				center: centerCoords,
+				zoom: 16
+			}, {
+				searchControlProvider: 'yandex#search'
+			});
+
+			var placemark = new ymaps.Placemark(centerCoords, {}, {
+				iconLayout: 'default#image',
+				iconImageHref: 'img/pin.svg',
+				hideIconOnBalloonOpen: false,
+				iconImageSize: [65, 72],
+				iconImageOffset: [-32, -72],
+				balloonOffset: [0, -72]
+			});
+
+			map.controls.remove('searchControl');
+			map.behaviors.disable('scrollZoom');
+			map.geoObjects.add(placemark);
+		} catch (e) {
+			// fail silently
+		}
+	}
+
 	// Service Tabs Slider
 	if ($('.service-tabs').length) {
 		var serviceTabsCurrentActiveSlider = null;

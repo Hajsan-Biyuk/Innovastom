@@ -4121,7 +4121,7 @@ form .btn-main:hover {
 
 /* Contacts & Map Section */
 .contacts-map {
-	padding: 50px 0 0;
+	padding-bottom: 0px;
 }
 .contacts-map__header {
 	padding: 10px 0 24px;
@@ -4217,17 +4217,222 @@ form .btn-main:hover {
 	padding: 20px 24px;
 	font-size: 16px;
 	line-height: 140%;
-	font-weight: 500;
+}
+
+/* Contacts Info Section */
+.contacts-info {
+	padding: 60px 0 80px;
+}
+.contacts-info .row {
+	margin: 0 -12px;
+}
+.contacts-info .row > div {
+	padding: 0 12px;
+}
+.contacts-info__block {
+	width: 100%;
+	max-width: 504px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.contacts-info__title {
+	font-size: 20px;
+	line-height: 160%;
+	font-weight: 600;
 	color: #1D1D1B;
 	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+.contacts-info__list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.contacts-info__item {
+	font-size: 20px;
+	line-height: 160%;
+	font-weight: 400;
+	color: #313638;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+.contacts-info__phone {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.contacts-info__phone-link {
+	font-size: 20px;
+	line-height: 160%;
+	font-weight: 600;
+	color: #313638;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+}
+.contacts-info__phone-icon {
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+}
+.contacts-info__additional {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.contacts-info__subtitle {
+	font-size: 20px;
+	line-height: 160%;
+	font-weight: 600;
+	color: #1D1D1B;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+.contacts-info__additional-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.contacts-info__social {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.contacts-info__social-text {
+	font-size: 20px;
+	line-height: 160%;
+	font-weight: 600;
+	color: #313638;
+	font-family: 'Montserrat', sans-serif;
+}
+.contacts-info__social-icon {
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+}
+
+/* Contacts Callback Section */
+.contacts-callback {
+	width: 100%;
+	max-width: 504px;
+	background: #C5A780;
+	border-radius: 24px;
+	padding: 36px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+	box-sizing: border-box;
+}
+.contacts-callback__header {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.contacts-callback__title {
+	font-size: 24px;
+	line-height: 140%;
+	font-weight: 600;
+	color: #313638;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+.contacts-callback__subtitle {
+	font-size: 16px;
+	line-height: 160%;
+	font-weight: 400;
+	color: #313638;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+.contacts-callback__form {
+	width: 100%;
+	gap: 32px;
+}
+.contacts-callback__btn {
+	width: 100%;
+	padding: 20px 24px;
+	font-size: 16px;
+	line-height: 140%;
 	text-transform: uppercase;
+	font-weight: 500;
+	border-radius: 6px;
+	color: #FFFFFF;
 	background-color: #C5A780;
 	border: none;
-	border-radius: 6px;
 	cursor: pointer;
 	transition: all 0.3s;
-	text-align: center;
-	margin-top: auto;
+	font-family: 'Montserrat', sans-serif;
+}
+.contacts-callback__btn:hover {
+	background: #EFDFCD;
+	color: #1D1D1B;
+}
+
+/* Contacts Transport Section */
+.contacts-transport {
+	padding: 60px 0 80px;
+}
+.contacts-transport__header {
+	padding: 10px 0 24px;
+	border-bottom: 1px solid #313638;
+	margin-bottom: 50px;
+}
+.contacts-transport__title {
+	font-size: 32px;
+	line-height: 140%;
+	font-weight: 600;
+	color: #1D1D1B;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+.contacts-transport__content {
+	width: 100%;
+}
+.contacts-transport__content .row {
+	margin: 0 -12px;
+}
+.contacts-transport__content .row > div {
+	padding: 0 12px;
+}
+.contacts-transport__map {
+	width: 100%;
+	height: 394px;
+	border-radius: 24px;
+	overflow: hidden;
+	background-color: #F1F0EA;
+	position: relative;
+}
+.contacts-transport__map .map-container {
+	width: 100%;
+	height: 100%;
+}
+.contacts-transport__info {
+	width: 100%;
+	max-width: 636px;
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+}
+.contacts-transport__info-block {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.contacts-transport__info-title {
+	font-size: 24px;
+	line-height: 140%;
+	font-weight: 600;
+	color: #1D1D1B;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+}
+.contacts-transport__info-text {
+	font-size: 18px;
+	line-height: 160%;
+	font-weight: 400;
+	color: #313638;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
 }
 .btn-ui:hover {
 	background: #EFDFCD;
